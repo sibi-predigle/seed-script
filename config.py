@@ -11,11 +11,11 @@ TARGET_CLIENT_ID = "691ad32be2653616d96af2d5"  # the id every migrated document 
 
 # Pre-existing, already-provisioned destination databases -- these literal names are given/external,
 # not a naming choice; every other identifier in this script stays client-agnostic.
-DEST_FABRIX_DB = "Hektor_fabrix_4"
-DEST_PRECOG_DB = "Hektor_precog_4"
-DEST_ENTITY_DB = "Hektor_entity_4"
+DEST_FABRIX_DB = "pdb-pi-dev"
+DEST_PRECOG_DB = "pdb-precog-dev"
+DEST_ENTITY_DB = "pdb-entity-dev"
 # The agents database: seeded from data/agents.json, state_types.json, acl_agent.json (static fixtures; no executions).
-DEST_AGENT_DB = "Hektor_agent_4"
+DEST_AGENT_DB = "pdb-agent-dev"
 
 # The Postman-covered bots/processors (postman/hektor-hc3-botruns.postman_collection.json) --
 # precog-side scope stays exactly these, since no other Hektor fabrix has a matching bot/processor.
