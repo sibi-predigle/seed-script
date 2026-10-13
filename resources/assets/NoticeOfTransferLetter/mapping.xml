@@ -1,0 +1,11 @@
+<BLOCKDEF>
+  <BOUNDARY pattern="^\S.*?\s{2,}Date:\s*\d{1,2}/\d{1,2}/\d{2,4}\s*$"/>
+  <FIELD name="BANK_NAME" pattern="^(\S.*?)\s{2,}Date:\s*\d{1,2}/\d{1,2}/\d{2,4}"/>
+  <FIELD name="STATEMENT_DATE" pattern="Date:\s*(\S+)"/>
+  <FIELD name="TRANSFER_AMOUNT" pattern="A transfer of ([\d,]+\.\d{2}) has been made"/>
+  <FIELD name="ACCOUNT_FROM" pattern="account # (\S+) to account" masked="yes"/>
+  <FIELD name="ACCOUNT_TO" pattern="to account # (\S+)" masked="yes"/>
+  <FIELD name="NAME_LINE" repeat="2" anchor_after="Please adjust your records to reflect the above referenced transaction\." tail_reserved="2" masked="yes"/>
+  <FIELD name="ADDRESS_LINE1" offset_from_end="2" masked="yes"/>
+  <FIELD name="ADDRESS_LINE2" offset_from_end="1" masked="yes"/>
+</BLOCKDEF>

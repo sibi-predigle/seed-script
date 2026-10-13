@@ -1,0 +1,212 @@
+[
+  {
+    "_id": {
+      "$oid": "691dcb0f6de2706efbf6b64f"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "state_name_from_zipcode",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [
+      {
+        "user_id": "3b472cca-162d-4be4-9d37-295137111b6a",
+        "allowed_roles": [
+          {
+            "allowed_roles": "Owner"
+          }
+        ]
+      }
+    ],
+    "audit_data": {
+      "create_user_id": "3b472cca-162d-4be4-9d37-295137111b6a",
+      "create_ts": {
+        "$date": "2025-11-19T13:50:07.577Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2025-11-19T13:50:07.578Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "state_name_from_zipcode",
+    "title": "state_name_from_zipcode",
+    "type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "function",
+      "type": "python"
+    },
+    "inputs": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "zipcode",
+        "type": "String",
+        "required": true,
+        "default_value": "00000"
+      }
+    ],
+    "outputs": [],
+    "details": {
+      "hidden": false,
+      "deleted_status": "N",
+      "source_url": "https://storage.googleapis.com/api-entity-fabrix-bucket/functions/state_name_from_zipcode-6747337462ef4b179a419f3a710425d2.py",
+      "source_name": "functions/state_name_from_zipcode-6747337462ef4b179a419f3a710425d2.py",
+      "description": "Function to generate statename from zipcode",
+      "testcases": [
+        {
+          "hidden": false,
+          "deleted_status": "N",
+          "inputs": {
+            "zipcode": "00000"
+          },
+          "expected_output": "null"
+        }
+      ]
+    },
+    "tags": [],
+    "cacheable": true
+  },
+  {
+    "_id": {
+      "$oid": "692da81ae032bfaa1e13c418"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "get_total_fee_amount",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [
+      {
+        "user_id": "3b472cca-162d-4be4-9d37-295137111b6a",
+        "allowed_roles": [
+          {
+            "allowed_roles": "Owner"
+          }
+        ]
+      }
+    ],
+    "audit_data": {
+      "create_user_id": "3b472cca-162d-4be4-9d37-295137111b6a",
+      "create_ts": {
+        "$date": "2025-12-01T14:37:14.038Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2025-12-01T14:37:14.038Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "get_total_fee_amount",
+    "title": "Get Total Fee Amount",
+    "type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "function",
+      "type": "Python"
+    },
+    "inputs": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "statement",
+        "type": "String",
+        "required": true,
+        "default_value": "''"
+      }
+    ],
+    "outputs": [],
+    "details": {
+      "hidden": false,
+      "deleted_status": "N",
+      "source_url": "https://storage.googleapis.com/api-entity-fabrix-bucket/functions/get_total_fee_amount-88db2f8f1e6e48cd802678143d4f5e0a.py",
+      "source_name": "functions/get_total_fee_amount-88db2f8f1e6e48cd802678143d4f5e0a.py",
+      "description": "get sum of all the amounts that attributed to a Fee",
+      "testcases": [
+        {
+          "hidden": false,
+          "deleted_status": "N",
+          "inputs": {
+            "statement": "''"
+          },
+          "expected_output": "0"
+        }
+      ]
+    },
+    "tags": [],
+    "cacheable": true
+  },
+  {
+    "_id": {
+      "$oid": "692da850e032bfaa1e13c41a"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "get_category_wise_total_amount",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [
+      {
+        "user_id": "3b472cca-162d-4be4-9d37-295137111b6a",
+        "allowed_roles": [
+          {
+            "allowed_roles": "Owner"
+          }
+        ]
+      }
+    ],
+    "audit_data": {
+      "create_user_id": "3b472cca-162d-4be4-9d37-295137111b6a",
+      "create_ts": {
+        "$date": "2025-12-01T14:38:08.345Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2025-12-01T14:38:08.345Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "get_category_wise_total_amount",
+    "title": "Get Category Wise Total",
+    "type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "function",
+      "type": "Python"
+    },
+    "inputs": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "statement",
+        "type": "String",
+        "required": true,
+        "default_value": "''"
+      }
+    ],
+    "outputs": [],
+    "details": {
+      "hidden": false,
+      "deleted_status": "N",
+      "source_url": "https://storage.googleapis.com/api-entity-fabrix-bucket/functions/get_category_wise_total_amount-cd90e300b3e94f88b3bdeaab75f2cbcf.py",
+      "source_name": "functions/get_category_wise_total_amount-cd90e300b3e94f88b3bdeaab75f2cbcf.py",
+      "description": "get sum of amounts of different categories",
+      "testcases": [
+        {
+          "hidden": false,
+          "deleted_status": "N",
+          "inputs": {
+            "statement": "''"
+          },
+          "expected_output": "{}"
+        }
+      ]
+    },
+    "tags": [],
+    "cacheable": true
+  }
+]

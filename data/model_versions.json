@@ -1,0 +1,33 @@
+[
+  {
+    "_id": {
+      "$oid": "6a60ae74683499e2a1cb9d25"
+    },
+    "client_id": "64c48dc0eb5ba14e7588cbe6",
+    "slug": "precog-pc-gemibench-2.5-2026-07-15-19-17-29-240",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "dc453661-db7c-4b53-a257-e4b1b684141d",
+      "create_ts": {
+        "$date": "2026-07-15T13:47:29.598Z"
+      },
+      "update_user_id": "dc453661-db7c-4b53-a257-e4b1b684141d",
+      "update_ts": {
+        "$date": "2026-07-15T13:47:29.606Z"
+      },
+      "record_status": "A"
+    },
+    "name": "gemini-2.5-flash",
+    "tags": [],
+    "model": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "PC-GemiBench",
+      "reference_id": "6a605c3e683499e2a1cb9d0d"
+    },
+    "version": 1
+  }
+]

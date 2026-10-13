@@ -1,0 +1,86 @@
+[
+  {
+    "_id": {
+      "$oid": "6ad0000000000000000f1e02"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T00:00:00Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-13T08:46:04.285Z"
+      },
+      "record_status": "A"
+    },
+    "tags": [],
+    "name": "bot:6ac6656b0717bfc9b1625932:local_file_adapter:6ad0000000000000000f1e01",
+    "context": {
+      "reference_id": "6ac6656b0717bfc9b1625932",
+      "type": "bot",
+      "name": "bot:6ac6656b0717bfc9b1625932:local_file_adapter:6ad0000000000000000f1e01"
+    },
+    "listener_type": "local_file",
+    "source_type": "folder",
+    "source_value": "folder",
+    "status": "PAUSED",
+    "config": {
+      "connection_id": "6ad0000000000000000f1e01",
+      "file_param_key": null
+    },
+    "runtime": {},
+    "heartbeat": {},
+    "stats": {
+      "processed": 0
+    },
+    "error": {}
+  },
+  {
+    "_id": {
+      "$oid": "6ad0000000000000000f1e03"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T00:00:00Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-13T08:46:04.285Z"
+      },
+      "record_status": "A"
+    },
+    "tags": [],
+    "name": "agent:6acdd6c63d578a20bff2713a:local_file_adapter:6ad0000000000000000f1e01",
+    "context": {
+      "reference_id": "6acdd6c63d578a20bff2713a",
+      "type": "agent",
+      "name": "agent:6acdd6c63d578a20bff2713a:local_file_adapter:6ad0000000000000000f1e01"
+    },
+    "listener_type": "local_file",
+    "source_type": "folder",
+    "source_value": "folder",
+    "status": "RUNNING",
+    "config": {
+      "connection_id": "6ad0000000000000000f1e01",
+      "file_param_key": null
+    },
+    "runtime": {},
+    "heartbeat": {},
+    "stats": {
+      "processed": 0
+    },
+    "error": {}
+  }
+]

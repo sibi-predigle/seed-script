@@ -1,0 +1,37 @@
+[
+  {
+    "_id": {
+      "$oid": "6a605c3e683499e2a1cb9d0d"
+    },
+    "client_id": "64c48dc0eb5ba14e7588cbe6",
+    "hidden": false,
+    "deleted_status": "N",
+    "status": "active",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "dc453661-db7c-4b53-a257-e4b1b684141d",
+      "create_ts": {
+        "$date": "2026-07-13T11:13:10.152Z"
+      },
+      "update_user_id": "dc453661-db7c-4b53-a257-e4b1b684141d",
+      "update_ts": {
+        "$date": "2026-07-13T11:13:10.168Z"
+      },
+      "record_status": "A"
+    },
+    "name": "PC-GemiBench",
+    "foundation_model": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Gemini",
+      "reference_id": "6a5f4406683499e2a1cb9cde",
+      "path": "engine.framework.models.gemini"
+    },
+    "optimal_version": {
+      "name": "gemini-2.5-flash",
+      "reference_id": "6a60ae74683499e2a1cb9d25"
+    },
+    "framework": "Vertex AI"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "_id": {
+      "$oid": "6a5f4406683499e2a1cb9cde"
+    },
+    "slug": "gemini-vertex-ai",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "dc453661-db7c-4b53-a257-e4b1b684141d",
+      "create_ts": {
+        "$date": "2025-12-15T19:55:15.767Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2025-12-15T19:55:15.768Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "Gemini",
+    "framework": "Vertex AI",
+    "category": "Generative AI",
+    "client_id": "64c48dc0eb5ba14e7588cbe6",
+    "module_name": "engine.framework.models.gemini",
+    "class_name": "GeminiModel"
+  }
+]

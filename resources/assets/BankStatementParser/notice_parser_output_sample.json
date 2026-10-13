@@ -1,0 +1,95 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "bank_name": "Stride Bank, N.A",
+      "notice_date": "11/13/25",
+      "notice_type": "NOTICE OF TRANSFER",
+      "transfer_amount": "1,200.90",
+      "from_account_type": "Christmas Club",
+      "from_account_number": "3000653",
+      "to_account_number": "30000861",
+      "city_state_zip": "BRANSON MO 65100-4400",
+      "account_holder_info": {
+        "primary_name": "DANI M MATSON",
+        "co_names": [
+          "NICHI S MATSON"
+        ]
+      },
+      "address_info": {
+        "street": "300 SCHONGER DR APT 2048",
+        "city": "BRANSON",
+        "state": "MO",
+        "zip": "65100-4400"
+      }
+    },
+    {
+      "bank_name": "Stride Bank, N.A",
+      "notice_date": "11/13/25",
+      "notice_type": "NOTICE OF TRANSFER",
+      "transfer_amount": "1,200.00",
+      "from_account_type": "Christmas Club",
+      "from_account_number": "3000881",
+      "to_account_number": "000770",
+      "city_state_zip": "ENID OK 73000-2300",
+      "account_holder_info": {
+        "primary_name": "Will B BAKERSH",
+        "co_names": []
+      },
+      "address_info": {
+        "street": "900 W POLDAR",
+        "city": "ENID",
+        "state": "OK",
+        "zip": "73000-2300"
+      }
+    },
+    {
+      "bank_name": "Stride Bank, N.A",
+      "notice_date": "11/13/25",
+      "notice_type": "NOTICE OF TRANSFER",
+      "transfer_amount": "1,100.00",
+      "from_account_type": "Christmas Club",
+      "from_account_number": "3000555",
+      "to_account_number": "800700900",
+      "city_state_zip": "ENID OK 73000-2300",
+      "account_holder_info": {
+        "primary_name": "Will B BAKERSH",
+        "co_names": []
+      },
+      "address_info": {
+        "street": "900 W POLDAR",
+        "city": "ENID",
+        "state": "OK",
+        "zip": "73000-2300"
+      }
+    },
+    {
+      "bank_name": "Stride Bank, N.A",
+      "notice_date": "11/13/25",
+      "notice_type": "NOTICE OF TRANSFER",
+      "transfer_amount": "1,200.90",
+      "from_account_type": "Christmas Club",
+      "from_account_number": "3000719",
+      "to_account_number": "30000907",
+      "city_state_zip": "ENID OK 73000-2300",
+      "account_holder_info": {
+        "primary_name": "RICHA M MATSON",
+        "co_names": [
+          "NICHI S MATSON"
+        ]
+      },
+      "address_info": {
+        "street": "3000 RED LANE CIR",
+        "city": "ENID",
+        "state": "OK",
+        "zip": "73000-2300"
+      }
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "total_records": 4,
+    "successful_records": 4,
+    "failed_records": 0
+  }
+}

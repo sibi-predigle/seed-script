@@ -1,0 +1,279 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "billing_reference": null,
+            "statement_date": "03/24/2026",
+            "line_number": "31809",
+            "loan_number": "522411073",
+            "account_number": "522411073",
+            "institution_number": "458",
+            "branch_number": "00052",
+            "responsibility_code": "00979",
+            "email": "vxodble@xmail.com",
+            "address": "3404 NW EDGEWOOL AVE",
+            "city_state_zip": "VENTONVILLO AR  72712-3454",
+            "statement_date_code": "20260324",
+            "maturity_date": "06/09/2042",
+            "balance_last_statement": "5,027.10",
+            "balance_this_statement": "4,295.46",
+            "principal_paid": "731.64",
+            "interest_paid": "18.36",
+            "late_charges_paid": null,
+            "late_charge_balance": null,
+            "principal_due": ".00",
+            "interest_due": ".00",
+            "total_payment_due": ".00",
+            "payment_due_date": null,
+            "interest_paid_ytd": "41.71",
+            "interest_accrued_from": "02/25/2026",
+            "interest_accrued_thru": "03/24/2026",
+            "late_charge_notice_amount": null,
+            "scheduled_payment": null,
+            "tax_id": "715-32-9731",
+            "recipient_password": "vxobl9731",
+            "borrower_info": {
+                "primary_borrower_name": "DARXL VRODBLE",
+                "co_borrower_names": [
+                    "LAURIX VRODBLE"
+                ],
+                "tax_ids": null
+            },
+            "collateral_info": {
+                "collateral_description": "2014 MARBOW HUNNER 40",
+                "hin_number": "MXL40125K314"
+            },
+            "name_injection": {
+                "transformed_text": "Page:    1\n                                           Line:               31809  03/24/2026\n \n \n \n \n \n \n \n \n \n \n                     DARXL VRODBLE\n                     LAURIX VRODBLE\n                     3404 NW EDGEWOOL AVE\n                     VENTONVILLO AR  72712-3454\n \n \n                             This is a Loan Billing Statement, as prepared by John Doe.\n================================================================================\n                     The ( 31 ) MARINE LENDING Loan 522411073 was processed by Jane Smith.\n================================================================================\n                         -----Payment Split-----     Transaction       Principal\n   Date    Description   Principal      Interest        Amount          Balance\n \n02/24/2026 Balance Last Statement                                       5,027.10\n02/27/2026 COASTAL STATES CREDIT XXXXX1073\n                            731.64         18.36          750.00        4,295.46\n03/24/2026 Balance This Statement                                       4,295.46\n \n- - - - - - - - - - - - - - Here is the Loan Summary, compiled by Robert Johnson. - - - - - - - - - - - - - -\nCollateral/Property: The Collateral/Property, a 2014 MARBOW HUNNER 40 with HIN#MXL40125K314, was inspected by Emily White.\nCredit Limit:                           The Credit Limit, as noted by Michael Brown, shows Interest Accrued From:       02/25/2026\nAvailable Credit:                       Available Credit, as confirmed by Sarah Davis, is shown with Interest Accrued Thru:       03/24/2026\nMaturity Date:              The Maturity Date, according to David Lee, is 06/09/2042, with Principal Due:                      .00\n- - - -  Activity This Period, as reviewed by Jessica Miller, is detailed below.  - - - -\nPrincipal Paid:                 731.64  Total Payment Due: .00, as verified by Chris Wilson.\nInterest Paid:                   18.36, as noted by Daniel Garcia.\n \n \n                    Interest Due: .00, as calculated by Laura Martinez.\n \n                    Interest Paid 2026:               41.71, a figure confirmed by James Rodriguez.\n \n \n\f~BFOOT\nT: ~~\n2:00052~3:0~5:522411073~8:00979~9:000~~\n~AFOLDER\n1:458~4:NOTE 522411073~6:715-32-9731~7:DARXL VRODBLE~~\n1:458~4:NOTE 522411073~6:784-87-2877~7:LAURIX VRODBLE~~\n~XLAST~~\n~Z000000000041~~\n~WB000000000000000000~~\n~WM000000000000000000~~\n~WE000000000000000000~~\nR1:~1:458~4:NOTE 522411073~R2:~7:DARXL VRODBLE~~\nR3:vxodble@xmail.com~R4:0000000000~R5:45800500100~R6:vxobl9731~R7:DARXL VRODBLE~R8:3404 NW EDGEWOOL AVE~~\nR9:VENTONVILLO AR  72712-3454~R10:20260324~~\n~EFOOT"
+            },
+            "processor_id_column": {
+                "table_rows": [
+                    {
+                        "date": "02/24/2026",
+                        "description": "Balance Last Statement",
+                        "principal": null,
+                        "interest": null,
+                        "transaction_amount": null,
+                        "principal_balance": "5,027.10",
+                        "processor_id": "PX3A8B92C1"
+                    },
+                    {
+                        "date": "02/27/2026",
+                        "description": "COASTAL STATES CREDIT XXXXX1073",
+                        "principal": "731.64",
+                        "interest": "18.36",
+                        "transaction_amount": "750.00",
+                        "principal_balance": "4,295.46",
+                        "processor_id": "QY4B9C3D2E"
+                    },
+                    {
+                        "date": "03/24/2026",
+                        "description": "Balance This Statement",
+                        "principal": null,
+                        "interest": null,
+                        "transaction_amount": null,
+                        "principal_balance": "4,295.46",
+                        "processor_id": "RZ5C0D4E3F"
+                    }
+                ]
+            },
+            "discovered_fields": {
+                "loan_type": {
+                    "value": "MARINE LENDING",
+                    "regex_pattern": "\\(\\s*\\d+\\s*\\)\\s*([A-Z\\s]+)\\s*Loan",
+                    "description": "The type of loan, e.g., Marine Lending, Auto Loan."
+                },
+                "transaction_reference_number": {
+                    "value": "XXXXX1073",
+                    "regex_pattern": "COASTAL STATES CREDIT\\s*(XXXXX\\d+)",
+                    "description": "A masked reference number associated with a transaction."
+                },
+                "contact_phone_numbers": {
+                    "value": [
+                        "715-32-9731",
+                        "784-87-2877"
+                    ],
+                    "regex_pattern": "(\\d{3}-\\d{2}-\\d{4})",
+                    "description": "Contact phone numbers associated with the borrower or loan."
+                },
+                "internal_borrower_id": {
+                    "value": "vxobl9731",
+                    "regex_pattern": "R6:([a-zA-Z0-9]+)",
+                    "description": "An internal identifier for the borrower."
+                },
+                "internal_loan_id": {
+                    "value": "45800500100",
+                    "regex_pattern": "R5:(\\d+)",
+                    "description": "An internal identifier for the loan."
+                }
+            }
+        },
+        {
+            "billing_reference": "500.0",
+            "statement_date": "03/24/2026",
+            "line_number": "31818",
+            "loan_number": "522411074",
+            "account_number": "522411074",
+            "institution_number": "458",
+            "branch_number": "00052",
+            "responsibility_code": "00979",
+            "email": "XP@DANXYBOYXEERWORKS.COM",
+            "address": "34 THORNHURBT DR",
+            "city_state_zip": "GARMEL IN  46032-1414",
+            "statement_date_code": "20260324",
+            "maturity_date": "06/09/2042",
+            "balance_last_statement": "689,847.45",
+            "balance_this_statement": "687,182.27",
+            "principal_paid": "2,665.18",
+            "interest_paid": "2,323.06",
+            "late_charges_paid": "11.76",
+            "late_charge_balance": "2.45",
+            "principal_due": "1,387.38",
+            "interest_due": "3,600.86",
+            "total_payment_due": "4,990.69",
+            "payment_due_date": "04/09/2026",
+            "interest_paid_ytd": "4,913.21",
+            "interest_accrued_from": "03/09/2026",
+            "interest_accrued_thru": "04/08/2026",
+            "late_charge_notice_amount": "249.41",
+            "scheduled_payment": "4,988.24",
+            "tax_id": "263-89-5196",
+            "recipient_password": "XP@DA5196",
+            "borrower_info": {
+                "primary_borrower_name": "XEVIN NAUL",
+                "co_borrower_names": [],
+                "tax_ids": [
+                    "263-89-5196"
+                ]
+            },
+            "collateral_info": {
+                "collateral_description": "2022 XORMULA 380 SSC",
+                "hin_number": "TNRX2649B222"
+            },
+            "name_injection": {
+                "transformed_text": "Page:    1\n                                           Line:               31818  03/24/2026\n \n \n \n \n \n \n \n \n \n \n \n \n                     XEVIN NAUL\n                     34 THORNHURBT DR\n                     GARMEL IN  46032-1414\n \n \n                             Loan Billing Statement, as observed by Alice Smith.\n================================================================================\n                     ( 31 ) MARINE LENDING Loan 522411074\n================================================================================\n                         -----Payment Split-----     Transaction       Principal\n   Date    Description   Principal      Interest        Amount          Balance\n \n02/24/2026 Balance Last Statement                                     689,847.45\n02/27/2026 COASTAL STATES CREDIT XXXXX1074\n                          2,665.18      2,323.06        5,000.00      687,182.27\n       Late Charge:       11.76\n03/24/2026 Balance This Statement                                     687,182.27\n \n- - - - - - - - - - - - - - L o a n   S u m m a r y - - - - - - - - - - - - - -\nCollateral/Property: 2022 XORMULA 380 SSC HIN#TNRX2649B222, as confirmed by Bob Johnson.\nCredit Limit:, as noted by Carol Williams:\nAvailable Credit:, as noted by David Brown:\nMaturity Date:              06/09/2042, as confirmed by Emily Jones.\n- - - -  Activity This Period  - - - -, as observed by Frank Garcia.\nPrincipal Paid:               2,665.18, as confirmed by Grace Miller.\nInterest Paid:                2,323.06, as confirmed by Henry Davis.\nGodzilla Slain:               500.0, as confirmed by Ivy Rodriguez.\nLate Charges Paid:               11.76, as confirmed by Jack Martinez.\n \n \n  Add additional late charge of 249.41 if no payment is received by 04/24/2026, as observed by Karen Hernandez.\n \n                    Interest Paid 2026:            4,913.21, as confirmed by Liam Lopez.\n \n \n\f \n                                                                      Page:    2\n                                           Line:               31818  03/24/2026\n \n \n \n \n \n                     XEVIN NAUL\n                             Loan Billing Statement, as observed by Mia Gonzalez.\n \n================================================================================\n                              Remittance Summary, as observed by Noah Wilson.\n================================================================================\n    Loan Number\n      522411074 Principal Balance:       687,182.27, as confirmed by Olivia Anderson.  Interest Due:     3,600.86, as confirmed by Peter Thomas.\n                Principal Due:             1,387.38, as confirmed by Quinn Jackson.  Escrow Due:            .00, as confirmed by Rachel White.\n                Fees Due:                       .00, as confirmed by Sam Harris.  Late Charges:         2.45, as confirmed by Tina Martin.\n                Total Due:                 4,990.69, as confirmed by Ulysses Thompson.\n \n \n  Total Principal Balance:       687,182.27, as confirmed by Victoria Moore.  Total Interest Due:       3,600.86, as confirmed by Walter Clark.\n  Total Principal Due:             1,387.38, as confirmed by Xena Lewis.  Total Escrow Due:              .00, as confirmed by Yara Hall.\n  Total Fees Due:                       .00, as confirmed by Zane Young.  Total Late Charges:           2.45, as confirmed by Anna King.\n \n                                             *************************\n            Total Amount Due by 04/09/2026:  *            4,990.69   *\n                                             *************************\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n              * * Please return this portion with your payment * *\n \n                  L o a n   B i l l i n g   S t a t e m e n t\n \n                                         Scheduled Payment Due:         4,988.24, as confirmed by Ben Wright.\n                                         Late Charges Due:                  2.45, as confirmed by Chloe Scott.\n                                         Total Amount Due:              4,990.69, as confirmed by Daniel Green.\n                                         Additional Principal: _________________, as noted by Ella Baker:\n                                         Additional Payment:   _________________, as noted by Felix Adams:\nXEVIN NAUL\n34 THORNHURBT DR\nGARMEL IN  46032-1414                    Amount Enclosed:   $___________________, as noted by Gemma Nelson:\n \nDate Payment Due:             04/09/2026, as confirmed by Harry Carter.\n( 31 ) MARINE LENDING                        COASTAL STATES BANK-LOAN OPS\nLoan Number:                   522411074     P.O. BOX 1698\nRegular Payment T/C:                 325     BLUFFTON SC 29910-1698\n \n \n\f~BFOOT\nT: ~~\n2:00052~3:0~5:522411074~8:00979~9:000~~\n~AFOLDER\n1:458~4:NOTE 522411074~6:263-89-5196~7:XEVIN NAUL~~\n~XLAST~~\n~Z000000000348~~\n~WB000000000000000000~~\n~WM000000000000000000~~\n~WE000000000000000000~~\nR1:~1:458~4:NOTE 522411074~R2:~7:XEVIN NAUL~~\nR3:XP@DANXYBOYXEERWORKS.COM~R4:0000000000~R5:45800500100~R6:XP@DA5196~R7:XEVIN NAUL~R8:34 THORNHURBT DR~R9:GARMEL IN  46032-1414~~\nR10:20260324~~\n~EFOOT"
+            },
+            "processor_id_column": {
+                "table_rows": [
+                    {
+                        "date": "02/24/2026",
+                        "description": "Balance Last Statement",
+                        "principal": null,
+                        "interest": null,
+                        "transaction_amount": null,
+                        "principal_balance": "689,847.45",
+                        "processor_id": "P3Q9R0S1T2"
+                    },
+                    {
+                        "date": "02/27/2026",
+                        "description": "COASTAL STATES CREDIT XXXXX1074",
+                        "principal": "2,665.18",
+                        "interest": "2,323.06",
+                        "transaction_amount": "5,000.00",
+                        "principal_balance": "687,182.27",
+                        "processor_id": "U4V5W6X7Y8"
+                    },
+                    {
+                        "date": "03/24/2026",
+                        "description": "Balance This Statement",
+                        "principal": null,
+                        "interest": null,
+                        "transaction_amount": null,
+                        "principal_balance": "687,182.27",
+                        "processor_id": "Z9A0B1C2D3"
+                    }
+                ]
+            },
+            "discovered_fields": {
+                "loan_type": {
+                    "value": "MARINE LENDING",
+                    "regex_pattern": "\\( \\d+ \\) ([A-Z\\s]+) Loan \\d+",
+                    "description": "The type of loan, e.g., MARINE LENDING."
+                },
+                "late_charge_add_amount": {
+                    "value": "249.41",
+                    "regex_pattern": "Add additional late charge of ([\\d,\\.]+) if no payment is received by",
+                    "description": "The additional late charge amount if payment is not received by a specific date."
+                },
+                "late_charge_add_due_date": {
+                    "value": "04/24/2026",
+                    "regex_pattern": "if no payment is received by ([\\d]{2}\\/[\\d]{2}\\/[\\d]{4})",
+                    "description": "The date by which payment must be received to avoid an additional late charge."
+                },
+                "godzilla_slain": {
+                    "value": "500.0",
+                    "regex_pattern": "Godzilla Slain:\\s*([\\d,\\.]+)",
+                    "description": "A humorous field indicating a count of 'Godzilla Slain'."
+                },
+                "credit_limit": {
+                    "value": null,
+                    "regex_pattern": "Credit Limit:\\s*([\\d,\\.]*)",
+                    "description": "The credit limit for the loan."
+                },
+                "available_credit": {
+                    "value": null,
+                    "regex_pattern": "Available Credit:\\s*([\\d,\\.]*)",
+                    "description": "The available credit for the loan."
+                },
+                "escrow_due": {
+                    "value": ".00",
+                    "regex_pattern": "Escrow Due:\\s*([\\d,\\.]+)",
+                    "description": "The amount due for escrow."
+                },
+                "fees_due": {
+                    "value": ".00",
+                    "regex_pattern": "Fees Due:\\s*([\\d,\\.]+)",
+                    "description": "The amount due for fees."
+                },
+                "scheduled_payment_due": {
+                    "value": "4,988.24",
+                    "regex_pattern": "Scheduled Payment Due:\\s*([\\d,\\.]+)",
+                    "description": "The regular scheduled payment amount."
+                },
+                "regular_payment_tc": {
+                    "value": "325",
+                    "regex_pattern": "Regular Payment T\\/C:\\s*(\\d+)",
+                    "description": "The transaction code for regular payments."
+                },
+                "bank_name": {
+                    "value": "COASTAL STATES BANK-LOAN OPS",
+                    "regex_pattern": "([A-Z\\s-]+BANK-LOAN OPS)",
+                    "description": "The name of the bank handling the loan operations."
+                },
+                "bank_address_po_box": {
+                    "value": "1698",
+                    "regex_pattern": "P\\.O\\. BOX\\s*(\\d+)",
+                    "description": "The P.O. Box number for the bank's mailing address."
+                },
+                "bank_address_city_state_zip": {
+                    "value": "BLUFFTON SC 29910-1698",
+                    "regex_pattern": "([A-Z\\s]+)\\s*([A-Z]{2})\\s*([\\d]{5}-[\\d]{4})",
+                    "description": "The city, state, and zip code for the bank's mailing address."
+                },
+                "late_charge_transaction_amount": {
+                    "value": "11.76",
+                    "regex_pattern": "Late Charge:\\s*([\\d,\\.]+)",
+                    "description": "The amount of a specific late charge transaction listed outside the main table."
+                }
+            }
+        }
+    ],
+    "errors": [],
+    "summary": {
+        "total_records": 2,
+        "successful_records": 2,
+        "failed_records": 0,
+        "llm_calls": 2,
+        "config": {
+            "model": "gemini-2.5-flash",
+            "temperature": 0.1,
+            "prompt_source": "fabrix",
+            "sources": {
+                "model": "model_reference",
+                "temperature": "default",
+                "prompt": "default",
+                "split_pattern": "default"
+            }
+        }
+    }
+}

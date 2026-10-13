@@ -1,0 +1,782 @@
+[
+  {
+    "_id": {
+      "$oid": "6a60e036b5e1889f1a06f8a2"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": 1791797479161
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1791797479161
+      },
+      "record_status": "A"
+    },
+    "name": "hc3_conn_source",
+    "image_url": "./assets/icons/multiple-files.svg",
+    "tags": [],
+    "type": {
+      "name": "DNA Multi Record Fixed Width Metadata",
+      "type": "dna_multi_type_position_based_xml_metadata"
+    },
+    "category": "source",
+    "connection_config": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "category": "",
+      "status": "",
+      "parser_id": "",
+      "config_type": "",
+      "config_value": "resources/assets/FiservDNA_sample/FiservDNA_sample_data.txt",
+      "options": null,
+      "config_options": null,
+      "auth": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "auth_type": "NO_AUTH",
+        "body_type": "json"
+      }
+    },
+    "plugins": [],
+    "connection_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "type": {
+        "name": "Text File",
+        "type": "text"
+      },
+      "category": "sheets",
+      "status": "",
+      "adapter": {
+        "slug": "032aa56d-ce88-45db-8977-b6694dedf8b7",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "DNA Multi Type Position Based XML Metadata Adapter",
+        "tags": [],
+        "type": {
+          "type": "dna_multi_type_position_based_xml_metadata_adapter"
+        },
+        "category": "source",
+        "status": "active",
+        "module_name": "engine.adapters.xml_metadata.dnamultitypepositionbased",
+        "class_name": "DnaMultiTypePositionBasedAdapter",
+        "config_type": "xml",
+        "config_value": "resources/assets/FiservDNA_sample/FiservDNA_mapping.xml"
+      },
+      "parser": {
+        "slug": "5e76793f-1233-4839-bda7-0251c9583e41",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "DNA Multi Type Position Based Parser",
+        "tags": [],
+        "type": {
+          "type": "dna_multi_type_position_based_parser"
+        },
+        "category": "source",
+        "status": "active",
+        "module_name": "engine.framework.parsers.dnamultitypepositionbased",
+        "class_name": "DnaMultiTypePositionBasedParser"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69ccadf10ab6f287f499f4fb"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": 1791797479162
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1791797479162
+      },
+      "record_status": "A"
+    },
+    "name": "test msk dst",
+    "image_url": "./assets/icons/multiple-files.svg",
+    "tags": [],
+    "type": {
+      "name": "Text File",
+      "type": "text"
+    },
+    "category": "destination",
+    "connection_config": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "category": "",
+      "status": "",
+      "parser_id": "",
+      "config_type": "text",
+      "config_value": "output.txt",
+      "options": null,
+      "config_options": null,
+      "auth": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "auth_type": "NO_AUTH",
+        "body_type": "json"
+      }
+    },
+    "plugins": [],
+    "connection_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "description": "A lightweight format for storing and exchanging plain text data, often used in pipelines, messaging, and event-driven applications.",
+      "image_url": "./assets/icons/multiple-files.svg",
+      "tags": [],
+      "type": {
+        "name": "Text File",
+        "type": "text"
+      },
+      "category": "sheets",
+      "status": "",
+      "adapter": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "category": "",
+        "status": "",
+        "module_name": "",
+        "class_name": ""
+      },
+      "parser": {
+        "identifier": "6a54e050-c343-4349-84aa-1a67f80f4711",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "category": "",
+        "status": "",
+        "module_name": "",
+        "class_name": ""
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6a96c91f18f1ce947b857ec4"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": 1791797479162
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1791797479162
+      },
+      "record_status": "A"
+    },
+    "name": "test-connection-v22",
+    "image_url": "./assets/icons/multiple-files.svg",
+    "tags": [],
+    "type": {
+      "name": "url",
+      "type": "url"
+    },
+    "category": "source",
+    "connection_config": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "audit_data": {
+        "create_user_id": "0",
+        "create_ts": {
+          "$date": 1758019526352
+        },
+        "update_user_id": "0",
+        "update_ts": {
+          "$date": 1774682900450
+        },
+        "record_status": "A"
+      },
+      "tags": [],
+      "category": "",
+      "status": "",
+      "parser_id": "",
+      "config_type": "url",
+      "config_value": "https://api.com",
+      "options": null,
+      "config_options": null,
+      "auth": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "auth_type": "NO_AUTH",
+        "body_type": "json"
+      },
+      "headers": [
+        {
+          "key": "Authorization",
+          "value": "Bearer {{ $. }}"
+        }
+      ]
+    },
+    "plugins": [],
+    "connection_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "description": "A web address that points to online resources or data sources, enabling integration of external content or APIs.",
+      "image_url": "./assets/images/url.png",
+      "tags": [],
+      "type": {
+        "name": "url",
+        "type": "url"
+      },
+      "category": "link",
+      "status": "",
+      "adapter": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "category": "",
+        "status": "",
+        "module_name": "",
+        "class_name": ""
+      },
+      "parser": {
+        "identifier": "34ed7780-d54b-414a-97db-388308fbd1e7",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "category": "",
+        "status": "",
+        "module_name": "",
+        "class_name": ""
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca8e7aba30971d037e711"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": 1791797479162
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1791797479162
+      },
+      "record_status": "A"
+    },
+    "name": null,
+    "image_url": "./assets/icons/multiple-files.svg",
+    "tags": [],
+    "type": null,
+    "category": null,
+    "connection_config": {
+      "config_type": "image",
+      "config_value": "masked_output.png"
+    },
+    "plugins": [],
+    "connection_type": null
+  },
+  {
+    "_id": {
+      "$oid": "6acca8e7aba30971d037e712"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": 1791797479162
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1791797479162
+      },
+      "record_status": "A"
+    },
+    "name": null,
+    "image_url": "./assets/icons/multiple-files.svg",
+    "tags": [],
+    "type": null,
+    "category": null,
+    "connection_config": {
+      "config_type": "json",
+      "config_value": "redaction_report.json"
+    },
+    "plugins": [],
+    "connection_type": null
+  },
+  {
+    "_id": {
+      "$oid": "6acca8e7aba30971d037e713"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": 1791797479163
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1791797479163
+      },
+      "record_status": "A"
+    },
+    "name": "JSON Destination",
+    "image_url": "./assets/icons/json.svg",
+    "tags": [],
+    "type": {
+      "name": "Json",
+      "type": "json"
+    },
+    "category": "destination",
+    "connection_config": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "category": "",
+      "status": "",
+      "parser_id": "",
+      "config_type": "json",
+      "config_value": "output.json",
+      "options": null,
+      "config_options": null,
+      "auth": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "auth_type": "NO_AUTH",
+        "body_type": "json"
+      }
+    },
+    "plugins": [],
+    "connection_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "category": "",
+      "status": "",
+      "adapter": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "category": "",
+        "status": "",
+        "module_name": "",
+        "class_name": ""
+      },
+      "parser": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "category": "",
+        "status": "",
+        "module_name": "",
+        "class_name": ""
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca8e7aba30971d037e714"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.163Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T19:36:33.479Z"
+      },
+      "record_status": "A"
+    },
+    "name": "bank_statement_parser_output_source",
+    "image_url": "./assets/icons/json.svg",
+    "tags": [],
+    "type": {
+      "name": "Json",
+      "type": "json"
+    },
+    "category": "source",
+    "connection_config": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "category": "",
+      "status": "",
+      "parser_id": "",
+      "config_type": "json",
+      "config_value": "resources/assets/BankStatementParser/notice_parser_output_sample.json",
+      "options": null,
+      "config_options": null,
+      "auth": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "auth_type": "NO_AUTH",
+        "body_type": "json"
+      }
+    },
+    "plugins": [],
+    "connection_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "category": "sheets",
+      "status": "",
+      "adapter": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "category": "",
+        "status": "",
+        "module_name": "",
+        "class_name": ""
+      },
+      "parser": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "category": "",
+        "status": "",
+        "module_name": "",
+        "class_name": ""
+      },
+      "type": {
+        "name": "Json",
+        "type": "json"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acc9594d270343c5d96569d"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": 1791797479164
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1791797479164
+      },
+      "record_status": "A"
+    },
+    "name": "Hektor - Notice of Transfer Inbox (Local Files)",
+    "image_url": "./assets/icons/multiple-files.svg",
+    "tags": [],
+    "type": {
+      "name": "Local File Subscriber",
+      "type": "local_file_adapter"
+    },
+    "category": "source",
+    "connection_config": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "category": "",
+      "status": "",
+      "parser_id": "",
+      "config_type": "",
+      "config_value": "C:\\Predigle\\hektor_inbox\\notice_of_transfer",
+      "options": null,
+      "config_options": null,
+      "auth": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "auth_type": "NO_AUTH",
+        "body_type": "json"
+      }
+    },
+    "plugins": [],
+    "connection_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "type": {
+        "name": "Local File Adapter",
+        "type": "local_file_adpater"
+      },
+      "category": "sheets",
+      "status": "",
+      "adapter": {
+        "identifier": "90cb21c9-afac-4b67-b922-4bf3c14f8cf2",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Local File Adapter",
+        "tags": [],
+        "type": {
+          "name": "Local File Adapter",
+          "type": "local_file_adapter"
+        },
+        "category": "source",
+        "status": "active",
+        "config_type": "local_file",
+        "module_name": "engine.adapters.file_adapter.file_adapter",
+        "class_name": "FileHandler"
+      },
+      "parser": {
+        "identifier": "83f59571-8184-470a-a0a4-4f60df5a558a",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "File Parser",
+        "tags": [],
+        "type": {
+          "name": "File Parser",
+          "type": "file_parser"
+        },
+        "category": "source/destination",
+        "status": "active",
+        "module_name": "engine.framework.parsers.file",
+        "class_name": "FileParser"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca8e7aba30971d037e716"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": 1791797479163
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1791797479163
+      },
+      "record_status": "A"
+    },
+    "name": "Notice of Transfer Masked JSON output",
+    "image_url": "./assets/icons/json.svg",
+    "tags": [],
+    "type": {
+      "name": "Json",
+      "type": "json"
+    },
+    "category": "destination",
+    "connection_config": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "category": "",
+      "status": "",
+      "parser_id": "",
+      "config_type": "json",
+      "config_value": "output.json",
+      "options": null,
+      "config_options": null,
+      "auth": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "auth_type": "NO_AUTH",
+        "body_type": "json"
+      }
+    },
+    "plugins": [],
+    "connection_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "category": "",
+      "status": "",
+      "adapter": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "category": "",
+        "status": "",
+        "module_name": "",
+        "class_name": ""
+      },
+      "parser": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "category": "",
+        "status": "",
+        "module_name": "",
+        "class_name": ""
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ad0000000000000000f1e01"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": 1791763200000
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1791763200000
+      },
+      "record_status": "A"
+    },
+    "name": "Hektor - Local File Sub (Bank Statements)",
+    "image_url": "./assets/icons/multiple-files.svg",
+    "tags": [],
+    "type": {
+      "name": "Local File Subscriber",
+      "type": "local_file_adapter"
+    },
+    "category": "source",
+    "connection_config": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "category": "",
+      "status": "",
+      "parser_id": "",
+      "config_type": "",
+      "config_value": "/opt/input",
+      "options": null,
+      "config_options": null,
+      "auth": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "auth_type": "NO_AUTH",
+        "body_type": "json"
+      }
+    },
+    "plugins": [],
+    "connection_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "type": {
+        "name": "Local File Adapter",
+        "type": "local_file_adpater"
+      },
+      "category": "sheets",
+      "status": "",
+      "adapter": {
+        "identifier": "90cb21c9-afac-4b67-b922-4bf3c14f8cf2",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "Local File Adapter",
+        "type": {
+          "name": "Local File Adapter",
+          "type": "local_file_adapter"
+        },
+        "category": "source",
+        "status": "active",
+        "module_name": "engine.adapters.file_adapter.file_adapter",
+        "class_name": "FileHandler"
+      },
+      "parser": {
+        "identifier": "83f59571-8184-470a-a0a4-4f60df5a558a",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "File Parser",
+        "type": {
+          "name": "File Parser",
+          "type": "file_parser"
+        },
+        "category": "source/destination",
+        "status": "active",
+        "module_name": "engine.framework.parsers.file",
+        "class_name": "FileParser"
+      }
+    }
+  }
+]

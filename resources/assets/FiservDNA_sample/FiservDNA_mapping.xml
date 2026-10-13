@@ -1,0 +1,98 @@
+<FILEDEF>
+  <RECORDKEY start="1" length="4"/>
+  <RECORDDEF>
+    <RECORD type="0000">
+      <FIELD name="Record ID" length="4"/>
+      <FIELD name="Filler" length="17"/>
+      <FIELD name="Statement Date" length="10"/>
+      <FIELD name="Message Text" length="100"/>
+      <FIELD name="Routing and Transit" length="9" masked="yes"/>
+      <FIELD name="Financial Institution Name" length="40" masked="yes"/>
+      <FIELD name="Creating Program Name" length="20"/>
+      <FIELD name="Program Version" length="10"/>
+      <FIELD name="QueNbr" length="10"/>
+      <FIELD name="ApplNbr" length="10"/>
+      <FIELD name="QueSubNbr" length="10"/>
+      <FIELD name="Institution Phone Number" length="15" masked="yes"/>
+      <FIELD name="Filler" length="30"/>
+    </RECORD>
+    <RECORD type="0001">
+      <FIELD name="Record ID" length="4"/>
+      <FIELD name="Primary Account Number" length="17" masked="yes"/>
+      <FIELD name="Member Number" length="14" masked="yes"/>
+      <FIELD name="Tax Identification Number" length="9" masked="yes"/>
+      <FIELD name="Branch Number" length="12"/>
+      <FIELD name="Branch Name" length="40" masked="yes"/>
+      <FIELD name="Routing &amp; Transit Number" length="9" masked="yes"/>
+      <FIELD name="Statement Type" length="1"/>
+      <FIELD name="Account Cycle Code" length="4"/>
+      <FIELD name="Statement Delivery Code" length="4"/>
+      <FIELD name="Tax Reported Person Number" length="12"/>
+      <FIELD name="Tax Reported Org Number" length="12"/>
+      <FIELD name="Sequence Number" length="10"/>
+      <FIELD name="OwnCd" length="4"/>
+      <FIELD name="MailTypCd" length="4"/>
+      <FIELD name="MailAddrUseCd" length="4"/>
+      <FIELD name="AddrFormatCd" length="4"/>
+      <FIELD name="Branch Phone Number" length="15" masked="yes"/>
+      <FIELD name="Filler" length="31"/>
+    </RECORD>
+    <RECORD type="1000">
+      <FIELD name="Record ID" length="4"/>
+      <FIELD name="Primary Account Number" length="17" masked="yes"/>
+      <FIELD name="Name/Address Information" length="40" masked="yes"/>
+      <FIELD name="Name/Address Type Indicator" length="1"/>
+      <FIELD name="User Field Value" length="60"/>
+      <FIELD name="Filler" length="40"/>
+    </RECORD>
+    <RECORD type="1005">
+      <FIELD name="Record ID" length="4"/>
+      <FIELD name="Primary Account Number" length="17" masked="yes"/>
+      <FIELD name="ZIP Code" length="9" masked="yes"/>
+      <FIELD name="Country Code" length="4" masked="yes"/>
+      <FIELD name="Filler" length="66"/>
+    </RECORD>
+    <RECORD type="1008">
+      <FIELD name="Record ID" length="4"/>
+      <FIELD name="Primary Account Number" length="17" masked="yes"/>
+      <FIELD name="Address Use Code" length="4"/>
+      <FIELD name="Address Information" length="40" masked="yes"/>
+      <FIELD name="Filler" length="100"/>
+    </RECORD>
+    <RECORD type="1500">
+      <FIELD name="Record ID" length="4"/>
+      <FIELD name="Primary Account Number" length="17" masked="yes"/>
+      <FIELD name="Account Number" length="17" masked="yes"/>
+      <FIELD name="Major Code" length="4"/>
+      <FIELD name="Minor Code" length="4"/>
+      <FIELD name="Minor Product Description" length="30"/>
+      <FIELD name="Amount" length="13"/>
+      <FIELD name="Major Product Description" length="30"/>
+      <FIELD name="Minor Customer Description" length="30"/>
+      <FIELD name="Account Description" length="40"/>
+      <FIELD name="Filler" length="100"/>
+    </RECORD>
+    <RECORD type="2500">
+      <FIELD name="Record ID" length="4"/>
+      <FIELD name="Primary Account Number" length="17" masked="yes"/>
+      <FIELD name="Account Number" length="17" masked="yes"/>
+      <FIELD name="Post Date" length="10"/>
+      <FIELD name="Effective Date" length="10"/>
+      <FIELD name="Credit/Debit Indicator" length="1"/>
+      <FIELD name="Amount" length="11"/>
+      <FIELD name="Transaction Code" length="4"/>
+      <FIELD name="Status Code" length="4"/>
+      <FIELD name="Transaction Description" length="172"/>
+      <FIELD name="Trace Number" length="20"/>
+      <FIELD name="Account Balance" length="13"/>
+      <FIELD name="Filler" length="217"/>
+    </RECORD>
+    <RECORD type="8900">
+      <FIELD name="Record ID" length="4"/>
+      <FIELD name="Primary Account Number" length="17" masked="yes"/>
+      <FIELD name="Nines Filler" length="17"/>
+      <FIELD name="Statement Record Count" length="9"/>
+      <FIELD name="Filler" length="100"/>
+    </RECORD>
+  </RECORDDEF>
+</FILEDEF>

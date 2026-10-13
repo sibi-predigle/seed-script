@@ -1,0 +1,147 @@
+[
+  {
+    "_id": {
+      "$oid": "6ac659f96a96f8432eca10d6"
+    },
+    "identifier": "hc3-fiserv-dna-masking",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "hc3-fiserv-dna-masking",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:57.754Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T15:05:42.448Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "HC3 Fiserv DNA Masking",
+    "description": "HC3 client: rule-engine migration of source fabrix 'Fiserv DNA Masking Fabrix' (6a60c6e9b5e1889f1a06f895) \u2014 masking.scramble rule_blocks, one deterministic section, per docs/migration/hc3-masking-rule-engine-processor.md.",
+    "tags": [],
+    "fabrix_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "fabrix_type_ref": "rule-builder-fabrix",
+      "type": "base",
+      "level": 0
+    },
+    "configs": {
+      "hidden": false,
+      "deleted_status": "N"
+    },
+    "data_source": {
+      "name": "HC3 Fiserv DNA Masking Fields",
+      "reference_id": "6ac65fc56a96f8432eca10f1"
+    },
+    "slit": {
+      "type": "single",
+      "mode": "deterministic"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a348c39023e81a5490a9"
+    },
+    "identifier": "notice-of-transfer-letter-masking",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "notice-of-transfer-letter-masking",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-08T14:06:00.476Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-08T14:06:00.476Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "Notice of Transfer Letter Masking",
+    "description": "Hektor client: masks PII in free-text 'Notice of Transfer' letters via the new RegexBlockAdapter/RegexBlockParser pair (regex-block-extracted fields, not fixed-width) + masking.scramble rule-engine actions \u2014 one deterministic section, one rule per masked field.",
+    "tags": [],
+    "fabrix_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "fabrix_type_ref": "rule-builder-fabrix",
+      "type": "base",
+      "level": 0
+    },
+    "configs": {},
+    "data_source": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Notice of Transfer Letter Fields",
+      "reference_id": "6ac7a348c39023e81a5490a7"
+    },
+    "slit": {
+      "type": "single",
+      "mode": "deterministic"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca142546eee5cf25270f6"
+    },
+    "identifier": "hektor-bank-statement-extraction",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "hektor-bank-statement-extraction",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T08:58:42.694Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "Hektor Bank Statement Extraction",
+    "description": "Hektor client: Notice of Transfer letters. One deterministic section (regex transform_attribute: bank, date, amount, from/to accounts, city/state/zip) and one non-deterministic section (LLM prompt: account holder names, address). Replaces the loan-billing-statement fields.",
+    "tags": [],
+    "fabrix_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "fabrix_type_ref": "rule-builder-fabrix",
+      "type": "base",
+      "level": 0
+    },
+    "configs": {
+      "prompt": {
+        "slug": "frag-hektor-bank-statement-extraction-system-prompt",
+        "name": "Hektor Bank Statement Extraction - system prompt",
+        "reference_id": "6acca142546eee5cf25270fc",
+        "version": {
+          "name": "version_0.1",
+          "reference_id": "6acca142546eee5cf25270fd"
+        }
+      }
+    },
+    "data_source": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "DS - Hektor Bank Statement Extraction",
+      "reference_id": "6acca140546eee5cf25270f4"
+    },
+    "slit": {
+      "type": "double"
+    }
+  }
+]

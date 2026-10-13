@@ -1,0 +1,889 @@
+[
+  {
+    "_id": {
+      "$oid": "6a60e094d3b42957dd173880"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "masking-bot-hc3-3271bf1d8d7146058b059d1711ff6abc",
+    "hidden": false,
+    "deleted_status": "N",
+    "status": "Active",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "78afbdef-62c4-4bf4-902b-97198a949173",
+      "create_ts": {
+        "$date": 1784733844829
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1784733844830
+      },
+      "record_status": "A"
+    },
+    "tags": [],
+    "metadata": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Masking bot hc3",
+      "tags": [],
+      "version": "1.0.0",
+      "status": "Idle",
+      "type": {
+        "name": "unknown",
+        "type": "databot"
+      }
+    },
+    "configuration": {
+      "slug": "e6310ad3-db84-49c6-9f87-1824fca60685",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Masking processor hc3",
+      "tags": [],
+      "metadata": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Masking processor hc3",
+        "tags": [],
+        "version": "1.0.0",
+        "status": "active"
+      },
+      "sources": [
+        {
+          "client_id": "64c48dc0eb5ba14e7588cbe6",
+          "slug": "f262a499-9863-4661-bb7d-16d92d2dfbc7",
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "audit_data": {
+            "create_user_id": "78afbdef-62c4-4bf4-902b-97198a949173",
+            "create_ts": {
+              "$date": 1784726814150
+            },
+            "update_user_id": "0",
+            "update_ts": {
+              "$date": 1784726823783
+            },
+            "record_status": "A"
+          },
+          "name": "hc3_conn_source",
+          "description": "\"\"",
+          "tags": [],
+          "type": {
+            "name": "DNA Multi Record Fixed Width Metadata",
+            "type": "dna_multi_type_position_based_xml_metadata"
+          },
+          "status": "",
+          "connection_ref": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "hc3_conn_source",
+            "reference_id": "6a60e036b5e1889f1a06f8a2"
+          },
+          "connection_config": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "category": "",
+            "status": "",
+            "parser_id": "",
+            "config_type": "",
+            "config_value": "resources/assets/FiservDNA_sample/FiservDNA_sample_data.txt",
+            "options": null,
+            "config_options": null,
+            "auth": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "auth_type": "NO_AUTH",
+              "body_type": "json"
+            }
+          },
+          "connection_type": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "type": {
+              "name": "Text File",
+              "type": "text"
+            },
+            "category": "sheets",
+            "status": "",
+            "adapter": {
+              "slug": "032aa56d-ce88-45db-8977-b6694dedf8b7",
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "name": "DNA Multi Type Position Based XML Metadata Adapter",
+              "tags": [],
+              "type": {
+                "type": "dna_multi_type_position_based_xml_metadata_adapter"
+              },
+              "category": "source",
+              "status": "active",
+              "module_name": "engine.adapters.xml_metadata.dnamultitypepositionbased",
+              "class_name": "DnaMultiTypePositionBasedAdapter",
+              "config_type": "xml",
+              "config_value": "resources/assets/FiservDNA_sample/FiservDNA_mapping.xml"
+            },
+            "parser": {
+              "slug": "5e76793f-1233-4839-bda7-0251c9583e41",
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "name": "DNA Multi Type Position Based Parser",
+              "tags": [],
+              "type": {
+                "type": "dna_multi_type_position_based_parser"
+              },
+              "category": "source",
+              "status": "active",
+              "module_name": "engine.framework.parsers.dnamultitypepositionbased",
+              "class_name": "DnaMultiTypePositionBasedParser"
+            }
+          },
+          "category": "source"
+        }
+      ],
+      "processor": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Masking processor hc3",
+        "description": "Masking processor hc3 description",
+        "reference_id": "6a60e06d3ed84624e4a7cbe9"
+      },
+      "destinations": [
+        {
+          "client_id": "64c48dc0eb5ba14e7588cbe6",
+          "slug": "c493edb4-0c5e-4f07-8928-0e66d518de64",
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "audit_data": {
+            "create_user_id": "78afbdef-62c4-4bf4-902b-97198a949173",
+            "create_ts": {
+              "$date": 1775021553686
+            },
+            "update_user_id": "0",
+            "update_ts": {
+              "$date": 1775021553701
+            },
+            "record_status": "A"
+          },
+          "name": "test msk dst",
+          "image_url": "./assets/icons/multiple-files.svg",
+          "tags": [],
+          "type": {
+            "name": "Text File",
+            "type": "text"
+          },
+          "status": "",
+          "connection_ref": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "test msk dst",
+            "reference_id": "69ccadf10ab6f287f499f4fb"
+          },
+          "connection_config": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "category": "",
+            "status": "",
+            "parser_id": "",
+            "config_type": "text",
+            "config_value": "output.txt",
+            "options": null,
+            "config_options": null,
+            "auth": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "auth_type": "NO_AUTH",
+              "body_type": "json"
+            }
+          },
+          "connection_type": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "description": "A lightweight format for storing and exchanging plain text data, often used in pipelines, messaging, and event-driven applications.",
+            "image_url": "./assets/icons/multiple-files.svg",
+            "tags": [],
+            "type": {
+              "name": "Text File",
+              "type": "text"
+            },
+            "category": "sheets",
+            "status": "",
+            "adapter": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "category": "",
+              "status": "",
+              "module_name": "",
+              "class_name": ""
+            },
+            "parser": {
+              "identifier": "6a54e050-c343-4349-84aa-1a67f80f4711",
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "category": "",
+              "status": "",
+              "module_name": "",
+              "class_name": ""
+            }
+          },
+          "category": "destination"
+        }
+      ]
+    },
+    "is_ready": true
+  },
+  {
+    "_id": {
+      "$oid": "6aa95dea43949b401138905c"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "phi-redaction-precog-c95701024252417faef6bb9075b8b826",
+    "hidden": false,
+    "deleted_status": "N",
+    "status": "Active",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "4866c074-5b1a-47c0-99b8-06f731a55c83",
+      "create_ts": {
+        "$date": 1789484522802
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": 1789486172708
+      },
+      "record_status": "A"
+    },
+    "tags": [],
+    "metadata": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Phi Redaction Precog",
+      "description": "It takes  document and converts phi data to blur or black boxed",
+      "tags": [],
+      "version": "1.0.0",
+      "status": "Idle",
+      "type": {
+        "name": "unknown",
+        "type": "databot"
+      }
+    },
+    "configuration": {
+      "slug": "0da3450b-7e52-4425-94af-5815529354c4",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "PHI Redaction Processor",
+      "description": "It takes  document and converts phi data to blur or black boxed",
+      "tags": [],
+      "metadata": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "PHI Redaction Processor",
+        "tags": [],
+        "version": "1.0.0",
+        "status": "active"
+      },
+      "sources": [
+        {
+          "client_id": "64c48dc0eb5ba14e7588cbe6",
+          "slug": "6db8e6e4-580b-4c41-b95d-4dd584949700",
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "audit_data": {
+            "create_user_id": "154455ce-fb55-433c-8399-143d23774c0f",
+            "create_ts": {
+              "$date": 1788266783134
+            },
+            "update_user_id": "0",
+            "update_ts": {
+              "$date": 1788266783150
+            },
+            "record_status": "A"
+          },
+          "name": "test-connection-v22",
+          "image_url": "./assets/images/url.png",
+          "tags": [],
+          "type": {
+            "name": "url",
+            "type": "url"
+          },
+          "status": "",
+          "connection_ref": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "test-connection-v22",
+            "reference_id": "6a96c91f18f1ce947b857ec4"
+          },
+          "connection_config": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "audit_data": {
+              "create_user_id": "0",
+              "create_ts": {
+                "$date": 1758019526352
+              },
+              "update_user_id": "0",
+              "update_ts": {
+                "$date": 1774682900450
+              },
+              "record_status": "A"
+            },
+            "tags": [],
+            "category": "",
+            "status": "",
+            "parser_id": "",
+            "config_type": "url",
+            "config_value": "https://api.com",
+            "options": null,
+            "config_options": null,
+            "auth": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "auth_type": "NO_AUTH",
+              "body_type": "json"
+            },
+            "headers": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{ $. }}"
+              }
+            ]
+          },
+          "connection_type": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "description": "A web address that points to online resources or data sources, enabling integration of external content or APIs.",
+            "image_url": "./assets/images/url.png",
+            "tags": [],
+            "type": {
+              "name": "url",
+              "type": "url"
+            },
+            "category": "link",
+            "status": "",
+            "adapter": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "category": "",
+              "status": "",
+              "module_name": "",
+              "class_name": ""
+            },
+            "parser": {
+              "identifier": "34ed7780-d54b-414a-97db-388308fbd1e7",
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "category": "",
+              "status": "",
+              "module_name": "",
+              "class_name": ""
+            }
+          },
+          "category": "source"
+        }
+      ],
+      "processor": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "PHI Redaction Processor",
+        "description": "N/A",
+        "reference_id": "6aa93548e04eef122a9b4407"
+      },
+      "destinations": [
+        {
+          "connection_config": {
+            "config_type": "image",
+            "config_value": "masked_output.png"
+          },
+          "connection_ref": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": null,
+            "reference_id": "6acca8e7aba30971d037e711"
+          }
+        },
+        {
+          "connection_config": {
+            "config_type": "json",
+            "config_value": "redaction_report.json"
+          },
+          "connection_ref": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": null,
+            "reference_id": "6acca8e7aba30971d037e712"
+          }
+        }
+      ]
+    },
+    "is_ready": true
+  },
+  {
+    "_id": {
+      "$oid": "6ac6656b0717bfc9b1625932"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "bank-loan-statement-extraction-rule-engine-b13adc5f87524246bcb0889366010f6a",
+    "hidden": false,
+    "deleted_status": "N",
+    "status": "Active",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T15:29:47.841Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T08:08:52.713Z"
+      },
+      "record_status": "A"
+    },
+    "tags": [],
+    "metadata": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Bank Loan Statement Extraction (Rule Engine)",
+      "tags": [],
+      "version": "1.0.0",
+      "status": "Idle",
+      "type": {
+        "name": "unknown",
+        "type": "databot"
+      }
+    },
+    "configuration": {
+      "slug": "2d3aef09-2796-4ecc-bb27-2fdc33a0e91d",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Bank Loan Statement Extraction PS (Rule Engine)",
+      "tags": [],
+      "metadata": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Bank Loan Statement Extraction PS (Rule Engine)",
+        "tags": [],
+        "version": "1.0.0",
+        "status": "active"
+      },
+      "sources": [],
+      "processor": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Bank Loan Statement Extraction PS (Rule Engine)",
+        "description": "Rule-engine replacement for the legacy LS300PSPDOC processor",
+        "reference_id": "6ac6656b0717bfc9b1625930"
+      },
+      "destinations": [
+        {
+          "slug": "f6af0858-2ebb-4f0f-9275-90d4bab830d9",
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "name": "JSON Destination",
+          "tags": [],
+          "type": {
+            "name": "Json",
+            "type": "json"
+          },
+          "status": "",
+          "connection_config": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "category": "",
+            "status": "",
+            "parser_id": "",
+            "config_type": "json",
+            "config_value": "output.json",
+            "options": null,
+            "config_options": null,
+            "auth": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "auth_type": "NO_AUTH",
+              "body_type": "json"
+            }
+          },
+          "connection_type": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "category": "",
+            "status": "",
+            "adapter": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "category": "",
+              "status": "",
+              "module_name": "",
+              "class_name": ""
+            },
+            "parser": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "category": "",
+              "status": "",
+              "module_name": "",
+              "class_name": ""
+            }
+          },
+          "category": "destination",
+          "connection_ref": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "JSON Destination",
+            "reference_id": "6acca8e7aba30971d037e713"
+          }
+        }
+      ]
+    },
+    "is_ready": true
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a3ca10110026df8b33cd"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "notice-of-transfer-letter-masking-bot-ef8712cae1c1481bb60340dd853b0365",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-08T14:08:10.945Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:36:33.479Z"
+      },
+      "record_status": "A"
+    },
+    "tags": [],
+    "metadata": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Notice of Transfer Letter Masking Bot",
+      "tags": [],
+      "version": "1.0.0",
+      "status": "Idle"
+    },
+    "configuration": {
+      "slug": "b2240219-ef47-4e56-a87d-0b3d1bd6f412",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "tags": [],
+      "metadata": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "version": "",
+        "status": ""
+      },
+      "sources": [
+        {
+          "slug": "86abb851-b2fa-4c8c-85ea-a45b44d4278c",
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "name": "bank_statement_parser_output_source",
+          "tags": [],
+          "type": {
+            "hidden": false,
+            "deleted_status": "N",
+            "name": "Json",
+            "type": "json"
+          },
+          "status": "",
+          "connection_config": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "category": "",
+            "status": "",
+            "parser_id": "",
+            "config_type": "json",
+            "config_value": "resources/assets/BankStatementParser/notice_parser_output_sample.json",
+            "options": null,
+            "config_options": null,
+            "auth": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "auth_type": "NO_AUTH",
+              "body_type": "json"
+            }
+          },
+          "connection_type": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "category": "sheets",
+            "status": "",
+            "adapter": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "category": "",
+              "status": "",
+              "module_name": "",
+              "class_name": ""
+            },
+            "parser": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "category": "",
+              "status": "",
+              "module_name": "",
+              "class_name": ""
+            },
+            "type": {
+              "hidden": false,
+              "deleted_status": "N",
+              "name": "Json",
+              "type": "json"
+            }
+          },
+          "category": "source",
+          "connection_ref": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "bank_statement_parser_output_source",
+            "reference_id": "6acca8e7aba30971d037e714"
+          },
+          "image_url": "./assets/icons/json.svg"
+        },
+        {
+          "slug": "45e894ce-af7c-4ec8-b8eb-de4a17f0f04d",
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "name": "Hektor - Notice of Transfer Inbox (Local Files)",
+          "description": "",
+          "image_url": "./assets/icons/link.svg",
+          "tags": [],
+          "type": {
+            "name": "Local File Subscriber",
+            "type": "local_file_adapter"
+          },
+          "status": "",
+          "connection_ref": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Hektor - Notice of Transfer Inbox (Local Files)",
+            "reference_id": "6acc9594d270343c5d96569d"
+          },
+          "connection_config": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "category": "",
+            "status": "",
+            "parser_id": "",
+            "config_type": "",
+            "config_value": "C:\\Predigle\\hektor_inbox\\notice_of_transfer",
+            "options": null,
+            "config_options": null,
+            "auth": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "auth_type": "NO_AUTH",
+              "body_type": "json"
+            }
+          },
+          "connection_type": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "type": {
+              "name": "Local File Adapter",
+              "type": "local_file_adpater"
+            },
+            "category": "sheets",
+            "status": "",
+            "adapter": {
+              "identifier": "90cb21c9-afac-4b67-b922-4bf3c14f8cf2",
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "name": "Local File Adapter",
+              "tags": [],
+              "type": {
+                "name": "Local File Adapter",
+                "type": "local_file_adapter"
+              },
+              "category": "source",
+              "status": "active",
+              "config_type": "local_file",
+              "module_name": "engine.adapters.file_adapter.file_adapter",
+              "class_name": "FileHandler"
+            },
+            "parser": {
+              "identifier": "83f59571-8184-470a-a0a4-4f60df5a558a",
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "name": "File Parser",
+              "tags": [],
+              "type": {
+                "name": "File Parser",
+                "type": "file_parser"
+              },
+              "category": "source/destination",
+              "status": "active",
+              "module_name": "engine.framework.parsers.file",
+              "class_name": "FileParser"
+            }
+          },
+          "category": "source"
+        }
+      ],
+      "processor": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Notice of Transfer Letter Masking Processor",
+        "reference_id": "6ac7a3ba10110026df8b33cb"
+      },
+      "destinations": [
+        {
+          "slug": "69ec0a50-9109-5328-b700-bc58616ac0ad",
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "name": "Masked JSON output",
+          "tags": [],
+          "type": {
+            "name": "Json",
+            "type": "json"
+          },
+          "status": "",
+          "connection_config": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "category": "",
+            "status": "",
+            "parser_id": "",
+            "config_type": "json",
+            "config_value": "output.json",
+            "options": null,
+            "config_options": null,
+            "auth": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "auth_type": "NO_AUTH",
+              "body_type": "json"
+            }
+          },
+          "connection_type": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "tags": [],
+            "category": "",
+            "status": "",
+            "adapter": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "category": "",
+              "status": "",
+              "module_name": "",
+              "class_name": ""
+            },
+            "parser": {
+              "hidden": false,
+              "deleted_status": "N",
+              "acl": [],
+              "tags": [],
+              "category": "",
+              "status": "",
+              "module_name": "",
+              "class_name": ""
+            }
+          },
+          "category": "destination",
+          "connection_ref": {
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Notice of Transfer Masked JSON output",
+            "reference_id": "6acca8e7aba30971d037e716"
+          }
+        }
+      ]
+    },
+    "is_ready": true
+  }
+]

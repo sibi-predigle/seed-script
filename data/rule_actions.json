@@ -1,0 +1,2552 @@
+[
+  {
+    "_id": {
+      "$oid": "644c99caa5ca75ff00ba3b31"
+    },
+    "slug": "set_attribute",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "attribute_management",
+    "deleted_status": "N",
+    "description": "Updates or creates an attribute value on the entity",
+    "execution": {
+      "handler": "attribute.set",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "set_value",
+        "update_attribute"
+      ],
+      "status": "active"
+    },
+    "name": "Set Attribute",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "attribute": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Target attribute name"
+        },
+        "value": {
+          "allowed_types": [
+            "string",
+            "number",
+            "boolean",
+            "array",
+            "object",
+            "null"
+          ],
+          "required": true,
+          "description": "Value to assign"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "a0092e041d46d4771da34386"
+    },
+    "slug": "remove_attribute",
+    "applicable_rule_types": [
+      "validation",
+      "transformation",
+      "normalization"
+    ],
+    "category": "attribute_management",
+    "deleted_status": "N",
+    "description": "Deletes an attribute from the entity",
+    "execution": {
+      "handler": "attribute.remove",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "unset_attribute"
+      ],
+      "status": "active"
+    },
+    "name": "Remove Attribute",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "attribute": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Attribute name to remove"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "d4422c6257a97ab2223e881c"
+    },
+    "slug": "assign_tag",
+    "applicable_rule_types": [
+      "decision",
+      "routing",
+      "scoring",
+      "notification",
+      "escalation"
+    ],
+    "category": "tagging",
+    "deleted_status": "N",
+    "description": "Adds a tag to the entity",
+    "execution": {
+      "handler": "tag.assign",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "add_tag"
+      ],
+      "status": "active"
+    },
+    "name": "Assign Tag",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "tag": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Tag to assign"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "ee5182456f953953b6839e4c"
+    },
+    "slug": "remove_tag",
+    "applicable_rule_types": [
+      "decision",
+      "routing"
+    ],
+    "category": "tagging",
+    "deleted_status": "N",
+    "description": "Removes a tag from the entity",
+    "execution": {
+      "handler": "tag.remove",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Remove Tag",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "tag": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Tag to remove"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "125f2f0368f4df0d947e0a4e"
+    },
+    "slug": "update_status",
+    "applicable_rule_types": [
+      "validation",
+      "decision",
+      "routing",
+      "escalation"
+    ],
+    "category": "attribute_management",
+    "deleted_status": "N",
+    "description": "Sets the entity's status field",
+    "execution": {
+      "handler": "attribute.updateStatus",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "set_status"
+      ],
+      "status": "active"
+    },
+    "name": "Update Status",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "New status value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "be3852ddf351ca47feaca700"
+    },
+    "slug": "add_to_segment",
+    "applicable_rule_types": [
+      "decision",
+      "routing",
+      "scoring"
+    ],
+    "category": "segment_management",
+    "deleted_status": "N",
+    "description": "Adds the entity to a named segment or cohort",
+    "execution": {
+      "handler": "segment.add",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "add_to_cohort"
+      ],
+      "status": "inactive",
+      "selectable": false,
+      "notes": "Inactive: segment_ref points at no defined resource in this catalog. See docs/guides/rule-actions-and-conditions.md."
+    },
+    "name": "Add To Segment",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "segment_ref": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Segment or cohort identifier"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "a05371adc1ea16dfea3ee62e"
+    },
+    "slug": "remove_from_segment",
+    "applicable_rule_types": [
+      "decision",
+      "routing"
+    ],
+    "category": "segment_management",
+    "deleted_status": "N",
+    "description": "Removes the entity from a named segment or cohort",
+    "execution": {
+      "handler": "segment.remove",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "remove_from_cohort"
+      ],
+      "status": "inactive",
+      "selectable": false,
+      "notes": "Inactive: segment_ref points at no defined resource in this catalog. See docs/guides/rule-actions-and-conditions.md."
+    },
+    "name": "Remove From Segment",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "segment_ref": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Segment or cohort identifier"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "fc86b8497b0b04c5c6ec332a"
+    },
+    "slug": "increment_counter",
+    "applicable_rule_types": [
+      "calculation",
+      "scoring",
+      "aggregation"
+    ],
+    "category": "attribute_management",
+    "deleted_status": "N",
+    "description": "Increments a numeric attribute by a given amount",
+    "execution": {
+      "handler": "attribute.increment",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": false,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Increment Counter",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "attribute": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Numeric attribute to increment"
+        },
+        "by": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": false,
+          "description": "Amount to increment by (default 1)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "d3cef548afdb91e3bfaa3325"
+    },
+    "slug": "send_notification",
+    "applicable_rule_types": [
+      "notification",
+      "escalation"
+    ],
+    "category": "communication",
+    "deleted_status": "N",
+    "description": "Sends a notification to the entity through a chosen channel",
+    "execution": {
+      "handler": "notification.send",
+      "executor": "external",
+      "mode": "async",
+      "idempotent": false,
+      "target": "external"
+    },
+    "metadata": {
+      "aliases": [
+        "notify"
+      ],
+      "status": "active"
+    },
+    "name": "Send Notification",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "template_ref": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Notification template identifier"
+        },
+        "channel": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "enum": [
+            "email",
+            "sms",
+            "push"
+          ],
+          "description": "Delivery channel: email, sms, or push"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "534ab5846cef2a55a539cebb"
+    },
+    "slug": "send_email",
+    "applicable_rule_types": [
+      "notification",
+      "escalation"
+    ],
+    "category": "communication",
+    "deleted_status": "N",
+    "description": "Sends an email to the entity using a template",
+    "execution": {
+      "handler": "email.send",
+      "executor": "external",
+      "mode": "async",
+      "idempotent": false,
+      "target": "external"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Send Email",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "template_ref": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Email template identifier"
+        },
+        "subject": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Optional subject line override"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "4453ddd13d974362abe17cb9"
+    },
+    "slug": "call_webhook",
+    "applicable_rule_types": [
+      "routing",
+      "notification",
+      "escalation"
+    ],
+    "category": "integration",
+    "deleted_status": "N",
+    "description": "Invokes an external HTTP endpoint with a constructed payload",
+    "execution": {
+      "handler": "integration.callWebhook",
+      "executor": "external",
+      "mode": "async",
+      "idempotent": false,
+      "target": "external"
+    },
+    "metadata": {
+      "aliases": [
+        "call_api"
+      ],
+      "status": "active"
+    },
+    "name": "Call Webhook",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "endpoint": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Target URL"
+        },
+        "method": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "HTTP method"
+        },
+        "payload_template": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": false,
+          "description": "Payload template to send"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "eba08efab1141d02417d073c"
+    },
+    "slug": "generate_coupon",
+    "applicable_rule_types": [
+      "decision",
+      "scoring"
+    ],
+    "category": "communication",
+    "deleted_status": "N",
+    "description": "Generates a discount coupon for the entity",
+    "execution": {
+      "handler": "commerce.generateCoupon",
+      "executor": "engine",
+      "mode": "async",
+      "idempotent": false,
+      "target": "external"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Generate Coupon",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "coupon_type": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Coupon template or type identifier"
+        },
+        "value": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": false,
+          "description": "Discount value if not fixed by the template"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "29d13bd85068c015fca435c7"
+    },
+    "slug": "log_event",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "logging",
+    "deleted_status": "N",
+    "description": "Records an audit or analytics event for the entity",
+    "execution": {
+      "handler": "logging.event",
+      "executor": "engine",
+      "mode": "async",
+      "idempotent": true,
+      "target": "log"
+    },
+    "metadata": {
+      "aliases": [
+        "record_event"
+      ],
+      "status": "active"
+    },
+    "name": "Log Event",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "event_name": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Name of the event to log"
+        },
+        "metadata": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": false,
+          "description": "Additional event metadata"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "836511f45924bc4691e9b459"
+    },
+    "slug": "calculate_field",
+    "applicable_rule_types": [
+      "calculation",
+      "aggregation",
+      "scoring"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Computes a derived value from one or more source fields and writes it to the rule's target_field",
+    "execution": {
+      "handler": "processing.calculateField",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "compute_field"
+      ],
+      "status": "active"
+    },
+    "name": "Calculate Field",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "expression": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Calculation expression, e.g. \"income - expenses\""
+        },
+        "operands": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": false,
+          "description": "Optional explicit list of source field references"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "a805f873bc3b190ea14d8b48"
+    },
+    "slug": "transform_attribute",
+    "applicable_rule_types": [
+      "transformation",
+      "normalization",
+      "masking"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Applies a transformation (regex extract, format, case conversion, etc.) to the rule's target_field, writing back in place unless output_field is given",
+    "execution": {
+      "handler": "processing.transformAttribute",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "apply_transform"
+      ],
+      "status": "active"
+    },
+    "name": "Transform Attribute",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the result. Defaults to target_field (in place) when omitted."
+        },
+        "transform_type": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "enum": [
+            "uppercase",
+            "lowercase",
+            "regex_extract",
+            "date_format"
+          ],
+          "description": "Type of transform: regex_extract, uppercase, lowercase, date_format, etc."
+        },
+        "transform_params": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": false,
+          "description": "Extra parameters the transform_type needs, e.g. {pattern, group} for regex_extract"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "c9177a5c0ddbb6298911f5dc"
+    },
+    "slug": "filter_array_attribute",
+    "applicable_rule_types": [
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Filters an array-valued attribute down to elements matching a condition and writes the result to a target attribute",
+    "execution": {
+      "handler": "processing.filterArrayAttribute",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "inactive",
+      "selectable": false,
+      "notes": "Inactive: condition_ref points at no defined resource in this catalog. See docs/guides/rule-actions-and-conditions.md."
+    },
+    "name": "Filter Array Attribute",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "source_attribute": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Array attribute to filter"
+        },
+        "target_attribute": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Attribute to write the filtered array to"
+        },
+        "condition_ref": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "rule_conditions slug applied to each array element"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "2e6f6a2045ce8dc4f121ec60"
+    },
+    "slug": "regex_replace",
+    "applicable_rule_types": [
+      "transformation",
+      "normalization",
+      "masking"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Replaces all matches of a regex pattern in the target field value with a replacement string",
+    "execution": {
+      "handler": "processing.regexReplace",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "regex_sub",
+        "pattern_replace"
+      ],
+      "status": "active"
+    },
+    "name": "Regex Replace",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "pattern": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Regex pattern to match"
+        },
+        "replacement": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Replacement string"
+        },
+        "flags": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Optional regex flags, e.g. i for case-insensitive"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "088c67d5548b74119e8b6c18"
+    },
+    "slug": "change_case",
+    "applicable_rule_types": [
+      "transformation",
+      "normalization"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Converts the target field value to uppercase, lowercase, or title case",
+    "execution": {
+      "handler": "processing.changeCase",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "to_uppercase",
+        "to_lowercase",
+        "title_case"
+      ],
+      "status": "active"
+    },
+    "name": "Change Case",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "enum": [
+            "uppercase",
+            "lowercase",
+            "title_case"
+          ],
+          "description": "Target case: uppercase | lowercase | title_case"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "cc1d81c2edfe5e35b27757b0"
+    },
+    "slug": "mask_field",
+    "applicable_rule_types": [
+      "masking"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Redacts or masks a field value, optionally preserving a suffix of visible characters",
+    "execution": {
+      "handler": "processing.maskField",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "redact_field",
+        "anonymize_field"
+      ],
+      "status": "active"
+    },
+    "name": "Mask Field",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "mask_char": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Character to use as mask, default *"
+        },
+        "visible_suffix": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": false,
+          "description": "Number of trailing characters to leave visible, e.g. 4 for ****1234"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "c8c26278e1465317bd5f22cf"
+    },
+    "slug": "format_date",
+    "applicable_rule_types": [
+      "transformation",
+      "normalization"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Parses the target field as a date and re-formats it to a specified output format",
+    "execution": {
+      "handler": "processing.formatDate",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "reformat_date",
+        "date_convert"
+      ],
+      "status": "active"
+    },
+    "name": "Format Date",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "input_format": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Input format e.g. %d/%m/%Y (auto-detected if omitted)"
+        },
+        "output_format": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Desired output format e.g. %Y-%m-%d"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "be1ff70ca2c93597905d807e"
+    },
+    "slug": "lookup_normalize",
+    "applicable_rule_types": [
+      "normalization",
+      "enrichment"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Maps the target field value to a canonical form using a reference lookup table",
+    "execution": {
+      "handler": "processing.lookupNormalize",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "reference_lookup",
+        "canonical_map"
+      ],
+      "status": "inactive",
+      "selectable": false,
+      "notes": "Inactive: lookup_ref points at no defined resource in this catalog; superseded by mongo_query. See docs/guides/rule-actions-and-conditions.md."
+    },
+    "name": "Lookup Normalize",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "lookup_ref": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Reference dataset or lookup table identifier"
+        },
+        "match_column": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Column in the lookup table to match against"
+        },
+        "output_column": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Column in the lookup table to use as canonical output"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "67acc574b50ebfcf2f863153"
+    },
+    "slug": "enrich_from_ref",
+    "applicable_rule_types": [
+      "enrichment"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Pulls fields from a reference dataset into the current entity record using a join key",
+    "execution": {
+      "handler": "processing.enrichFromRef",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "join_reference",
+        "enrich_lookup"
+      ],
+      "status": "inactive",
+      "selectable": false,
+      "notes": "Inactive: ref_dataset points at no defined resource in this catalog; superseded by mongo_query/mongo_upsert. See docs/guides/rule-actions-and-conditions.md."
+    },
+    "name": "Enrich From Reference",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "ref_dataset": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Reference dataset identifier"
+        },
+        "join_key": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Field used to match records in both datasets"
+        },
+        "pull_fields": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": true,
+          "description": "List of field names to pull from the reference dataset"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "7dc7eb74b6544631fa37f8f3"
+    },
+    "slug": "set_score",
+    "applicable_rule_types": [
+      "scoring"
+    ],
+    "category": "scoring",
+    "deleted_status": "N",
+    "description": "Writes a computed numeric score value to the rule's target_field",
+    "execution": {
+      "handler": "scoring.setScore",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "assign_score",
+        "write_score"
+      ],
+      "status": "active"
+    },
+    "name": "Set Score",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Numeric score value to assign"
+        },
+        "weight": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": false,
+          "description": "Optional weight multiplier applied before writing"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "159270fc6f07766105695651"
+    },
+    "slug": "route_to_queue",
+    "applicable_rule_types": [
+      "routing"
+    ],
+    "category": "routing",
+    "deleted_status": "N",
+    "description": "Sends the entity record to a named queue or workflow destination for further processing",
+    "execution": {
+      "handler": "routing.toQueue",
+      "executor": "engine",
+      "mode": "async",
+      "idempotent": false,
+      "target": "external"
+    },
+    "metadata": {
+      "aliases": [
+        "send_to_queue",
+        "dispatch_to_workflow"
+      ],
+      "status": "inactive",
+      "selectable": false,
+      "notes": "Inactive: queue_ref points at no defined resource in this catalog. See docs/guides/rule-actions-and-conditions.md."
+    },
+    "name": "Route To Queue",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "queue_ref": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Target queue or workflow identifier"
+        },
+        "priority": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "enum": [
+            "high",
+            "normal",
+            "low"
+          ],
+          "description": "Routing priority: high | normal | low"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "c67a194deeeaaae70d1d84dc"
+    },
+    "slug": "escalate_ownership",
+    "applicable_rule_types": [
+      "escalation"
+    ],
+    "category": "routing",
+    "deleted_status": "N",
+    "description": "Re-assigns entity ownership to the next level or a specified owner for escalation handling",
+    "execution": {
+      "handler": "routing.escalateOwnership",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": false,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "reassign_owner",
+        "escalate_to_manager"
+      ],
+      "status": "inactive",
+      "selectable": false,
+      "notes": "Inactive: escalate_to points at no defined resource in this catalog. See docs/guides/rule-actions-and-conditions.md."
+    },
+    "name": "Escalate Ownership",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "escalate_to": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Owner identifier or escalation level to assign"
+        },
+        "reason": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Reason for escalation, stored in audit"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "464cfab451f46a19fa7602e8"
+    },
+    "slug": "set_default_value",
+    "applicable_rule_types": [
+      "default_assignment",
+      "transformation"
+    ],
+    "category": "attribute_management",
+    "deleted_status": "N",
+    "description": "Sets a fallback value on the target field only when the field is null, missing, or empty",
+    "execution": {
+      "handler": "attribute.setDefault",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "fill_empty",
+        "default_fill"
+      ],
+      "status": "active"
+    },
+    "name": "Set Default Value",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ],
+          "required": true,
+          "description": "Default value to assign when field is empty or missing"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "59188c22013497ba278c53ab"
+    },
+    "slug": "deduplicate_merge",
+    "applicable_rule_types": [
+      "deduplication"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Merges a detected duplicate entity record into the designated primary record",
+    "execution": {
+      "handler": "processing.deduplicateMerge",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": false,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "merge_duplicate",
+        "dedup_merge"
+      ],
+      "status": "inactive",
+      "selectable": false,
+      "notes": "Inactive: primary_key_ref points at no defined resource in this catalog. See docs/guides/rule-actions-and-conditions.md."
+    },
+    "name": "Deduplicate Merge",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "merge_strategy": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "enum": [
+            "keep_primary",
+            "keep_latest",
+            "keep_longest"
+          ],
+          "description": "Conflict resolution: keep_primary | keep_latest | keep_longest"
+        },
+        "primary_key_ref": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Field used to identify the primary record"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "929bee9f5db5e6a3994a71f3"
+    },
+    "slug": "aggregate_write",
+    "applicable_rule_types": [
+      "aggregation"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Computes an aggregation (sum, avg, count, min, max) across the rule's target_field, writing back in place unless output_field is given",
+    "execution": {
+      "handler": "processing.aggregateWrite",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "write_aggregate",
+        "group_aggregate"
+      ],
+      "status": "active"
+    },
+    "name": "Aggregate Write",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "function": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "enum": [
+            "sum",
+            "avg",
+            "count",
+            "min",
+            "max"
+          ],
+          "description": "Aggregation function: sum | avg | count | min | max"
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the aggregated result. Defaults to target_field (in place) when omitted."
+        },
+        "group_by": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Optional field to group by before aggregating"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6a8d53432810779312fb1b34"
+    },
+    "slug": "prompt",
+    "applicable_rule_types": [
+      "extraction"
+    ],
+    "category": "extraction",
+    "deleted_status": "N",
+    "description": "Uses an LLM prompt against the raw HTML/text content to extract a value when selector-based extraction is impractical or brittle",
+    "execution": {
+      "handler": "extraction.extractFieldViaPrompt",
+      "executor": "llm",
+      "mode": "sync",
+      "idempotent": false,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "llm_extract",
+        "ai_extract"
+      ],
+      "status": "active"
+    },
+    "name": "Prompt",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "fragment": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "Prompt fragment reference \u00e2\u20ac\u201d same shape as PromptReference.fragment (PromptFragmentReference: reference_id/slug/version), a pointer into the prompt registry. Not raw prompt text."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "1a2b3c4d5e6f7a8b9c0d1e2f"
+    },
+    "slug": "trim_whitespace",
+    "applicable_rule_types": [
+      "transformation",
+      "normalization"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Strips leading/trailing whitespace from the rule's target_field, writing back in place unless output_field is given",
+    "execution": {
+      "handler": "processing.trimWhitespace",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Trim Whitespace",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "sides": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "enum": [
+            "leading",
+            "trailing",
+            "both"
+          ],
+          "description": "leading | trailing | both (default both)"
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the result. Defaults to target_field (in place) when omitted."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "2b3c4d5e6f7a8b9c0d1e2f3a"
+    },
+    "slug": "concat_fields",
+    "applicable_rule_types": [
+      "transformation"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Joins several fields (plus the rule's target_field) into one string, writing back in place unless output_field is given",
+    "execution": {
+      "handler": "processing.concatFields",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Concat Fields",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": true,
+          "description": "Field names to join, in order (genuinely multi-field, not a restatement of target_field)"
+        },
+        "separator": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Joiner string, default \"\""
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the result. Defaults to target_field (in place) when omitted."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "3c4d5e6f7a8b9c0d1e2f3a4b"
+    },
+    "slug": "split_field",
+    "applicable_rule_types": [
+      "transformation"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Splits the rule's target_field by a delimiter into an array, writing back in place unless output_field is given",
+    "execution": {
+      "handler": "processing.splitField",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Split Field",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "delimiter": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Delimiter to split on"
+        },
+        "limit": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": false,
+          "description": "Optional maximum number of splits"
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the resulting array. Defaults to target_field (in place) when omitted."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "4d5e6f7a8b9c0d1e2f3a4b5c"
+    },
+    "slug": "replace_value",
+    "applicable_rule_types": [
+      "transformation",
+      "normalization",
+      "masking"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Literal (non-regex) find/replace on the rule's target_field, writing back in place unless output_field is given",
+    "execution": {
+      "handler": "processing.replaceValue",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Replace Value",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "find": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Literal substring to find"
+        },
+        "replace": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Replacement string"
+        },
+        "case_sensitive": {
+          "allowed_types": [
+            "boolean"
+          ],
+          "required": false,
+          "description": "Default true"
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the result. Defaults to target_field (in place) when omitted."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "5e6f7a8b9c0d1e2f3a4b5c6d"
+    },
+    "slug": "round_number",
+    "applicable_rule_types": [
+      "transformation",
+      "calculation"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Rounds the rule's numeric target_field to a fixed number of decimals, writing back in place unless output_field is given",
+    "execution": {
+      "handler": "processing.roundNumber",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Round Number",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "decimals": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Number of decimal places to round to"
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the result. Defaults to target_field (in place) when omitted."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6f7a8b9c0d1e2f3a4b5c6d7e"
+    },
+    "slug": "convert_format",
+    "applicable_rule_types": [
+      "transformation"
+    ],
+    "category": "data_processing",
+    "deleted_status": "N",
+    "description": "Stringifies or parses the rule's target_field as JSON, writing back in place unless output_field is given",
+    "execution": {
+      "handler": "processing.convertFormat",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Convert Format",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "direction": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "enum": [
+            "to_json",
+            "from_json"
+          ],
+          "description": "to_json | from_json"
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the result. Defaults to target_field (in place) when omitted."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "7a8b9c0d1e2f3a4b5c6d7e8f"
+    },
+    "slug": "log_error",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "logging",
+    "deleted_status": "N",
+    "description": "Writes an error-level line to the bot run's logger (self.bot_logger) \u00e2\u20ac\u201d a pure side effect, never mutates data",
+    "execution": {
+      "handler": "logging.error",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "log"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Log Error",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Log message"
+        },
+        "metadata": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": false,
+          "description": "Extra structured fields attached to the log line"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "8b9c0d1e2f3a4b5c6d7e8f9a"
+    },
+    "slug": "log_warning",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "logging",
+    "deleted_status": "N",
+    "description": "Writes a warning-level line to the bot run's logger (self.bot_logger) \u00e2\u20ac\u201d a pure side effect, never mutates data",
+    "execution": {
+      "handler": "logging.warning",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "log"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Log Warning",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Log message"
+        },
+        "metadata": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": false,
+          "description": "Extra structured fields attached to the log line"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "9c0d1e2f3a4b5c6d7e8f9a0b"
+    },
+    "slug": "log_audit",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "logging",
+    "deleted_status": "N",
+    "description": "Writes an audit-trail line (who did what) to the bot run's logger (self.bot_logger) \u00e2\u20ac\u201d a pure side effect, never mutates data",
+    "execution": {
+      "handler": "logging.audit",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "log"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Log Audit",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "action_description": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "What happened, e.g. \"status changed to Approved\""
+        },
+        "actor": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Who/what performed the action"
+        },
+        "metadata": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": false,
+          "description": "Extra structured fields attached to the log line"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "0d1e2f3a4b5c6d7e8f9a0b1c"
+    },
+    "slug": "mongo_query",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "mongo",
+    "deleted_status": "N",
+    "description": "Reads one field from one matched document in an allow-listed Mongo collection, writing it to the rule's target_field",
+    "execution": {
+      "handler": "mongo.query",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "read_mongo",
+        "mongo_lookup"
+      ],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Mongo Query",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Must be on the fabrix's permitted_mongo_collections allow-list"
+        },
+        "filter": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "Match query. Values may be {\"$field\": \"<context field>\"} placeholders resolved before querying."
+        },
+        "projection_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Which field of the matched document to pull"
+        },
+        "default_value": {
+          "allowed_types": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ],
+          "required": false,
+          "description": "Used when no document matches"
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the result. Defaults to target_field when omitted."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "1e2f3a4b5c6d7e8f9a0b1c2d"
+    },
+    "slug": "mongo_upsert",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "mongo",
+    "deleted_status": "N",
+    "description": "Inserts or merge-updates a document in an allow-listed Mongo collection. Cataloged for visibility \u2014 write path not yet implemented, not yet selectable in the UI.",
+    "execution": {
+      "handler": "mongo.upsert",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": false,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "write_mongo"
+      ],
+      "status": "active",
+      "selectable": false,
+      "notes": "Not selectable yet: write path is cataloged for roadmap visibility only, no Precog handler implemented this phase."
+    },
+    "name": "Mongo Upsert",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Must be on the fabrix's permitted_mongo_collections allow-list"
+        },
+        "filter": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "Match key. Values may be {\"$field\": \"<context field>\"} placeholders."
+        },
+        "document": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "Payload to write. Values may be {\"$field\": \"<context field>\"} placeholders."
+        },
+        "merge": {
+          "allowed_types": [
+            "boolean"
+          ],
+          "required": false,
+          "description": "Merge-patch (true, default) vs full replace (false)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "2f3a4b5c6d7e8f9a0b1c2d3e"
+    },
+    "slug": "mongo_delete",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "mongo",
+    "deleted_status": "N",
+    "description": "Deletes matching document(s) in an allow-listed Mongo collection. Cataloged for visibility \u2014 write path not yet implemented, not yet selectable in the UI.",
+    "execution": {
+      "handler": "mongo.delete",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": false,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": false,
+      "notes": "Not selectable yet: write path is cataloged for roadmap visibility only, no Precog handler implemented this phase."
+    },
+    "name": "Mongo Delete",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Must be on the fabrix's permitted_mongo_collections allow-list"
+        },
+        "filter": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "Match query. Values may be {\"$field\": \"<context field>\"} placeholders."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "3a4b5c6d7e8f9a0b1c2d3e4f"
+    },
+    "slug": "mongo_increment",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "mongo",
+    "deleted_status": "N",
+    "description": "Atomically increments a field on one real persisted document in an allow-listed Mongo collection (distinct from increment_counter, which only mutates the in-memory context). Cataloged for visibility \u2014 write path not yet implemented, not yet selectable in the UI.",
+    "execution": {
+      "handler": "mongo.increment",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": false,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": false,
+      "notes": "Not selectable yet: write path is cataloged for roadmap visibility only, no Precog handler implemented this phase."
+    },
+    "name": "Mongo Increment",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Must be on the fabrix's permitted_mongo_collections allow-list"
+        },
+        "filter": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "Match query. Values may be {\"$field\": \"<context field>\"} placeholders."
+        },
+        "field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Field to increment on the matched document"
+        },
+        "by": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": false,
+          "description": "Delta to apply, default 1"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "4b5c6d7e8f9a0b1c2d3e4f5a"
+    },
+    "slug": "custom_function",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "function",
+    "deleted_status": "N",
+    "description": "Calls a registered Fabrix Function (POST /functions/{id}/execute/) and writes its output to the rule's target_field",
+    "execution": {
+      "handler": "function.execute",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": false,
+      "target": "external"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active",
+      "selectable": true
+    },
+    "name": "Custom Function",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "function_ref": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "Pointer to a Function document: {name, reference_id}"
+        },
+        "inputs": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "Key/value map of the function's declared inputs. Values may be literals or a {\"$field\": \"<context field>\"} placeholder resolved before the call."
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the function's output. Defaults to target_field when omitted."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "f792cc459a90caad54796f7b"
+    },
+    "slug": "selector",
+    "applicable_rule_types": [
+      "extraction"
+    ],
+    "category": "extraction",
+    "deleted_status": "N",
+    "description": "Extracts a value from raw HTML/DOM content using a CSS selector chain with fallback alternatives \u2014 the deterministic sibling of 'prompt'",
+    "execution": {
+      "handler": "extraction.extractFieldViaSelector",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [
+        "css_extract",
+        "selector_extract"
+      ],
+      "status": "active"
+    },
+    "name": "Selector",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "selector": {
+          "allowed_types": [
+            "string",
+            "array"
+          ],
+          "required": true,
+          "description": "Primary CSS selector (or list of selectors, first-match-wins)"
+        },
+        "alternatives": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": false,
+          "description": "Ordered fallback configs (same shape as this action's params), tried if the primary yields nothing"
+        },
+        "attr": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "DOM attribute to read instead of text content, e.g. src/content/data-sku"
+        },
+        "text": {
+          "allowed_types": [
+            "boolean"
+          ],
+          "required": false,
+          "description": "Read element.text"
+        },
+        "innerText": {
+          "allowed_types": [
+            "boolean"
+          ],
+          "required": false,
+          "description": "Read element.innerText instead of .text"
+        },
+        "regex": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": false,
+          "description": "{pattern, extract_group} applied to the matched text/script content"
+        },
+        "multiple": {
+          "allowed_types": [
+            "boolean"
+          ],
+          "required": false,
+          "description": "Scan all matches (e.g. every <script> tag) instead of the first"
+        },
+        "trim": {
+          "allowed_types": [
+            "boolean"
+          ],
+          "required": false,
+          "description": "Trim surrounding whitespace"
+        },
+        "cleanText": {
+          "allowed_types": [
+            "boolean"
+          ],
+          "required": false,
+          "description": "Collapse internal whitespace"
+        },
+        "decodeEntities": {
+          "allowed_types": [
+            "boolean"
+          ],
+          "required": false,
+          "description": "Decode HTML entities in the extracted text"
+        },
+        "transform": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "e.g. parseFloat"
+        },
+        "parseAs": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "e.g. number"
+        },
+        "replace": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": false,
+          "description": "[[from, to], ...] string replacements applied before transform"
+        },
+        "joinWith": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Separator used when multiple matches are joined into one string"
+        },
+        "confidence": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Authoring-time confidence label, informational only"
+        },
+        "unique": {
+          "allowed_types": [
+            "boolean"
+          ],
+          "required": false,
+          "description": "De-duplicate multiple matches before joining"
+        }
+      },
+      "additionalProperties": true
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "8ffed79931864e4088122027"
+    },
+    "slug": "scramble",
+    "applicable_rule_types": [
+      "transformation",
+      "masking"
+    ],
+    "category": "masking",
+    "deleted_status": "N",
+    "description": "Replaces the rule target_field value with a consistent random scramble (same input -> same output within one run), via DataScrambler.get_scrambled_string.",
+    "execution": {
+      "handler": "masking.scramble",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": false,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Scramble",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "flags": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "enum": [
+            "unique",
+            "keep-length",
+            "keep-format",
+            "letters"
+          ],
+          "multi": true,
+          "description": "Default: unique,keep-length,keep-format."
+        },
+        "keep_first": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": false,
+          "description": "Leading characters left visible; the rest are masked."
+        },
+        "keep_last": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": false,
+          "description": "Trailing characters left visible; the rest are masked."
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the result. Defaults to target_field (in place) when omitted."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "574c9c5726cc4c7eab85f1e6"
+    },
+    "slug": "substitute_value",
+    "applicable_rule_types": [
+      "transformation",
+      "masking"
+    ],
+    "category": "masking",
+    "deleted_status": "N",
+    "description": "Writes `value` over the rule target_field. Plain text is written as is (e.g. \"XXX-XX-XXXX\"); `value` may also use {fill:X}, {lastN}, {firstN} to keep part of the original, e.g. {fill:X}{last4}.",
+    "execution": {
+      "handler": "masking.substitute",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Substitute Value",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Text to write. Tokens: {fill:X} (pads to the original length), {last4}, {first2}. e.g. {fill:X}{last4}"
+        },
+        "output_field": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": false,
+          "description": "Where to write the result. Defaults to target_field (in place) when omitted."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "55aac391a6094bc1b493125e"
+    },
+    "slug": "drop_field",
+    "applicable_rule_types": [
+      "transformation",
+      "masking"
+    ],
+    "category": "masking",
+    "deleted_status": "N",
+    "description": "Removes the rule target_field entirely from the output record (legacy Skip semantics) instead of mutating its value.",
+    "execution": {
+      "handler": "masking.dropField",
+      "executor": "engine",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "entity"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Drop Field",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6ac7ff967f706e31cc750ded"
+    },
+    "slug": "select_model_version",
+    "applicable_rule_types": [
+      "validation"
+    ],
+    "category": "routing",
+    "deleted_status": "N",
+    "description": "Cascading 3-level model routing: Model Group -> Model (within that group) -> Version (of that model), backed by the precog fnf_model API (GET /fnf_model/model_groups/ -> GET /fnf_model/?model_group_id=:id -> GET /fnf_model/<model_slug>/version/). Version additionally offers a hardcoded 'Latest' option alongside the API-listed versions.",
+    "execution": {
+      "handler": "model.select_version",
+      "executor": "external",
+      "mode": "sync",
+      "idempotent": true,
+      "target": "external"
+    },
+    "metadata": {
+      "aliases": [
+        "model_selector",
+        "model_group_model_version"
+      ],
+      "status": "active",
+      "selectable": true,
+      "notes": "3-level cascading model routing action; params mirror custom_function's {name, reference_id} pointer convention."
+    },
+    "name": "Model Group / Model / Version Selector",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "model_group": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "{name, reference_id} of the selected model group."
+        },
+        "model": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "{name, reference_id} of the selected model."
+        },
+        "version": {
+          "allowed_types": [
+            "object"
+          ],
+          "required": true,
+          "description": "{name, reference_id} of the selected version, or {name:'Latest', reference_id:'latest'}."
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  }
+]

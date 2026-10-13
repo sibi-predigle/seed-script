@@ -1,0 +1,675 @@
+[
+  {
+    "_id": {
+      "$oid": "6ac567b68fe9bfaa29fea690"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-06T21:27:18.132Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:25:52.683Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Document - transaction_details",
+      "reference_id": "6ac567b68fe9bfaa29fea68f"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Extract all the transaction lines from the transaction details section in this financial document. Make sure the negative amounts are capture correctly with their symbol, which would be wrapped in parantheses in this document. Do not include currency symbol in the amount fields. Extract all transaction lines as individual objects in an array, where a single line is represented as follows: [{\"transaction_date\": \"date\", \"description\": \"string\", \"amount\": \"float\"}]"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor Bank Statement Document",
+          "reference_id": "6ac567b58fe9bfaa29fea685"
+        },
+        {
+          "name": "Hektor Bank Statement Document",
+          "reference_id": "6ac5e5f0c1ffbf41d82595e1"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac567b68fe9bfaa29fea694"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-06T21:27:18.376Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:25:52.924Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Document - cheque_payee_address",
+      "reference_id": "6ac567b68fe9bfaa29fea693"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Extract the address of the payee as a string, that needs to be mentioned while issuing a cheque from the given document."
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor Bank Statement Document",
+          "reference_id": "6ac567b58fe9bfaa29fea685"
+        },
+        {
+          "name": "Hektor Bank Statement Document",
+          "reference_id": "6ac5e5f0c1ffbf41d82595e1"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac567b68fe9bfaa29fea698"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-06T21:27:18.568Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:25:53.207Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Document - summary_of_charges",
+      "reference_id": "6ac567b68fe9bfaa29fea697"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given financial statement document, and extract all information related to the summary of charges as the JSON schema given below. For amount fields, ensure to capture the negative amounts which are wrapped in paranthesis in the given document, with the correct minus symbol. And do not capture currency symbols for amount fields. Also If a particular field does not exist in the document, return \"null\" against that field, but do not skip any field: JSON Schema - {\"previous_balance\": \"float\", \"payments_received\": \"float\", \"new_charges\": \"float\", \"adjustments\": \"float\", \"total_amount_due\": \"number\", \"payment_due_date\": \"date\"}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor Bank Statement Document",
+          "reference_id": "6ac567b58fe9bfaa29fea685"
+        },
+        {
+          "name": "Hektor Bank Statement Document",
+          "reference_id": "6ac5e5f0c1ffbf41d82595e1"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac567b68fe9bfaa29fea69c"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-06T21:27:18.743Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:25:53.477Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Document - bank_details",
+      "reference_id": "6ac567b68fe9bfaa29fea69b"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given financial statement document, and extract all information related to the bank that issued this statement in the JSON schema given below. If a particular field does not exist in the document, return \"null\" against that field, but do not skip any field: {\"bank_name\": \"string\", \"bank_hq_address\": \"string\", \"bank_support_email\": \"string\", \"cheque_payee_address\": \"string\"}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor Bank Statement Document",
+          "reference_id": "6ac567b58fe9bfaa29fea685"
+        },
+        {
+          "name": "Hektor Bank Statement Document",
+          "reference_id": "6ac5e5f0c1ffbf41d82595e1"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da71c1ffbf41d8258c28"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:49.007Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:26:02.880Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor LAS330 - borrower_info",
+      "reference_id": "6ac5da70c1ffbf41d8258c27"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given LAS loan billing statement text, and extract all borrower information in the JSON schema below. If a field does not exist, return \"null\". Do not skip any field: {\"primary_borrower_name\": \"string\", \"co_borrower_names\": [\"string\"], \"tax_ids\": [\"string\"]}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor LAS330",
+          "reference_id": "6ac5da68c1ffbf41d8258bb4"
+        },
+        {
+          "name": "Hektor LAS330",
+          "reference_id": "6ac5e5f6c1ffbf41d8259641"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da71c1ffbf41d8258c30"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:49.572Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:26:03.147Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor LAS330 - collateral_info",
+      "reference_id": "6ac5da71c1ffbf41d8258c2f"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given LAS loan billing statement text, and extract collateral/property information in the JSON schema below. If a field does not exist, return \"null\". Do not skip any field: {\"collateral_description\": \"string\", \"hin_number\": \"string\"}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor LAS330",
+          "reference_id": "6ac5da68c1ffbf41d8258bb4"
+        },
+        {
+          "name": "Hektor LAS330",
+          "reference_id": "6ac5e5f6c1ffbf41d8259641"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da79c1ffbf41d8258ca5"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:57.160Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:26:06.530Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor ls300-pspdoc - borrower_info",
+      "reference_id": "6ac5da79c1ffbf41d8258ca4"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given LAS loan billing statement text, and extract all borrower information in the JSON schema below. If a field does not exist, return \"null\". Do not skip any field: {\"primary_borrower_name\": \"string\", \"co_borrower_names\": [\"string\"], \"tax_ids\": [\"string\"]}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor ls300-pspdoc",
+          "reference_id": "6ac5da72c1ffbf41d8258c37"
+        },
+        {
+          "name": "Hektor ls300-pspdoc",
+          "reference_id": "6ac5e5fbc1ffbf41d825967f"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da79c1ffbf41d8258cad"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:57.564Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:26:06.752Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor ls300-pspdoc - collateral_info",
+      "reference_id": "6ac5da79c1ffbf41d8258cac"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given LAS loan billing statement text, and extract collateral/property information in the JSON schema below. If a field does not exist, return \"null\". Do not skip any field: {\"collateral_description\": \"string\", \"hin_number\": \"string\"}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor ls300-pspdoc",
+          "reference_id": "6ac5da72c1ffbf41d8258c37"
+        },
+        {
+          "name": "Hektor ls300-pspdoc",
+          "reference_id": "6ac5e5fbc1ffbf41d825967f"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da7ac1ffbf41d8258cb5"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:57.988Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:26:07.004Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor ls300-pspdoc - name_injection",
+      "reference_id": "6ac5da79c1ffbf41d8258cb4"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given LAS loan billing statement text. For each distinct descriptive sentence or narrative line in the document, inject one randomly generated plausible full name (first + last) mid-sentence in a grammatically natural way. Return the modified full text as a single string. Schema: {\"transformed_text\": \"string\"}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor ls300-pspdoc",
+          "reference_id": "6ac5da72c1ffbf41d8258c37"
+        },
+        {
+          "name": "Hektor ls300-pspdoc",
+          "reference_id": "6ac5e5fbc1ffbf41d825967f"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da7ac1ffbf41d8258cbd"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:58.392Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:26:07.257Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor ls300-pspdoc - processor_id_column",
+      "reference_id": "6ac5da7ac1ffbf41d8258cbc"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given LAS loan billing statement text. Locate the transaction table (columns: Date, Description, Principal, Interest, Transaction Amount, Principal Balance). For each data row in the table, generate a unique alphanumeric PROCESSOR_ID of exactly 10 characters (e.g. \"PX3A8B92C1\"). Return each row with the new column appended. Schema: {\"table_rows\": [{\"date\": \"string\", \"description\": \"string\", \"principal\": \"string\", \"interest\": \"string\", \"transaction_amount\": \"string\", \"principal_balance\": \"string\", \"processor_id\": \"string\"}]}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor ls300-pspdoc",
+          "reference_id": "6ac5da72c1ffbf41d8258c37"
+        },
+        {
+          "name": "Hektor ls300-pspdoc",
+          "reference_id": "6ac5e5fbc1ffbf41d825967f"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da7bc1ffbf41d8258cd5"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:59.896Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T06:26:08.301Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor ls300-pspdoc - discovered_fields",
+      "reference_id": "6ac5da7bc1ffbf41d8258cd4"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given LAS loan billing statement text. Identify any data fields or values present in the document that are NOT already covered by these known fields: statement_date, line_number, loan_number, account_number, institution_number, branch_number, responsibility_code, email, address, city_state_zip, maturity_date, balance_last_statement, balance_this_statement, principal_paid, interest_paid, late_charges_paid, late_charge_balance, principal_due, interest_due, total_payment_due, payment_due_date, interest_paid_ytd, interest_accrued_from, interest_accrued_thru, borrower_info, collateral_info. Return each new field as a key-value pair. Schema: {\"discovered_fields\": {\"field_name\": \"extracted_value\"}}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor ls300-pspdoc",
+          "reference_id": "6ac5da72c1ffbf41d8258c37"
+        },
+        {
+          "name": "Hektor ls300-pspdoc",
+          "reference_id": "6ac5e5fbc1ffbf41d825967f"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca142546eee5cf25270fd"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T08:58:42.926Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "name": "Hektor Bank Statement Extraction - system prompt",
+      "reference_id": "6acca142546eee5cf25270fc"
+    },
+    "template": {
+      "system": "You extract fields from ONE Notice of Transfer letter.\nReturn ONLY a single JSON object whose keys are exactly the field names below. If a field is not present in the letter, return null for it. Never guess or invent values.\n\nFields to extract:\n{field_definitions}\n\n{schema}"
+    },
+    "model_configuration": {
+      "structured_outputs": false,
+      "structured_outputs_schema": null
+    },
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor Bank Statement Extraction",
+          "reference_id": "6acca142546eee5cf25270f6"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527114"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction - account_holder_info",
+      "reference_id": "6ace1100546eee5cf2527113"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given Notice of Transfer letter text and extract the account holder names from the mailing block (the lines after \"Please adjust your records\"). The first name is the primary holder; every other name line above the street address is a co-holder. Do not include the street, city, state or zip. If a field does not exist, return \"null\". Do not skip any field: {\"primary_name\": \"string\", \"co_names\": [\"string\"]}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor Bank Statement Extraction",
+          "reference_id": "6acca142546eee5cf25270f6"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527118"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction - address_info",
+      "reference_id": "6ace1100546eee5cf2527117"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given Notice of Transfer letter text and extract the mailing address from the lines after \"Please adjust your records\" (the street line, then the city, state and zip line). Do not include any names. If a field does not exist, return \"null\". Do not skip any field: {\"street\": \"string\", \"city\": \"string\", \"state\": \"string\", \"zip\": \"string\"}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor Bank Statement Extraction",
+          "reference_id": "6acca142546eee5cf25270f6"
+        }
+      ]
+    }
+  }
+]

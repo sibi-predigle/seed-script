@@ -1,0 +1,450 @@
+[
+  {
+    "_id": {
+      "$oid": "6a60e06d3ed84624e4a7cbe9"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "78afbdef-62c4-4bf4-902b-97198a949173",
+      "create_ts": {
+        "$date": "2026-07-22T15:23:25.281Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:41:12.232Z"
+      },
+      "record_status": "A"
+    },
+    "name": "Masking processor hc3",
+    "description": "Masking processor hc3 description",
+    "tags": [],
+    "module_name": "engine.processors.anonymizer.masking",
+    "class_name": "MaskingProcessor",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "input_params": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "description": "File to be masked",
+        "tags": [],
+        "name": "Input File",
+        "type": "file",
+        "key": "input_file",
+        "placeholder": "",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      }
+    ],
+    "supported_modes": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "live"
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "async"
+      }
+    ],
+    "status": "Active",
+    "type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "pi/data/process/masking",
+      "reference_id": "674deade8e543636b4052137"
+    },
+    "identifier": "6a60e06d3ed84624e4a7cbe9"
+  },
+  {
+    "_id": {
+      "$oid": "6aa93548e04eef122a9b4407"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "phi-redaction-test",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-09-15T12:08:40Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-09-16T12:16:13.534Z"
+      },
+      "record_status": "A"
+    },
+    "name": "PHI Redaction Processor",
+    "tags": [],
+    "module_name": "engine.processors.anonymizer.phi_redaction",
+    "class_name": "PHIRedactionProcessor",
+    "input_params": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "Input File",
+        "type": "file",
+        "key": "input_file",
+        "placeholder": "",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "Redaction Strategy",
+        "type": "string",
+        "key": "redaction_strategy",
+        "placeholder": "",
+        "required": true,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": "black_box"
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "PII Types",
+        "type": "string",
+        "key": "phi_types",
+        "placeholder": "",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": "all"
+      }
+    ],
+    "supported_modes": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "live"
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "async"
+      }
+    ],
+    "status": "Active",
+    "type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "PHI Redaction Processor"
+    },
+    "source_config": []
+  },
+  {
+    "_id": {
+      "$oid": "6ac6656b0717bfc9b1625930"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T15:29:47.654Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-08T10:33:56.364Z"
+      },
+      "record_status": "A"
+    },
+    "name": "Bank Loan Statement Extraction PS (Rule Engine)",
+    "description": "Rule-engine replacement for the legacy LS300PSPDOC/TransformationProcessor ('Bank Loan Statement Extraction' bot, export-only \u2014 see docs/migration/hektor-transformer-rule-engine-processor.md).",
+    "tags": [],
+    "module_name": "engine.processors.transformer.rule_engine_transformer",
+    "class_name": "RuleEngineTransformationProcessor",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "input_params": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "description": "File to be transformed",
+        "tags": [],
+        "name": "Input File",
+        "type": "file",
+        "key": "input_file",
+        "placeholder": "",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "description": "Path of the input file, as an alternative to Input File (used only when no file is uploaded). Relative or absolute.",
+        "tags": [],
+        "name": "File URL",
+        "type": "string",
+        "key": "file_url",
+        "placeholder": "resources/in/file.txt or C:\\data\\file.txt",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "description": "Raw statement text (alternative to Input File)",
+        "tags": [],
+        "name": "Input Text",
+        "type": "string",
+        "key": "input_text",
+        "placeholder": "",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "description": "Regex or text pattern to split records.",
+        "tags": [],
+        "name": "Split Pattern",
+        "type": "string",
+        "key": "split_pattern",
+        "placeholder": "",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      }
+    ],
+    "supported_modes": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "live"
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "async"
+      }
+    ],
+    "status": "Active",
+    "type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "pi/data/process/transformation",
+      "reference_id": "691b375c509165efb68b7e49"
+    },
+    "identifier": "6ac6656b0717bfc9b1625930",
+    "source_config": [],
+    "model": {
+      "identifier": "6a605c3e683499e2a1cb9d0d",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "PC-GemiBench",
+      "version": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "type": "static",
+        "reference_id": "6a60ae74683499e2a1cb9d25"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a3ba10110026df8b33cb"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-08T14:07:54.551Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-08T14:07:54.554Z"
+      },
+      "record_status": "A"
+    },
+    "name": "Notice of Transfer Letter Masking Processor",
+    "description": "Masking processor for notice-of-transfer letters (RegexBlockAdapter/Parser)",
+    "tags": [],
+    "module_name": "engine.processors.anonymizer.masking_json",
+    "class_name": "JsonMaskingProcessor",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Notice of Transfer Letter Masking",
+      "reference_id": "6ac7a348c39023e81a5490a9"
+    },
+    "input_params": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "description": "File to be masked",
+        "tags": [],
+        "name": "Input File",
+        "type": "file",
+        "key": "input_file",
+        "placeholder": "",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "description": "The JSON to mask, passed directly (an object / array, or JSON text). Used when no file is uploaded; wins over File URL.",
+        "tags": [],
+        "name": "Input JSON",
+        "type": "json",
+        "key": "input_json",
+        "placeholder": "{\"status\": \"success\", \"data\": [...]}",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "description": "Path of the input file, as an alternative to Input File (used only when no file is uploaded). Relative or absolute.",
+        "tags": [],
+        "name": "File URL",
+        "type": "string",
+        "key": "file_url",
+        "placeholder": "resources/in/file.txt or C:\\data\\file.txt",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      }
+    ],
+    "supported_modes": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "live"
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "async"
+      }
+    ],
+    "status": "Active",
+    "type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "reference_id": "674deade8e543636b4052137"
+    },
+    "identifier": "6ac7a3ba10110026df8b33cb"
+  }
+]

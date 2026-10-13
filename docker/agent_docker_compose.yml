@@ -1,0 +1,17 @@
+services:
+  api-entity-agent:
+    image: api-entity-agent:local
+    env_file:
+      - ./agent.env
+    environment:
+      # Anything but "local": settings.py would otherwise look for a .env baked into the image.
+      - PREDIGLE_APP_ENV=compose
+      - AGENT_EXECUTION_MODE=direct
+    command: ["gunicorn", "--bind", "0.0.0.0:8100", "--workers", "1", "--threads", "8", "--timeout", "0", "entityagent.wsgi:application"]
+    ports:
+      - "8100:8100"
+    networks:
+      - app-network
+    depends_on:
+      - predigle-mongodb
+ 

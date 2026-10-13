@@ -1,0 +1,1136 @@
+[
+  {
+    "_id": {
+      "$oid": "6ac659f96a96f8432eca10d9"
+    },
+    "identifier": "9ffb48d796a049af8e682d1fb098af82",
+    "slug": "70ab2059701841b7a41a26c1a2e7501b",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:57.777Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:57.777Z"
+      },
+      "record_status": "A"
+    },
+    "name": "Default RuleBlock",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "name": "Default Section",
+      "reference_id": "6ac659f96a96f8432eca10d8"
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fa6a96f8432eca10dc"
+    },
+    "identifier": "cohort-2500-trace-number-hc3dna-2500-trace-number",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-2500-trace-number-hc3dna-2500-trace-number",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:58.078Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:58.113Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "2500_Trace Number",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "2500_Trace Number Rule",
+      "reference_id": "6ac659f96a96f8432eca10db"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fa6a96f8432eca10de"
+    },
+    "identifier": "cohort-2500-transaction-description-hc3dna-2500-transaction-description",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-2500-transaction-description-hc3dna-2500-transaction-description",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:58.191Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:58.227Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "2500_Transaction Description",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "2500_Transaction Description Rule",
+      "reference_id": "6ac659fa6a96f8432eca10dd"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fa6a96f8432eca10e0"
+    },
+    "identifier": "cohort-0000-routing-and-transit-hc3dna-0000-routing-and-transit",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-0000-routing-and-transit-hc3dna-0000-routing-and-transit",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:58.303Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:58.336Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "0000_Routing and Transit",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "0000_Routing and Transit Rule",
+      "reference_id": "6ac659fa6a96f8432eca10df"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fa6a96f8432eca10e2"
+    },
+    "identifier": "cohort-0001-primary-account-number-hc3dna-0001-primary-account-number",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-0001-primary-account-number-hc3dna-0001-primary-account-number",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:58.412Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:58.445Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "0001_Primary Account Number",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "0001_Primary Account Number Rule",
+      "reference_id": "6ac659fa6a96f8432eca10e1"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fa6a96f8432eca10e4"
+    },
+    "identifier": "cohort-0001-member-number-hc3dna-0001-member-number",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-0001-member-number-hc3dna-0001-member-number",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:58.518Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:58.550Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "0001_Member Number",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "0001_Member Number Rule",
+      "reference_id": "6ac659fa6a96f8432eca10e3"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fa6a96f8432eca10e6"
+    },
+    "identifier": "cohort-0001-tax-identification-number-hc3dna-0001-tax-identification-number",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-0001-tax-identification-number-hc3dna-0001-tax-identification-number",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:58.634Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:58.668Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "0001_Tax Identification Number",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "0001_Tax Identification Number Rule",
+      "reference_id": "6ac659fa6a96f8432eca10e5"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fa6a96f8432eca10e8"
+    },
+    "identifier": "cohort-0001-branch-name-hc3dna-0001-branch-name",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-0001-branch-name-hc3dna-0001-branch-name",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:58.749Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:58.785Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "0001_Branch Name",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "0001_Branch Name Rule",
+      "reference_id": "6ac659fa6a96f8432eca10e7"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fa6a96f8432eca10ea"
+    },
+    "identifier": "cohort-1000-name-address-information-hc3dna-1000-name-address-information",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-1000-name-address-information-hc3dna-1000-name-address-information",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:58.866Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:58.908Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "1000_Name/Address Information",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "1000_Name/Address Information Rule",
+      "reference_id": "6ac659fa6a96f8432eca10e9"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fa6a96f8432eca10ec"
+    },
+    "identifier": "cohort-1005-zip-code-hc3dna-1005-zip-code",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-1005-zip-code-hc3dna-1005-zip-code",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:58.994Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:59.036Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "1005_ZIP Code",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "1005_ZIP Code Rule",
+      "reference_id": "6ac659fa6a96f8432eca10eb"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fb6a96f8432eca10ee"
+    },
+    "identifier": "cohort-1008-address-information-hc3dna-1008-address-information",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-1008-address-information-hc3dna-1008-address-information",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:59.118Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:59.153Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "1008_Address Information",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "1008_Address Information Rule",
+      "reference_id": "6ac659fb6a96f8432eca10ed"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac659fb6a96f8432eca10f0"
+    },
+    "identifier": "cohort-1500-account-number-hc3dna-1500-account-number",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-1500-account-number-hc3dna-1500-account-number",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:59.237Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:59.267Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "1500_Account Number",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac659f96a96f8432eca10da"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "1500_Account Number Rule",
+      "reference_id": "6ac659fb6a96f8432eca10ef"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a348c39023e81a5490ac"
+    },
+    "identifier": "c08f1320e2e8451bb87296c9061e57f1",
+    "slug": "2dc21ec94f6e4117bf22530011775dda",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-08T14:06:00.521Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-08T14:06:00.521Z"
+      },
+      "record_status": "A"
+    },
+    "name": "Default RuleBlock",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "name": "Notice of Transfer Letter Masking",
+      "reference_id": "6ac7a348c39023e81a5490a9"
+    },
+    "section": {
+      "name": "Default Section",
+      "reference_id": "6ac7a348c39023e81a5490ab"
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6acca142546eee5cf25270f9"
+    },
+    "identifier": "bb21595ed46842c69ab272f5b560b3eb",
+    "slug": "72e6b64980f6418ca2a0094f068e4ec7",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T08:58:42.764Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T08:58:42.764Z"
+      },
+      "record_status": "A"
+    },
+    "name": "Default RuleBlock",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "name": "Default Section",
+      "reference_id": "6acca142546eee5cf25270f8"
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a349c39023e81a5490bb"
+    },
+    "identifier": "cohort-data-from-account-number",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-data-from-account-number",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-08T14:06:00.646Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:36:33.479Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "data.from_account_number",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Notice of Transfer Letter Masking",
+      "reference_id": "6ac7a348c39023e81a5490a9"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac7a348c39023e81a5490ad"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "data.from_account_number Rule",
+      "reference_id": "6ac7a349c39023e81a5490ba"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527102"
+    },
+    "identifier": "cohort-bank-name-hektorbse-bank-name",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-bank-name-hektorbse-bank-name",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "bank_name",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Deterministic",
+      "reference_id": "6acca142546eee5cf25270fa"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "bank_name Rule",
+      "reference_id": "6ace1100546eee5cf2527101"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527104"
+    },
+    "identifier": "cohort-notice-date-hektorbse-notice-date",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-notice-date-hektorbse-notice-date",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "notice_date",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Deterministic",
+      "reference_id": "6acca142546eee5cf25270fa"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "notice_date Rule",
+      "reference_id": "6ace1100546eee5cf2527103"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527106"
+    },
+    "identifier": "cohort-notice-type-hektorbse-notice-type",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-notice-type-hektorbse-notice-type",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "notice_type",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Deterministic",
+      "reference_id": "6acca142546eee5cf25270fa"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "notice_type Rule",
+      "reference_id": "6ace1100546eee5cf2527105"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527108"
+    },
+    "identifier": "cohort-transfer-amount-hektorbse-transfer-amount",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-transfer-amount-hektorbse-transfer-amount",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "transfer_amount",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Deterministic",
+      "reference_id": "6acca142546eee5cf25270fa"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "transfer_amount Rule",
+      "reference_id": "6ace1100546eee5cf2527107"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf252710a"
+    },
+    "identifier": "cohort-from-account-type-hektorbse-from-account-type",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-from-account-type-hektorbse-from-account-type",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "from_account_type",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Deterministic",
+      "reference_id": "6acca142546eee5cf25270fa"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "from_account_type Rule",
+      "reference_id": "6ace1100546eee5cf2527109"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf252710c"
+    },
+    "identifier": "cohort-from-account-number-hektorbse-from-account-number",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-from-account-number-hektorbse-from-account-number",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "from_account_number",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Deterministic",
+      "reference_id": "6acca142546eee5cf25270fa"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "from_account_number Rule",
+      "reference_id": "6ace1100546eee5cf252710b"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf252710e"
+    },
+    "identifier": "cohort-to-account-number-hektorbse-to-account-number",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-to-account-number-hektorbse-to-account-number",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "to_account_number",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Deterministic",
+      "reference_id": "6acca142546eee5cf25270fa"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "to_account_number Rule",
+      "reference_id": "6ace1100546eee5cf252710d"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527110"
+    },
+    "identifier": "cohort-city-state-zip-hektorbse-city-state-zip",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-city-state-zip-hektorbse-city-state-zip",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "city_state_zip",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Deterministic",
+      "reference_id": "6acca142546eee5cf25270fa"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "city_state_zip Rule",
+      "reference_id": "6ace1100546eee5cf252710f"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527112"
+    },
+    "identifier": "cohort-account-holder-info-hektorbse-account-holder-info",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-account-holder-info-hektorbse-account-holder-info",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "account_holder_info",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Non-Deterministic",
+      "reference_id": "6acca142546eee5cf25270fb"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "account_holder_info Rule",
+      "reference_id": "6ace1100546eee5cf2527111"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527116"
+    },
+    "identifier": "cohort-address-info-hektorbse-address-info",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-address-info-hektorbse-address-info",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "address_info",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Non-Deterministic",
+      "reference_id": "6acca142546eee5cf25270fb"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "address_info Rule",
+      "reference_id": "6ace1100546eee5cf2527115"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a349c39023e81a5490bd"
+    },
+    "identifier": "cohort-data-to-account-number",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-data-to-account-number",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T19:36:33.479Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-12T19:36:33.479Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "data.to_account_number",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Notice of Transfer Letter Masking",
+      "reference_id": "6ac7a348c39023e81a5490a9"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac7a348c39023e81a5490ad"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "data.to_account_number Rule",
+      "reference_id": "6ac7a349c39023e81a5490bc"
+    }
+  }
+]
