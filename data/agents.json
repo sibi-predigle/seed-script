@@ -14,13 +14,13 @@
       },
       "update_user_id": "0",
       "update_ts": {
-        "$date": "2026-10-13T08:34:55.634Z"
+        "$date": "2026-10-13T13:15:52.451Z"
       },
       "record_status": "A"
     },
     "name": "Hektor Agent",
     "tags": [],
-    "status": "Draft",
+    "status": "Published",
     "active": true,
     "priority": "High",
     "states": [
@@ -343,6 +343,20 @@
       "source": "native",
       "retry_count": 0
     },
-    "content_hash": "5df379c26f3b0f9da645599e85f06e994d77444a908853ed3a1e89a8acd66bc6"
+    "content_hash": "5df379c26f3b0f9da645599e85f06e994d77444a908853ed3a1e89a8acd66bc6",
+    "draft_source_version": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Version - d7krem",
+      "reference_id": "6ace2f08fd086ffcec7e37c3"
+    },
+    "live_deployment": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "revision 1",
+      "reference_id": "6ace2f08fd086ffcec7e37c4"
+    }
   }
 ]

@@ -110,6 +110,8 @@ DB_DUMPS = {
     },
     DEST_AGENT_DB: {
         "agents": "agents.json",
+        "agent_versions": "agent_versions.json",
+        "agent_deployments": "agent_deployments.json",
         "state_types": "state_types.json",
         "acl": "acl_agent.json",
     },
