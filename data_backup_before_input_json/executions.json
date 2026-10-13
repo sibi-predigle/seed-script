@@ -1,0 +1,5582 @@
+[
+  {
+    "_id": {
+      "$oid": "6acde0a53d578a20bff2713c"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "create_ts": {
+        "$date": "2026-10-13T07:41:25.521Z"
+      },
+      "update_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "update_ts": {
+        "$date": "2026-10-13T07:41:25.526Z"
+      },
+      "record_status": "A"
+    },
+    "start": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": []
+    },
+    "end": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": []
+    },
+    "agent": {
+      "client_id": "691ad32be2653616d96af2d5",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Agent",
+      "reference_id": "6acdd6c63d578a20bff2713a"
+    },
+    "states": [
+      {
+        "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Start",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Start",
+        "type": "Start",
+        "status": "Pending",
+        "config": {
+          "position": {
+            "x": 434,
+            "y": 303
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "6y1d2h1x342b2o426406490x60200846",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "End",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "End",
+        "type": "End",
+        "status": "Pending",
+        "config": {
+          "position": {
+            "x": 400,
+            "y": 600
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "6y1d2h1x342b2o426406490x60200846",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Precog",
+        "type": "Precog",
+        "status": "Pending",
+        "config": {
+          "bot_id": "6ac6656b0717bfc9b1625932",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.input_file",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "input_text",
+              "value": "$.input_text",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "split_pattern",
+              "value": "$.split_pattern",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 380,
+            "y": 447
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "fabrix_connector": {
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "params": {
+            "input_file": "$.input_file",
+            "input_text": "$.input_text",
+            "split_pattern": "$.split_pattern"
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "End",
+            "type": "End"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      }
+    ],
+    "status": "queued",
+    "input_data": {
+      "constants": {
+        "file_path": "input_file - Copy - Copy (2) - Copy.txt"
+      }
+    },
+    "initial_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "current_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "active_child_execution_count": 0,
+    "trigger": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "",
+      "type": "StreamingConnection",
+      "details": {
+        "connection_type": "local_file",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "agent:6acdd6c63d578a20bff2713a:local_file_adapter:6ad0000000000000000f1e01",
+        "type": "agent",
+        "reference_id": "6acdd6c63d578a20bff2713a"
+      }
+    },
+    "duration_ms": 0,
+    "execution_type": "execute",
+    "label": "Execution - 724123"
+  },
+  {
+    "_id": {
+      "$oid": "6acde1303d578a20bff2713d"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "create_ts": {
+        "$date": "2026-10-13T07:43:44.398Z"
+      },
+      "update_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "update_ts": {
+        "$date": "2026-10-13T07:43:44.398Z"
+      },
+      "record_status": "A"
+    },
+    "start": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": []
+    },
+    "end": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": []
+    },
+    "agent": {
+      "client_id": "691ad32be2653616d96af2d5",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Agent",
+      "reference_id": "6acdd6c63d578a20bff2713a"
+    },
+    "states": [
+      {
+        "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Start",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Start",
+        "type": "Start",
+        "status": "Pending",
+        "config": {
+          "position": {
+            "x": 434,
+            "y": 303
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "6y1d2h1x342b2o426406490x60200846",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "End",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "End",
+        "type": "End",
+        "status": "Pending",
+        "config": {
+          "position": {
+            "x": 400,
+            "y": 600
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "6y1d2h1x342b2o426406490x60200846",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Precog",
+        "type": "Precog",
+        "status": "Pending",
+        "config": {
+          "bot_id": "6ac6656b0717bfc9b1625932",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.input_file",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "input_text",
+              "value": "$.input_text",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "split_pattern",
+              "value": "$.split_pattern",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 380,
+            "y": 447
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "fabrix_connector": {
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "params": {
+            "input_file": "$.input_file",
+            "input_text": "$.input_text",
+            "split_pattern": "$.split_pattern"
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "End",
+            "type": "End"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      }
+    ],
+    "status": "queued",
+    "input_data": {
+      "constants": {
+        "file_path": "input_file - Copy - Copy (2) - Copy - Copy.txt"
+      }
+    },
+    "initial_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "current_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "active_child_execution_count": 0,
+    "trigger": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "",
+      "type": "StreamingConnection",
+      "details": {
+        "connection_type": "local_file",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "agent:6acdd6c63d578a20bff2713a:local_file_adapter:6ad0000000000000000f1e01",
+        "type": "agent",
+        "reference_id": "6acdd6c63d578a20bff2713a"
+      }
+    },
+    "duration_ms": 0,
+    "execution_type": "execute",
+    "label": "Execution - 957104"
+  },
+  {
+    "_id": {
+      "$oid": "6acde1403d578a20bff2713e"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "create_ts": {
+        "$date": "2026-10-13T07:44:00.815Z"
+      },
+      "update_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "update_ts": {
+        "$date": "2026-10-13T07:44:00.816Z"
+      },
+      "record_status": "A"
+    },
+    "start": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": []
+    },
+    "end": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": []
+    },
+    "agent": {
+      "client_id": "691ad32be2653616d96af2d5",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Agent",
+      "reference_id": "6acdd6c63d578a20bff2713a"
+    },
+    "states": [
+      {
+        "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Start",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Start",
+        "type": "Start",
+        "status": "Pending",
+        "config": {
+          "position": {
+            "x": 434,
+            "y": 303
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "6y1d2h1x342b2o426406490x60200846",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "End",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "End",
+        "type": "End",
+        "status": "Pending",
+        "config": {
+          "position": {
+            "x": 400,
+            "y": 600
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "6y1d2h1x342b2o426406490x60200846",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Precog",
+        "type": "Precog",
+        "status": "Pending",
+        "config": {
+          "bot_id": "6ac6656b0717bfc9b1625932",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.input_file",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "input_text",
+              "value": "$.input_text",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "split_pattern",
+              "value": "$.split_pattern",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 380,
+            "y": 447
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "fabrix_connector": {
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "params": {
+            "input_file": "$.input_file",
+            "input_text": "$.input_text",
+            "split_pattern": "$.split_pattern"
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "End",
+            "type": "End"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      }
+    ],
+    "status": "queued",
+    "input_data": {
+      "constants": {
+        "file_path": "input_file - Copy - Copy (2) - Copy - Copy.txt"
+      }
+    },
+    "initial_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "current_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "active_child_execution_count": 0,
+    "trigger": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "",
+      "type": "StreamingConnection",
+      "details": {
+        "connection_type": "local_file",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "agent:6acdd6c63d578a20bff2713a:local_file_adapter:6ad0000000000000000f1e01",
+        "type": "agent",
+        "reference_id": "6acdd6c63d578a20bff2713a"
+      }
+    },
+    "duration_ms": 0,
+    "execution_type": "execute",
+    "label": "Execution - 861705"
+  },
+  {
+    "_id": {
+      "$oid": "6acde3a9935f798ed31ea708"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "create_ts": {
+        "$date": "2026-10-13T07:54:17.163Z"
+      },
+      "update_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "update_ts": {
+        "$date": "2026-10-13T07:54:27.743Z"
+      },
+      "record_status": "A"
+    },
+    "start": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "date": {
+        "$date": "2026-10-13T00:00:00Z"
+      },
+      "dateTime": {
+        "$date": "2026-10-13T07:54:17.179Z"
+      },
+      "timezone": "UTC"
+    },
+    "end": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "date": {
+        "$date": "2026-10-13T00:00:00Z"
+      },
+      "dateTime": {
+        "$date": "2026-10-13T07:54:27.743Z"
+      },
+      "timezone": "UTC"
+    },
+    "agent": {
+      "client_id": "691ad32be2653616d96af2d5",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Agent",
+      "reference_id": "6acdd6c63d578a20bff2713a"
+    },
+    "states": [
+      {
+        "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Start",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T07:54:17.273Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T07:54:17.835Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Start",
+        "type": "Start",
+        "status": "SUCCEEDED",
+        "config": {
+          "position": {
+            "x": 434,
+            "y": 303
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy.txt"
+          },
+          "context": {}
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde3a9935f798ed31ea708",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "6y1d2h1x342b2o426406490x60200846",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "Precog",
+              "type": "Precog",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "5k645j2s5x276m240e2k243o2j2v1k2c"
+        },
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "6y1d2h1x342b2o426406490x60200846",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 562,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "End",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T07:54:27.711Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T07:54:27.724Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "End",
+        "type": "End",
+        "status": "SUCCEEDED",
+        "config": {
+          "position": {
+            "x": 400,
+            "y": 600
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy.txt"
+          },
+          "context": {
+            "precog_execution": {
+              "identifier": "bot_run_e069f1fd-6739-43a0-9a93-8705abd5e688"
+            },
+            "data": [],
+            "should_exit": false,
+            "status": "no_records",
+            "errors": [
+              {
+                "stage": "extract",
+                "error": "NoRecords"
+              }
+            ],
+            "summary": {
+              "total_records": 0,
+              "successful_records": 0,
+              "failed_records": 0
+            }
+          }
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde3a9935f798ed31ea708",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [],
+          "current_state_identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+          "precog_execution": {
+            "identifier": "bot_run_e069f1fd-6739-43a0-9a93-8705abd5e688"
+          }
+        },
+        "input_data": {
+          "status": "no_records",
+          "data": [],
+          "errors": [
+            {
+              "stage": "extract",
+              "error": "NoRecords"
+            }
+          ],
+          "summary": {
+            "total_records": 0,
+            "successful_records": 0,
+            "failed_records": 0
+          }
+        },
+        "output_data": {
+          "status": "no_records",
+          "data": [],
+          "errors": [
+            {
+              "stage": "extract",
+              "error": "NoRecords"
+            }
+          ],
+          "summary": {
+            "total_records": 0,
+            "successful_records": 0,
+            "failed_records": 0
+          }
+        },
+        "next": [],
+        "duration_ms": 12,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "6y1d2h1x342b2o426406490x60200846",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T07:54:17.850Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T07:54:27.697Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Precog",
+        "type": "Precog",
+        "status": "SUCCEEDED",
+        "config": {
+          "bot_id": "6ac6656b0717bfc9b1625932",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.input_file",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "input_text",
+              "value": "$.input_text",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "split_pattern",
+              "value": "$.split_pattern",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 380,
+            "y": 447
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "fabrix_connector": {
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "params": {
+            "input_file": "$.input_file",
+            "input_text": "$.input_text",
+            "split_pattern": "$.split_pattern"
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy.txt"
+          },
+          "context": {
+            "precog_execution": {
+              "identifier": "bot_run_e069f1fd-6739-43a0-9a93-8705abd5e688"
+            },
+            "data": {
+              "status": "no_records",
+              "data": [],
+              "errors": [
+                {
+                  "stage": "extract",
+                  "error": "NoRecords"
+                }
+              ],
+              "summary": {
+                "total_records": 0,
+                "successful_records": 0,
+                "failed_records": 0
+              }
+            },
+            "should_exit": false
+          }
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde3a9935f798ed31ea708",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "End",
+              "type": "End",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "6y1d2h1x342b2o426406490x60200846",
+          "precog_execution": {
+            "identifier": "bot_run_e069f1fd-6739-43a0-9a93-8705abd5e688"
+          }
+        },
+        "input_data": {},
+        "output_data": {
+          "status": "no_records",
+          "data": [],
+          "errors": [
+            {
+              "stage": "extract",
+              "error": "NoRecords"
+            }
+          ],
+          "summary": {
+            "total_records": 0,
+            "successful_records": 0,
+            "failed_records": 0
+          }
+        },
+        "next": [
+          {
+            "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "End",
+            "type": "End"
+          }
+        ],
+        "duration_ms": 9846,
+        "source": "native",
+        "retry_count": 0
+      }
+    ],
+    "status": "SUCCEEDED",
+    "input_data": {
+      "constants": {
+        "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy.txt"
+      }
+    },
+    "initial_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "current_state": {
+      "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "End",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "date": {
+          "$date": "2026-10-13T00:00:00Z"
+        },
+        "dateTime": {
+          "$date": "2026-10-13T07:54:27.711Z"
+        },
+        "timezone": "UTC"
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "date": {
+          "$date": "2026-10-13T00:00:00Z"
+        },
+        "dateTime": {
+          "$date": "2026-10-13T07:54:27.724Z"
+        },
+        "timezone": "UTC"
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "End",
+      "type": "End",
+      "status": "SUCCEEDED",
+      "config": {
+        "position": {
+          "x": 400,
+          "y": 600
+        }
+      },
+      "reference": {},
+      "context": {
+        "constants": {
+          "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy.txt"
+        },
+        "context": {
+          "precog_execution": {
+            "identifier": "bot_run_e069f1fd-6739-43a0-9a93-8705abd5e688"
+          },
+          "data": [],
+          "should_exit": false,
+          "status": "no_records",
+          "errors": [
+            {
+              "stage": "extract",
+              "error": "NoRecords"
+            }
+          ],
+          "summary": {
+            "total_records": 0,
+            "successful_records": 0,
+            "failed_records": 0
+          }
+        }
+      },
+      "internal_context": {
+        "client_id": "691ad32be2653616d96af2d5",
+        "execution_id": "6acde3a9935f798ed31ea708",
+        "agent_id": "6acdd6c63d578a20bff2713a",
+        "agent_name": "Hektor Agent",
+        "execution_type": "execute",
+        "constants": {
+          "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy.txt"
+        },
+        "variables": {},
+        "next": [],
+        "current_state_identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "precog_execution": {
+          "identifier": "bot_run_e069f1fd-6739-43a0-9a93-8705abd5e688"
+        }
+      },
+      "input_data": {
+        "status": "no_records",
+        "data": [],
+        "errors": [
+          {
+            "stage": "extract",
+            "error": "NoRecords"
+          }
+        ],
+        "summary": {
+          "total_records": 0,
+          "successful_records": 0,
+          "failed_records": 0
+        }
+      },
+      "output_data": {
+        "status": "no_records",
+        "data": [],
+        "errors": [
+          {
+            "stage": "extract",
+            "error": "NoRecords"
+          }
+        ],
+        "summary": {
+          "total_records": 0,
+          "successful_records": 0,
+          "failed_records": 0
+        }
+      },
+      "next": [],
+      "duration_ms": 12,
+      "source": "native",
+      "retry_count": 0
+    },
+    "active_child_execution_count": 0,
+    "trigger": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "",
+      "type": "StreamingConnection",
+      "details": {
+        "connection_type": "local_file",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "agent:6acdd6c63d578a20bff2713a:local_file_adapter:6ad0000000000000000f1e01",
+        "type": "agent",
+        "reference_id": "6acdd6c63d578a20bff2713a"
+      }
+    },
+    "duration_ms": 10564,
+    "execution_type": "execute",
+    "label": "Execution - 690918",
+    "output_data": {
+      "status": "no_records",
+      "data": [],
+      "errors": [
+        {
+          "stage": "extract",
+          "error": "NoRecords"
+        }
+      ],
+      "summary": {
+        "total_records": 0,
+        "successful_records": 0,
+        "failed_records": 0
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acde434935f798ed31ea709"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "create_ts": {
+        "$date": "2026-10-13T07:56:36.820Z"
+      },
+      "update_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "update_ts": {
+        "$date": "2026-10-13T07:56:36.942Z"
+      },
+      "record_status": "A"
+    },
+    "start": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "date": {
+        "$date": "2026-10-13T00:00:00Z"
+      },
+      "dateTime": {
+        "$date": "2026-10-13T07:56:36.830Z"
+      },
+      "timezone": "UTC"
+    },
+    "end": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "date": {
+        "$date": "2026-10-13T00:00:00Z"
+      },
+      "dateTime": {
+        "$date": "2026-10-13T07:56:36.942Z"
+      },
+      "timezone": "UTC"
+    },
+    "agent": {
+      "client_id": "691ad32be2653616d96af2d5",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Agent",
+      "reference_id": "6acdd6c63d578a20bff2713a"
+    },
+    "states": [
+      {
+        "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Start",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T07:56:36.844Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T07:56:36.862Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Start",
+        "type": "Start",
+        "status": "SUCCEEDED",
+        "config": {
+          "position": {
+            "x": 434,
+            "y": 303
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt"
+          },
+          "context": {}
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde434935f798ed31ea709",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "6y1d2h1x342b2o426406490x60200846",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "Precog",
+              "type": "Precog",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "5k645j2s5x276m240e2k243o2j2v1k2c"
+        },
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "6y1d2h1x342b2o426406490x60200846",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 17,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "End",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "End",
+        "type": "End",
+        "status": "Pending",
+        "config": {
+          "position": {
+            "x": 400,
+            "y": 600
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "6y1d2h1x342b2o426406490x60200846",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T07:56:36.881Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T07:56:36.910Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Precog",
+        "type": "Precog",
+        "status": "FAILED",
+        "config": {
+          "bot_id": "6ac6656b0717bfc9b1625932",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.constants.file_path",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "input_text",
+              "value": "$.input_text",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "split_pattern",
+              "value": "$.split_pattern",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 380,
+            "y": 447
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix_connector": {
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "params": {
+            "input_file": "$.constants.file_path",
+            "input_text": "$.input_text",
+            "split_pattern": "$.split_pattern"
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt"
+          },
+          "context": {}
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde434935f798ed31ea709",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "End",
+              "type": "End",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "6y1d2h1x342b2o426406490x60200846"
+        },
+        "input_data": {},
+        "output_data": {
+          "error": "File could not be resolved for param input_file: no file for id 'C:\\\\Predigle\\\\hektor_inbox\\\\bank_statements\\\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt' ('C:\\\\Predigle\\\\hektor_inbox\\\\bank_statements\\\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string)",
+          "details": {
+            "config": {
+              "bot_id": "6ac6656b0717bfc9b1625932",
+              "bot_id_params": [
+                {
+                  "key": "input_file",
+                  "value": "$.constants.file_path",
+                  "type": "file",
+                  "required": false
+                },
+                {
+                  "key": "input_text",
+                  "value": "$.input_text",
+                  "type": "string",
+                  "required": false
+                },
+                {
+                  "key": "split_pattern",
+                  "value": "$.split_pattern",
+                  "type": "string",
+                  "required": false
+                }
+              ],
+              "bot_id_processor_param": null,
+              "mode": {
+                "primaryContent": "live",
+                "id": "live"
+              },
+              "position": {
+                "x": 380,
+                "y": 447
+              },
+              "connector": [
+                {
+                  "id": "fabrix",
+                  "name": "Fabrix",
+                  "icon": "agent-assets/icons/taxfab.svg"
+                }
+              ],
+              "fabrix_connector": {
+                "name": "Hektor Bank Statement Extraction",
+                "reference_id": "6acca142546eee5cf25270f6"
+              },
+              "fabrix": {
+                "selection_strategy": "direct",
+                "name": "Hektor Bank Statement Extraction",
+                "reference_id": "6acca142546eee5cf25270f6"
+              },
+              "params": {
+                "input_file": "$.constants.file_path",
+                "input_text": "$.input_text",
+                "split_pattern": "$.split_pattern"
+              },
+              "reference": {
+                "reference_id": "no_reference"
+              }
+            }
+          }
+        },
+        "next": [
+          {
+            "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "End",
+            "type": "End"
+          }
+        ],
+        "duration_ms": 28,
+        "source": "native",
+        "retry_count": 0
+      }
+    ],
+    "status": "FAILED",
+    "input_data": {
+      "constants": {
+        "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt"
+      }
+    },
+    "initial_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "current_state": {
+      "identifier": "6y1d2h1x342b2o426406490x60200846",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Precog",
+      "description": "Execute a single Precog",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "date": {
+          "$date": "2026-10-13T00:00:00Z"
+        },
+        "dateTime": {
+          "$date": "2026-10-13T07:56:36.881Z"
+        },
+        "timezone": "UTC"
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "date": {
+          "$date": "2026-10-13T00:00:00Z"
+        },
+        "dateTime": {
+          "$date": "2026-10-13T07:56:36.910Z"
+        },
+        "timezone": "UTC"
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Precog",
+      "type": "Precog",
+      "status": "FAILED",
+      "config": {
+        "bot_id": "6ac6656b0717bfc9b1625932",
+        "bot_id_params": [
+          {
+            "key": "input_file",
+            "value": "$.constants.file_path",
+            "type": "file",
+            "required": false
+          },
+          {
+            "key": "input_text",
+            "value": "$.input_text",
+            "type": "string",
+            "required": false
+          },
+          {
+            "key": "split_pattern",
+            "value": "$.split_pattern",
+            "type": "string",
+            "required": false
+          }
+        ],
+        "bot_id_processor_param": null,
+        "mode": {
+          "primaryContent": "live",
+          "id": "live"
+        },
+        "position": {
+          "x": 380,
+          "y": 447
+        },
+        "connector": [
+          {
+            "id": "fabrix",
+            "name": "Fabrix",
+            "icon": "agent-assets/icons/taxfab.svg"
+          }
+        ],
+        "fabrix_connector": {
+          "name": "Hektor Bank Statement Extraction",
+          "reference_id": "6acca142546eee5cf25270f6"
+        },
+        "fabrix": {
+          "selection_strategy": "direct",
+          "name": "Hektor Bank Statement Extraction",
+          "reference_id": "6acca142546eee5cf25270f6"
+        },
+        "params": {
+          "input_file": "$.constants.file_path",
+          "input_text": "$.input_text",
+          "split_pattern": "$.split_pattern"
+        }
+      },
+      "reference": {},
+      "context": {
+        "constants": {
+          "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt"
+        },
+        "context": {}
+      },
+      "internal_context": {
+        "client_id": "691ad32be2653616d96af2d5",
+        "execution_id": "6acde434935f798ed31ea709",
+        "agent_id": "6acdd6c63d578a20bff2713a",
+        "agent_name": "Hektor Agent",
+        "execution_type": "execute",
+        "constants": {
+          "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt"
+        },
+        "variables": {},
+        "next": [
+          {
+            "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+            "client_id": "",
+            "acl": [],
+            "hidden": false,
+            "deleted_status": "N",
+            "plugins": [],
+            "miners": [],
+            "status": "",
+            "name": "End",
+            "type": "End",
+            "reference_id": "",
+            "ingest_id": ""
+          }
+        ],
+        "current_state_identifier": "6y1d2h1x342b2o426406490x60200846"
+      },
+      "input_data": {},
+      "output_data": {
+        "error": "File could not be resolved for param input_file: no file for id 'C:\\\\Predigle\\\\hektor_inbox\\\\bank_statements\\\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt' ('C:\\\\Predigle\\\\hektor_inbox\\\\bank_statements\\\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string)",
+        "details": {
+          "config": {
+            "bot_id": "6ac6656b0717bfc9b1625932",
+            "bot_id_params": [
+              {
+                "key": "input_file",
+                "value": "$.constants.file_path",
+                "type": "file",
+                "required": false
+              },
+              {
+                "key": "input_text",
+                "value": "$.input_text",
+                "type": "string",
+                "required": false
+              },
+              {
+                "key": "split_pattern",
+                "value": "$.split_pattern",
+                "type": "string",
+                "required": false
+              }
+            ],
+            "bot_id_processor_param": null,
+            "mode": {
+              "primaryContent": "live",
+              "id": "live"
+            },
+            "position": {
+              "x": 380,
+              "y": 447
+            },
+            "connector": [
+              {
+                "id": "fabrix",
+                "name": "Fabrix",
+                "icon": "agent-assets/icons/taxfab.svg"
+              }
+            ],
+            "fabrix_connector": {
+              "name": "Hektor Bank Statement Extraction",
+              "reference_id": "6acca142546eee5cf25270f6"
+            },
+            "fabrix": {
+              "selection_strategy": "direct",
+              "name": "Hektor Bank Statement Extraction",
+              "reference_id": "6acca142546eee5cf25270f6"
+            },
+            "params": {
+              "input_file": "$.constants.file_path",
+              "input_text": "$.input_text",
+              "split_pattern": "$.split_pattern"
+            },
+            "reference": {
+              "reference_id": "no_reference"
+            }
+          }
+        }
+      },
+      "next": [
+        {
+          "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "name": "End",
+          "type": "End"
+        }
+      ],
+      "duration_ms": 28,
+      "source": "native",
+      "retry_count": 0
+    },
+    "active_child_execution_count": 0,
+    "trigger": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "",
+      "type": "StreamingConnection",
+      "details": {
+        "connection_type": "local_file",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "agent:6acdd6c63d578a20bff2713a:local_file_adapter:6ad0000000000000000f1e01",
+        "type": "agent",
+        "reference_id": "6acdd6c63d578a20bff2713a"
+      }
+    },
+    "duration_ms": 112,
+    "execution_type": "execute",
+    "label": "Execution - 932209",
+    "output_data": {
+      "error": "{'error': \"File could not be resolved for param input_file: no file for id 'C:\\\\\\\\Predigle\\\\\\\\hektor_inbox\\\\\\\\bank_statements\\\\\\\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt' ('C:\\\\\\\\Predigle\\\\\\\\hektor_inbox\\\\\\\\bank_statements\\\\\\\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy.txt' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string)\", 'details': {'config': {'bot_id': '6ac6656b0717bfc9b1625932', 'bot_id_params': [{'key': 'input_file', 'value': '$.constants.file_path', 'type': 'file', 'required': False}, {'key': 'input_text', 'value': '$.input_text', 'type': 'string', 'required': False}, {'key': 'split_pattern', 'value': '$.split_pattern', 'type': 'string', 'required': False}], 'bot_id_processor_param': None, 'mode': {'primaryContent': 'live', 'id': 'live'}, 'position': {'x': 380, 'y': 447}, 'connector': [{'id': 'fabrix', 'name': 'Fabrix', 'icon': 'agent-assets/icons/taxfab.svg'}], 'fabrix_connector': {'name': 'Hektor Bank Statement Extraction', 'reference_id': '6acca142546eee5cf25270f6'}, 'fabrix': {'selection_strategy': 'direct', 'name': 'Hektor Bank Statement Extraction', 'reference_id': '6acca142546eee5cf25270f6'}, 'params': {'input_file': '$.constants.file_path', 'input_text': '$.input_text', 'split_pattern': '$.split_pattern'}, 'reference': {'reference_id': 'no_reference'}}}}"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acde8ca935f798ed31ea70a"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "create_ts": {
+        "$date": "2026-10-13T08:16:10.379Z"
+      },
+      "update_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "update_ts": {
+        "$date": "2026-10-13T08:16:26.988Z"
+      },
+      "record_status": "A"
+    },
+    "start": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "date": {
+        "$date": "2026-10-13T00:00:00Z"
+      },
+      "dateTime": {
+        "$date": "2026-10-13T08:16:10.732Z"
+      },
+      "timezone": "UTC"
+    },
+    "end": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "date": {
+        "$date": "2026-10-13T00:00:00Z"
+      },
+      "dateTime": {
+        "$date": "2026-10-13T08:16:26.988Z"
+      },
+      "timezone": "UTC"
+    },
+    "agent": {
+      "client_id": "691ad32be2653616d96af2d5",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Agent",
+      "reference_id": "6acdd6c63d578a20bff2713a"
+    },
+    "states": [
+      {
+        "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Start",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:16:10.951Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:16:11.500Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Start",
+        "type": "Start",
+        "status": "SUCCEEDED",
+        "config": {
+          "position": {
+            "x": 434,
+            "y": 303
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy - Copy - Copy - Copy.txt"
+          },
+          "context": {}
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde8ca935f798ed31ea70a",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy - Copy - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "Precog",
+              "type": "Precog",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "5k645j2s5x276m240e2k243o2j2v1k2c"
+        },
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 548,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "End",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:16:26.903Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:16:26.918Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "End",
+        "type": "End",
+        "status": "SUCCEEDED",
+        "config": {
+          "position": {
+            "x": 400,
+            "y": 600
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy - Copy - Copy - Copy.txt"
+          },
+          "context": {
+            "precog_execution": {
+              "identifier": "bot_run_6f62223e-537d-45ef-ba15-4299688bae60"
+            },
+            "data": [
+              {
+                "bank_name": null,
+                "notice_date": "06/09/2042",
+                "notice_type": null,
+                "transfer_amount": null,
+                "from_account_type": null,
+                "from_account_number": null,
+                "to_account_number": null,
+                "city_state_zip": "VENTONVILLO AR  72712-3454",
+                "account_holder_info": {
+                  "primary_name": "DARXL VRODBLE",
+                  "co_names": [
+                    "LAURIX VRODBLE"
+                  ]
+                },
+                "address_info": {
+                  "street": "3404 NW EDGEWOOL AVE",
+                  "city": "VENTONVILLO",
+                  "state": "AR",
+                  "zip": "72712-3454"
+                }
+              },
+              {
+                "bank_name": null,
+                "notice_date": "06/09/2042",
+                "notice_type": "*",
+                "transfer_amount": null,
+                "from_account_type": null,
+                "from_account_number": null,
+                "to_account_number": null,
+                "city_state_zip": "GARMEL IN  46032-1414",
+                "account_holder_info": {
+                  "primary_name": "XEVIN NAUL",
+                  "co_names": []
+                },
+                "address_info": {
+                  "street": "34 THORNHURBT DR",
+                  "city": "GARMEL",
+                  "state": "IN",
+                  "zip": "46032-1414"
+                }
+              }
+            ],
+            "should_exit": false,
+            "status": "success",
+            "errors": [],
+            "summary": {
+              "total_records": 2,
+              "successful_records": 2,
+              "failed_records": 0
+            }
+          }
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde8ca935f798ed31ea70a",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy - Copy - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [],
+          "current_state_identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+          "precog_execution": {
+            "identifier": "bot_run_6f62223e-537d-45ef-ba15-4299688bae60"
+          }
+        },
+        "input_data": {
+          "status": "success",
+          "data": [
+            {
+              "bank_name": null,
+              "notice_date": "06/09/2042",
+              "notice_type": null,
+              "transfer_amount": null,
+              "from_account_type": null,
+              "from_account_number": null,
+              "to_account_number": null,
+              "city_state_zip": "VENTONVILLO AR  72712-3454",
+              "account_holder_info": {
+                "primary_name": "DARXL VRODBLE",
+                "co_names": [
+                  "LAURIX VRODBLE"
+                ]
+              },
+              "address_info": {
+                "street": "3404 NW EDGEWOOL AVE",
+                "city": "VENTONVILLO",
+                "state": "AR",
+                "zip": "72712-3454"
+              }
+            },
+            {
+              "bank_name": null,
+              "notice_date": "06/09/2042",
+              "notice_type": "*",
+              "transfer_amount": null,
+              "from_account_type": null,
+              "from_account_number": null,
+              "to_account_number": null,
+              "city_state_zip": "GARMEL IN  46032-1414",
+              "account_holder_info": {
+                "primary_name": "XEVIN NAUL",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "34 THORNHURBT DR",
+                "city": "GARMEL",
+                "state": "IN",
+                "zip": "46032-1414"
+              }
+            }
+          ],
+          "errors": [],
+          "summary": {
+            "total_records": 2,
+            "successful_records": 2,
+            "failed_records": 0
+          }
+        },
+        "output_data": {
+          "status": "success",
+          "data": [
+            {
+              "bank_name": null,
+              "notice_date": "06/09/2042",
+              "notice_type": null,
+              "transfer_amount": null,
+              "from_account_type": null,
+              "from_account_number": null,
+              "to_account_number": null,
+              "city_state_zip": "VENTONVILLO AR  72712-3454",
+              "account_holder_info": {
+                "primary_name": "DARXL VRODBLE",
+                "co_names": [
+                  "LAURIX VRODBLE"
+                ]
+              },
+              "address_info": {
+                "street": "3404 NW EDGEWOOL AVE",
+                "city": "VENTONVILLO",
+                "state": "AR",
+                "zip": "72712-3454"
+              }
+            },
+            {
+              "bank_name": null,
+              "notice_date": "06/09/2042",
+              "notice_type": "*",
+              "transfer_amount": null,
+              "from_account_type": null,
+              "from_account_number": null,
+              "to_account_number": null,
+              "city_state_zip": "GARMEL IN  46032-1414",
+              "account_holder_info": {
+                "primary_name": "XEVIN NAUL",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "34 THORNHURBT DR",
+                "city": "GARMEL",
+                "state": "IN",
+                "zip": "46032-1414"
+              }
+            }
+          ],
+          "errors": [],
+          "summary": {
+            "total_records": 2,
+            "successful_records": 2,
+            "failed_records": 0
+          }
+        },
+        "next": [],
+        "duration_ms": 14,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:16:11.572Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:16:26.886Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Precog",
+        "type": "Precog",
+        "status": "SUCCEEDED",
+        "config": {
+          "bot_id": "6ac6656b0717bfc9b1625932",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.input_file",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "file_url",
+              "value": "$.constants.file_path",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "input_text",
+              "value": "$.input_text",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "split_pattern",
+              "value": "$.split_pattern",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 360,
+            "y": 457
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "fabrix_connector": {
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "params": {
+            "input_file": "$.input_file",
+            "file_url": "$.constants.file_path",
+            "input_text": "$.input_text",
+            "split_pattern": "$.split_pattern"
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy - Copy - Copy - Copy.txt"
+          },
+          "context": {
+            "precog_execution": {
+              "identifier": "bot_run_6f62223e-537d-45ef-ba15-4299688bae60"
+            },
+            "data": {
+              "status": "success",
+              "data": [
+                {
+                  "bank_name": null,
+                  "notice_date": "06/09/2042",
+                  "notice_type": null,
+                  "transfer_amount": null,
+                  "from_account_type": null,
+                  "from_account_number": null,
+                  "to_account_number": null,
+                  "city_state_zip": "VENTONVILLO AR  72712-3454",
+                  "account_holder_info": {
+                    "primary_name": "DARXL VRODBLE",
+                    "co_names": [
+                      "LAURIX VRODBLE"
+                    ]
+                  },
+                  "address_info": {
+                    "street": "3404 NW EDGEWOOL AVE",
+                    "city": "VENTONVILLO",
+                    "state": "AR",
+                    "zip": "72712-3454"
+                  }
+                },
+                {
+                  "bank_name": null,
+                  "notice_date": "06/09/2042",
+                  "notice_type": "*",
+                  "transfer_amount": null,
+                  "from_account_type": null,
+                  "from_account_number": null,
+                  "to_account_number": null,
+                  "city_state_zip": "GARMEL IN  46032-1414",
+                  "account_holder_info": {
+                    "primary_name": "XEVIN NAUL",
+                    "co_names": []
+                  },
+                  "address_info": {
+                    "street": "34 THORNHURBT DR",
+                    "city": "GARMEL",
+                    "state": "IN",
+                    "zip": "46032-1414"
+                  }
+                }
+              ],
+              "errors": [],
+              "summary": {
+                "total_records": 2,
+                "successful_records": 2,
+                "failed_records": 0
+              }
+            },
+            "should_exit": false
+          }
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde8ca935f798ed31ea70a",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy - Copy - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "End",
+              "type": "End",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+          "precog_execution": {
+            "identifier": "bot_run_6f62223e-537d-45ef-ba15-4299688bae60"
+          }
+        },
+        "input_data": {},
+        "output_data": {
+          "status": "success",
+          "data": [
+            {
+              "bank_name": null,
+              "notice_date": "06/09/2042",
+              "notice_type": null,
+              "transfer_amount": null,
+              "from_account_type": null,
+              "from_account_number": null,
+              "to_account_number": null,
+              "city_state_zip": "VENTONVILLO AR  72712-3454",
+              "account_holder_info": {
+                "primary_name": "DARXL VRODBLE",
+                "co_names": [
+                  "LAURIX VRODBLE"
+                ]
+              },
+              "address_info": {
+                "street": "3404 NW EDGEWOOL AVE",
+                "city": "VENTONVILLO",
+                "state": "AR",
+                "zip": "72712-3454"
+              }
+            },
+            {
+              "bank_name": null,
+              "notice_date": "06/09/2042",
+              "notice_type": "*",
+              "transfer_amount": null,
+              "from_account_type": null,
+              "from_account_number": null,
+              "to_account_number": null,
+              "city_state_zip": "GARMEL IN  46032-1414",
+              "account_holder_info": {
+                "primary_name": "XEVIN NAUL",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "34 THORNHURBT DR",
+                "city": "GARMEL",
+                "state": "IN",
+                "zip": "46032-1414"
+              }
+            }
+          ],
+          "errors": [],
+          "summary": {
+            "total_records": 2,
+            "successful_records": 2,
+            "failed_records": 0
+          }
+        },
+        "next": [
+          {
+            "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "End",
+            "type": "End"
+          }
+        ],
+        "duration_ms": 15313,
+        "source": "native",
+        "retry_count": 0
+      }
+    ],
+    "status": "SUCCEEDED",
+    "input_data": {
+      "constants": {
+        "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy - Copy - Copy - Copy.txt"
+      }
+    },
+    "initial_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "current_state": {
+      "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "End",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "date": {
+          "$date": "2026-10-13T00:00:00Z"
+        },
+        "dateTime": {
+          "$date": "2026-10-13T08:16:26.903Z"
+        },
+        "timezone": "UTC"
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "date": {
+          "$date": "2026-10-13T00:00:00Z"
+        },
+        "dateTime": {
+          "$date": "2026-10-13T08:16:26.918Z"
+        },
+        "timezone": "UTC"
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "End",
+      "type": "End",
+      "status": "SUCCEEDED",
+      "config": {
+        "position": {
+          "x": 400,
+          "y": 600
+        }
+      },
+      "reference": {},
+      "context": {
+        "constants": {
+          "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy - Copy - Copy - Copy.txt"
+        },
+        "context": {
+          "precog_execution": {
+            "identifier": "bot_run_6f62223e-537d-45ef-ba15-4299688bae60"
+          },
+          "data": [
+            {
+              "bank_name": null,
+              "notice_date": "06/09/2042",
+              "notice_type": null,
+              "transfer_amount": null,
+              "from_account_type": null,
+              "from_account_number": null,
+              "to_account_number": null,
+              "city_state_zip": "VENTONVILLO AR  72712-3454",
+              "account_holder_info": {
+                "primary_name": "DARXL VRODBLE",
+                "co_names": [
+                  "LAURIX VRODBLE"
+                ]
+              },
+              "address_info": {
+                "street": "3404 NW EDGEWOOL AVE",
+                "city": "VENTONVILLO",
+                "state": "AR",
+                "zip": "72712-3454"
+              }
+            },
+            {
+              "bank_name": null,
+              "notice_date": "06/09/2042",
+              "notice_type": "*",
+              "transfer_amount": null,
+              "from_account_type": null,
+              "from_account_number": null,
+              "to_account_number": null,
+              "city_state_zip": "GARMEL IN  46032-1414",
+              "account_holder_info": {
+                "primary_name": "XEVIN NAUL",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "34 THORNHURBT DR",
+                "city": "GARMEL",
+                "state": "IN",
+                "zip": "46032-1414"
+              }
+            }
+          ],
+          "should_exit": false,
+          "status": "success",
+          "errors": [],
+          "summary": {
+            "total_records": 2,
+            "successful_records": 2,
+            "failed_records": 0
+          }
+        }
+      },
+      "internal_context": {
+        "client_id": "691ad32be2653616d96af2d5",
+        "execution_id": "6acde8ca935f798ed31ea70a",
+        "agent_id": "6acdd6c63d578a20bff2713a",
+        "agent_name": "Hektor Agent",
+        "execution_type": "execute",
+        "constants": {
+          "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\input_file - Copy - Copy (2) - Copy - Copy - Copy - Copy - Copy - Copy - Copy.txt"
+        },
+        "variables": {},
+        "next": [],
+        "current_state_identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "precog_execution": {
+          "identifier": "bot_run_6f62223e-537d-45ef-ba15-4299688bae60"
+        }
+      },
+      "input_data": {
+        "status": "success",
+        "data": [
+          {
+            "bank_name": null,
+            "notice_date": "06/09/2042",
+            "notice_type": null,
+            "transfer_amount": null,
+            "from_account_type": null,
+            "from_account_number": null,
+            "to_account_number": null,
+            "city_state_zip": "VENTONVILLO AR  72712-3454",
+            "account_holder_info": {
+              "primary_name": "DARXL VRODBLE",
+              "co_names": [
+                "LAURIX VRODBLE"
+              ]
+            },
+            "address_info": {
+              "street": "3404 NW EDGEWOOL AVE",
+              "city": "VENTONVILLO",
+              "state": "AR",
+              "zip": "72712-3454"
+            }
+          },
+          {
+            "bank_name": null,
+            "notice_date": "06/09/2042",
+            "notice_type": "*",
+            "transfer_amount": null,
+            "from_account_type": null,
+            "from_account_number": null,
+            "to_account_number": null,
+            "city_state_zip": "GARMEL IN  46032-1414",
+            "account_holder_info": {
+              "primary_name": "XEVIN NAUL",
+              "co_names": []
+            },
+            "address_info": {
+              "street": "34 THORNHURBT DR",
+              "city": "GARMEL",
+              "state": "IN",
+              "zip": "46032-1414"
+            }
+          }
+        ],
+        "errors": [],
+        "summary": {
+          "total_records": 2,
+          "successful_records": 2,
+          "failed_records": 0
+        }
+      },
+      "output_data": {
+        "status": "success",
+        "data": [
+          {
+            "bank_name": null,
+            "notice_date": "06/09/2042",
+            "notice_type": null,
+            "transfer_amount": null,
+            "from_account_type": null,
+            "from_account_number": null,
+            "to_account_number": null,
+            "city_state_zip": "VENTONVILLO AR  72712-3454",
+            "account_holder_info": {
+              "primary_name": "DARXL VRODBLE",
+              "co_names": [
+                "LAURIX VRODBLE"
+              ]
+            },
+            "address_info": {
+              "street": "3404 NW EDGEWOOL AVE",
+              "city": "VENTONVILLO",
+              "state": "AR",
+              "zip": "72712-3454"
+            }
+          },
+          {
+            "bank_name": null,
+            "notice_date": "06/09/2042",
+            "notice_type": "*",
+            "transfer_amount": null,
+            "from_account_type": null,
+            "from_account_number": null,
+            "to_account_number": null,
+            "city_state_zip": "GARMEL IN  46032-1414",
+            "account_holder_info": {
+              "primary_name": "XEVIN NAUL",
+              "co_names": []
+            },
+            "address_info": {
+              "street": "34 THORNHURBT DR",
+              "city": "GARMEL",
+              "state": "IN",
+              "zip": "46032-1414"
+            }
+          }
+        ],
+        "errors": [],
+        "summary": {
+          "total_records": 2,
+          "successful_records": 2,
+          "failed_records": 0
+        }
+      },
+      "next": [],
+      "duration_ms": 14,
+      "source": "native",
+      "retry_count": 0
+    },
+    "active_child_execution_count": 0,
+    "trigger": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "",
+      "type": "StreamingConnection",
+      "details": {
+        "connection_type": "local_file",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "agent:6acdd6c63d578a20bff2713a:local_file_adapter:6ad0000000000000000f1e01",
+        "type": "agent",
+        "reference_id": "6acdd6c63d578a20bff2713a"
+      }
+    },
+    "duration_ms": 16256,
+    "execution_type": "execute",
+    "label": "Execution - 954191",
+    "output_data": {
+      "status": "success",
+      "data": [
+        {
+          "bank_name": null,
+          "notice_date": "06/09/2042",
+          "notice_type": null,
+          "transfer_amount": null,
+          "from_account_type": null,
+          "from_account_number": null,
+          "to_account_number": null,
+          "city_state_zip": "VENTONVILLO AR  72712-3454",
+          "account_holder_info": {
+            "primary_name": "DARXL VRODBLE",
+            "co_names": [
+              "LAURIX VRODBLE"
+            ]
+          },
+          "address_info": {
+            "street": "3404 NW EDGEWOOL AVE",
+            "city": "VENTONVILLO",
+            "state": "AR",
+            "zip": "72712-3454"
+          }
+        },
+        {
+          "bank_name": null,
+          "notice_date": "06/09/2042",
+          "notice_type": "*",
+          "transfer_amount": null,
+          "from_account_type": null,
+          "from_account_number": null,
+          "to_account_number": null,
+          "city_state_zip": "GARMEL IN  46032-1414",
+          "account_holder_info": {
+            "primary_name": "XEVIN NAUL",
+            "co_names": []
+          },
+          "address_info": {
+            "street": "34 THORNHURBT DR",
+            "city": "GARMEL",
+            "state": "IN",
+            "zip": "46032-1414"
+          }
+        }
+      ],
+      "errors": [],
+      "summary": {
+        "total_records": 2,
+        "successful_records": 2,
+        "failed_records": 0
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acde91a935f798ed31ea70b"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "create_ts": {
+        "$date": "2026-10-13T08:17:30.898Z"
+      },
+      "update_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "update_ts": {
+        "$date": "2026-10-13T08:17:48.390Z"
+      },
+      "record_status": "A"
+    },
+    "start": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "date": {
+        "$date": "2026-10-13T00:00:00Z"
+      },
+      "dateTime": {
+        "$date": "2026-10-13T08:17:30.916Z"
+      },
+      "timezone": "UTC"
+    },
+    "end": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "date": {
+        "$date": "2026-10-13T00:00:00Z"
+      },
+      "dateTime": {
+        "$date": "2026-10-13T08:17:48.390Z"
+      },
+      "timezone": "UTC"
+    },
+    "agent": {
+      "client_id": "691ad32be2653616d96af2d5",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Agent",
+      "reference_id": "6acdd6c63d578a20bff2713a"
+    },
+    "states": [
+      {
+        "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Start",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:17:30.947Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:17:30.974Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Start",
+        "type": "Start",
+        "status": "SUCCEEDED",
+        "config": {
+          "position": {
+            "x": 434,
+            "y": 303
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample.txt"
+          },
+          "context": {}
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde91a935f798ed31ea70b",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "Precog",
+              "type": "Precog",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "5k645j2s5x276m240e2k243o2j2v1k2c"
+        },
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 27,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "End",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:17:48.360Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:17:48.373Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "End",
+        "type": "End",
+        "status": "SUCCEEDED",
+        "config": {
+          "position": {
+            "x": 400,
+            "y": 600
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample.txt"
+          },
+          "context": {
+            "precog_execution": {
+              "identifier": "bot_run_58615cf1-6cad-43d3-958f-24e75d3b2ea3"
+            },
+            "data": [
+              {
+                "bank_name": "Stride Bank, N.A",
+                "notice_date": "11/13/25",
+                "notice_type": "NOTICE OF TRANSFER",
+                "transfer_amount": "1,200.90",
+                "from_account_type": "Christmas Club",
+                "from_account_number": "3000653",
+                "to_account_number": "30000861",
+                "city_state_zip": "BRANSON MO 65100-4400",
+                "account_holder_info": {
+                  "primary_name": "DANI M MATSON",
+                  "co_names": [
+                    "NICHI S MATSON"
+                  ]
+                },
+                "address_info": {
+                  "street": "300 SCHONGER DR APT 2048",
+                  "city": "BRANSON",
+                  "state": "MO",
+                  "zip": "65100-4400"
+                }
+              },
+              {
+                "bank_name": "Stride Bank, N.A",
+                "notice_date": "11/13/25",
+                "notice_type": "NOTICE OF TRANSFER",
+                "transfer_amount": "1,200.00",
+                "from_account_type": "Christmas Club",
+                "from_account_number": "3000881",
+                "to_account_number": "000770",
+                "city_state_zip": "ENID OK 73000-2300",
+                "account_holder_info": {
+                  "primary_name": "Will B BAKERSH",
+                  "co_names": []
+                },
+                "address_info": {
+                  "street": "900 W POLDAR",
+                  "city": "ENID",
+                  "state": "OK",
+                  "zip": "73000-2300"
+                }
+              },
+              {
+                "bank_name": "Stride Bank, N.A",
+                "notice_date": "11/13/25",
+                "notice_type": "NOTICE OF TRANSFER",
+                "transfer_amount": "1,100.00",
+                "from_account_type": "Christmas Club",
+                "from_account_number": "3000555",
+                "to_account_number": "800700900",
+                "city_state_zip": "ENID OK 73000-2300",
+                "account_holder_info": {
+                  "primary_name": "Will B BAKERSH",
+                  "co_names": []
+                },
+                "address_info": {
+                  "street": "900 W POLDAR",
+                  "city": "ENID",
+                  "state": "OK",
+                  "zip": "73000-2300"
+                }
+              },
+              {
+                "bank_name": "Stride Bank, N.A",
+                "notice_date": "11/13/25",
+                "notice_type": "NOTICE OF TRANSFER",
+                "transfer_amount": "1,200.90",
+                "from_account_type": "Christmas Club",
+                "from_account_number": "3000719",
+                "to_account_number": "30000907",
+                "city_state_zip": "ENID OK 73000-2300",
+                "account_holder_info": {
+                  "primary_name": "RICHA M MATSON",
+                  "co_names": [
+                    "NICHI S MATSON"
+                  ]
+                },
+                "address_info": {
+                  "street": "3000 RED LANE CIR",
+                  "city": "ENID",
+                  "state": "OK",
+                  "zip": "73000-2300"
+                }
+              }
+            ],
+            "should_exit": false,
+            "status": "success",
+            "errors": [],
+            "summary": {
+              "total_records": 4,
+              "successful_records": 4,
+              "failed_records": 0
+            }
+          }
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde91a935f798ed31ea70b",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample.txt"
+          },
+          "variables": {},
+          "next": [],
+          "current_state_identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+          "precog_execution": {
+            "identifier": "bot_run_58615cf1-6cad-43d3-958f-24e75d3b2ea3"
+          }
+        },
+        "input_data": {
+          "status": "success",
+          "data": [
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000653",
+              "to_account_number": "30000861",
+              "city_state_zip": "BRANSON MO 65100-4400",
+              "account_holder_info": {
+                "primary_name": "DANI M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "300 SCHONGER DR APT 2048",
+                "city": "BRANSON",
+                "state": "MO",
+                "zip": "65100-4400"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000881",
+              "to_account_number": "000770",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,100.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000555",
+              "to_account_number": "800700900",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000719",
+              "to_account_number": "30000907",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "RICHA M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "3000 RED LANE CIR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            }
+          ],
+          "errors": [],
+          "summary": {
+            "total_records": 4,
+            "successful_records": 4,
+            "failed_records": 0
+          }
+        },
+        "output_data": {
+          "status": "success",
+          "data": [
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000653",
+              "to_account_number": "30000861",
+              "city_state_zip": "BRANSON MO 65100-4400",
+              "account_holder_info": {
+                "primary_name": "DANI M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "300 SCHONGER DR APT 2048",
+                "city": "BRANSON",
+                "state": "MO",
+                "zip": "65100-4400"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000881",
+              "to_account_number": "000770",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,100.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000555",
+              "to_account_number": "800700900",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000719",
+              "to_account_number": "30000907",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "RICHA M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "3000 RED LANE CIR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            }
+          ],
+          "errors": [],
+          "summary": {
+            "total_records": 4,
+            "successful_records": 4,
+            "failed_records": 0
+          }
+        },
+        "next": [],
+        "duration_ms": 12,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:17:31.007Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:17:48.347Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Precog",
+        "type": "Precog",
+        "status": "SUCCEEDED",
+        "config": {
+          "bot_id": "6ac6656b0717bfc9b1625932",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.input_file",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "file_url",
+              "value": "$.constants.file_path",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "input_text",
+              "value": "$.input_text",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "split_pattern",
+              "value": "$.split_pattern",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 360,
+            "y": 457
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "fabrix_connector": {
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "params": {
+            "input_file": "$.input_file",
+            "file_url": "$.constants.file_path",
+            "input_text": "$.input_text",
+            "split_pattern": "$.split_pattern"
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample.txt"
+          },
+          "context": {
+            "precog_execution": {
+              "identifier": "bot_run_58615cf1-6cad-43d3-958f-24e75d3b2ea3"
+            },
+            "data": {
+              "status": "success",
+              "data": [
+                {
+                  "bank_name": "Stride Bank, N.A",
+                  "notice_date": "11/13/25",
+                  "notice_type": "NOTICE OF TRANSFER",
+                  "transfer_amount": "1,200.90",
+                  "from_account_type": "Christmas Club",
+                  "from_account_number": "3000653",
+                  "to_account_number": "30000861",
+                  "city_state_zip": "BRANSON MO 65100-4400",
+                  "account_holder_info": {
+                    "primary_name": "DANI M MATSON",
+                    "co_names": [
+                      "NICHI S MATSON"
+                    ]
+                  },
+                  "address_info": {
+                    "street": "300 SCHONGER DR APT 2048",
+                    "city": "BRANSON",
+                    "state": "MO",
+                    "zip": "65100-4400"
+                  }
+                },
+                {
+                  "bank_name": "Stride Bank, N.A",
+                  "notice_date": "11/13/25",
+                  "notice_type": "NOTICE OF TRANSFER",
+                  "transfer_amount": "1,200.00",
+                  "from_account_type": "Christmas Club",
+                  "from_account_number": "3000881",
+                  "to_account_number": "000770",
+                  "city_state_zip": "ENID OK 73000-2300",
+                  "account_holder_info": {
+                    "primary_name": "Will B BAKERSH",
+                    "co_names": []
+                  },
+                  "address_info": {
+                    "street": "900 W POLDAR",
+                    "city": "ENID",
+                    "state": "OK",
+                    "zip": "73000-2300"
+                  }
+                },
+                {
+                  "bank_name": "Stride Bank, N.A",
+                  "notice_date": "11/13/25",
+                  "notice_type": "NOTICE OF TRANSFER",
+                  "transfer_amount": "1,100.00",
+                  "from_account_type": "Christmas Club",
+                  "from_account_number": "3000555",
+                  "to_account_number": "800700900",
+                  "city_state_zip": "ENID OK 73000-2300",
+                  "account_holder_info": {
+                    "primary_name": "Will B BAKERSH",
+                    "co_names": []
+                  },
+                  "address_info": {
+                    "street": "900 W POLDAR",
+                    "city": "ENID",
+                    "state": "OK",
+                    "zip": "73000-2300"
+                  }
+                },
+                {
+                  "bank_name": "Stride Bank, N.A",
+                  "notice_date": "11/13/25",
+                  "notice_type": "NOTICE OF TRANSFER",
+                  "transfer_amount": "1,200.90",
+                  "from_account_type": "Christmas Club",
+                  "from_account_number": "3000719",
+                  "to_account_number": "30000907",
+                  "city_state_zip": "ENID OK 73000-2300",
+                  "account_holder_info": {
+                    "primary_name": "RICHA M MATSON",
+                    "co_names": [
+                      "NICHI S MATSON"
+                    ]
+                  },
+                  "address_info": {
+                    "street": "3000 RED LANE CIR",
+                    "city": "ENID",
+                    "state": "OK",
+                    "zip": "73000-2300"
+                  }
+                }
+              ],
+              "errors": [],
+              "summary": {
+                "total_records": 4,
+                "successful_records": 4,
+                "failed_records": 0
+              }
+            },
+            "should_exit": false
+          }
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acde91a935f798ed31ea70b",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "End",
+              "type": "End",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+          "precog_execution": {
+            "identifier": "bot_run_58615cf1-6cad-43d3-958f-24e75d3b2ea3"
+          }
+        },
+        "input_data": {},
+        "output_data": {
+          "status": "success",
+          "data": [
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000653",
+              "to_account_number": "30000861",
+              "city_state_zip": "BRANSON MO 65100-4400",
+              "account_holder_info": {
+                "primary_name": "DANI M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "300 SCHONGER DR APT 2048",
+                "city": "BRANSON",
+                "state": "MO",
+                "zip": "65100-4400"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000881",
+              "to_account_number": "000770",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,100.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000555",
+              "to_account_number": "800700900",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000719",
+              "to_account_number": "30000907",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "RICHA M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "3000 RED LANE CIR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            }
+          ],
+          "errors": [],
+          "summary": {
+            "total_records": 4,
+            "successful_records": 4,
+            "failed_records": 0
+          }
+        },
+        "next": [
+          {
+            "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "End",
+            "type": "End"
+          }
+        ],
+        "duration_ms": 17339,
+        "source": "native",
+        "retry_count": 0
+      }
+    ],
+    "status": "SUCCEEDED",
+    "input_data": {
+      "constants": {
+        "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample.txt"
+      }
+    },
+    "initial_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "current_state": {
+      "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "End",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "date": {
+          "$date": "2026-10-13T00:00:00Z"
+        },
+        "dateTime": {
+          "$date": "2026-10-13T08:17:48.360Z"
+        },
+        "timezone": "UTC"
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "date": {
+          "$date": "2026-10-13T00:00:00Z"
+        },
+        "dateTime": {
+          "$date": "2026-10-13T08:17:48.373Z"
+        },
+        "timezone": "UTC"
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "End",
+      "type": "End",
+      "status": "SUCCEEDED",
+      "config": {
+        "position": {
+          "x": 400,
+          "y": 600
+        }
+      },
+      "reference": {},
+      "context": {
+        "constants": {
+          "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample.txt"
+        },
+        "context": {
+          "precog_execution": {
+            "identifier": "bot_run_58615cf1-6cad-43d3-958f-24e75d3b2ea3"
+          },
+          "data": [
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000653",
+              "to_account_number": "30000861",
+              "city_state_zip": "BRANSON MO 65100-4400",
+              "account_holder_info": {
+                "primary_name": "DANI M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "300 SCHONGER DR APT 2048",
+                "city": "BRANSON",
+                "state": "MO",
+                "zip": "65100-4400"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000881",
+              "to_account_number": "000770",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,100.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000555",
+              "to_account_number": "800700900",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000719",
+              "to_account_number": "30000907",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "RICHA M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "3000 RED LANE CIR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            }
+          ],
+          "should_exit": false,
+          "status": "success",
+          "errors": [],
+          "summary": {
+            "total_records": 4,
+            "successful_records": 4,
+            "failed_records": 0
+          }
+        }
+      },
+      "internal_context": {
+        "client_id": "691ad32be2653616d96af2d5",
+        "execution_id": "6acde91a935f798ed31ea70b",
+        "agent_id": "6acdd6c63d578a20bff2713a",
+        "agent_name": "Hektor Agent",
+        "execution_type": "execute",
+        "constants": {
+          "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample.txt"
+        },
+        "variables": {},
+        "next": [],
+        "current_state_identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "precog_execution": {
+          "identifier": "bot_run_58615cf1-6cad-43d3-958f-24e75d3b2ea3"
+        }
+      },
+      "input_data": {
+        "status": "success",
+        "data": [
+          {
+            "bank_name": "Stride Bank, N.A",
+            "notice_date": "11/13/25",
+            "notice_type": "NOTICE OF TRANSFER",
+            "transfer_amount": "1,200.90",
+            "from_account_type": "Christmas Club",
+            "from_account_number": "3000653",
+            "to_account_number": "30000861",
+            "city_state_zip": "BRANSON MO 65100-4400",
+            "account_holder_info": {
+              "primary_name": "DANI M MATSON",
+              "co_names": [
+                "NICHI S MATSON"
+              ]
+            },
+            "address_info": {
+              "street": "300 SCHONGER DR APT 2048",
+              "city": "BRANSON",
+              "state": "MO",
+              "zip": "65100-4400"
+            }
+          },
+          {
+            "bank_name": "Stride Bank, N.A",
+            "notice_date": "11/13/25",
+            "notice_type": "NOTICE OF TRANSFER",
+            "transfer_amount": "1,200.00",
+            "from_account_type": "Christmas Club",
+            "from_account_number": "3000881",
+            "to_account_number": "000770",
+            "city_state_zip": "ENID OK 73000-2300",
+            "account_holder_info": {
+              "primary_name": "Will B BAKERSH",
+              "co_names": []
+            },
+            "address_info": {
+              "street": "900 W POLDAR",
+              "city": "ENID",
+              "state": "OK",
+              "zip": "73000-2300"
+            }
+          },
+          {
+            "bank_name": "Stride Bank, N.A",
+            "notice_date": "11/13/25",
+            "notice_type": "NOTICE OF TRANSFER",
+            "transfer_amount": "1,100.00",
+            "from_account_type": "Christmas Club",
+            "from_account_number": "3000555",
+            "to_account_number": "800700900",
+            "city_state_zip": "ENID OK 73000-2300",
+            "account_holder_info": {
+              "primary_name": "Will B BAKERSH",
+              "co_names": []
+            },
+            "address_info": {
+              "street": "900 W POLDAR",
+              "city": "ENID",
+              "state": "OK",
+              "zip": "73000-2300"
+            }
+          },
+          {
+            "bank_name": "Stride Bank, N.A",
+            "notice_date": "11/13/25",
+            "notice_type": "NOTICE OF TRANSFER",
+            "transfer_amount": "1,200.90",
+            "from_account_type": "Christmas Club",
+            "from_account_number": "3000719",
+            "to_account_number": "30000907",
+            "city_state_zip": "ENID OK 73000-2300",
+            "account_holder_info": {
+              "primary_name": "RICHA M MATSON",
+              "co_names": [
+                "NICHI S MATSON"
+              ]
+            },
+            "address_info": {
+              "street": "3000 RED LANE CIR",
+              "city": "ENID",
+              "state": "OK",
+              "zip": "73000-2300"
+            }
+          }
+        ],
+        "errors": [],
+        "summary": {
+          "total_records": 4,
+          "successful_records": 4,
+          "failed_records": 0
+        }
+      },
+      "output_data": {
+        "status": "success",
+        "data": [
+          {
+            "bank_name": "Stride Bank, N.A",
+            "notice_date": "11/13/25",
+            "notice_type": "NOTICE OF TRANSFER",
+            "transfer_amount": "1,200.90",
+            "from_account_type": "Christmas Club",
+            "from_account_number": "3000653",
+            "to_account_number": "30000861",
+            "city_state_zip": "BRANSON MO 65100-4400",
+            "account_holder_info": {
+              "primary_name": "DANI M MATSON",
+              "co_names": [
+                "NICHI S MATSON"
+              ]
+            },
+            "address_info": {
+              "street": "300 SCHONGER DR APT 2048",
+              "city": "BRANSON",
+              "state": "MO",
+              "zip": "65100-4400"
+            }
+          },
+          {
+            "bank_name": "Stride Bank, N.A",
+            "notice_date": "11/13/25",
+            "notice_type": "NOTICE OF TRANSFER",
+            "transfer_amount": "1,200.00",
+            "from_account_type": "Christmas Club",
+            "from_account_number": "3000881",
+            "to_account_number": "000770",
+            "city_state_zip": "ENID OK 73000-2300",
+            "account_holder_info": {
+              "primary_name": "Will B BAKERSH",
+              "co_names": []
+            },
+            "address_info": {
+              "street": "900 W POLDAR",
+              "city": "ENID",
+              "state": "OK",
+              "zip": "73000-2300"
+            }
+          },
+          {
+            "bank_name": "Stride Bank, N.A",
+            "notice_date": "11/13/25",
+            "notice_type": "NOTICE OF TRANSFER",
+            "transfer_amount": "1,100.00",
+            "from_account_type": "Christmas Club",
+            "from_account_number": "3000555",
+            "to_account_number": "800700900",
+            "city_state_zip": "ENID OK 73000-2300",
+            "account_holder_info": {
+              "primary_name": "Will B BAKERSH",
+              "co_names": []
+            },
+            "address_info": {
+              "street": "900 W POLDAR",
+              "city": "ENID",
+              "state": "OK",
+              "zip": "73000-2300"
+            }
+          },
+          {
+            "bank_name": "Stride Bank, N.A",
+            "notice_date": "11/13/25",
+            "notice_type": "NOTICE OF TRANSFER",
+            "transfer_amount": "1,200.90",
+            "from_account_type": "Christmas Club",
+            "from_account_number": "3000719",
+            "to_account_number": "30000907",
+            "city_state_zip": "ENID OK 73000-2300",
+            "account_holder_info": {
+              "primary_name": "RICHA M MATSON",
+              "co_names": [
+                "NICHI S MATSON"
+              ]
+            },
+            "address_info": {
+              "street": "3000 RED LANE CIR",
+              "city": "ENID",
+              "state": "OK",
+              "zip": "73000-2300"
+            }
+          }
+        ],
+        "errors": [],
+        "summary": {
+          "total_records": 4,
+          "successful_records": 4,
+          "failed_records": 0
+        }
+      },
+      "next": [],
+      "duration_ms": 12,
+      "source": "native",
+      "retry_count": 0
+    },
+    "active_child_execution_count": 0,
+    "trigger": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "",
+      "type": "StreamingConnection",
+      "details": {
+        "connection_type": "local_file",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "agent:6acdd6c63d578a20bff2713a:local_file_adapter:6ad0000000000000000f1e01",
+        "type": "agent",
+        "reference_id": "6acdd6c63d578a20bff2713a"
+      }
+    },
+    "duration_ms": 17473,
+    "execution_type": "execute",
+    "label": "Execution - 510459",
+    "output_data": {
+      "status": "success",
+      "data": [
+        {
+          "bank_name": "Stride Bank, N.A",
+          "notice_date": "11/13/25",
+          "notice_type": "NOTICE OF TRANSFER",
+          "transfer_amount": "1,200.90",
+          "from_account_type": "Christmas Club",
+          "from_account_number": "3000653",
+          "to_account_number": "30000861",
+          "city_state_zip": "BRANSON MO 65100-4400",
+          "account_holder_info": {
+            "primary_name": "DANI M MATSON",
+            "co_names": [
+              "NICHI S MATSON"
+            ]
+          },
+          "address_info": {
+            "street": "300 SCHONGER DR APT 2048",
+            "city": "BRANSON",
+            "state": "MO",
+            "zip": "65100-4400"
+          }
+        },
+        {
+          "bank_name": "Stride Bank, N.A",
+          "notice_date": "11/13/25",
+          "notice_type": "NOTICE OF TRANSFER",
+          "transfer_amount": "1,200.00",
+          "from_account_type": "Christmas Club",
+          "from_account_number": "3000881",
+          "to_account_number": "000770",
+          "city_state_zip": "ENID OK 73000-2300",
+          "account_holder_info": {
+            "primary_name": "Will B BAKERSH",
+            "co_names": []
+          },
+          "address_info": {
+            "street": "900 W POLDAR",
+            "city": "ENID",
+            "state": "OK",
+            "zip": "73000-2300"
+          }
+        },
+        {
+          "bank_name": "Stride Bank, N.A",
+          "notice_date": "11/13/25",
+          "notice_type": "NOTICE OF TRANSFER",
+          "transfer_amount": "1,100.00",
+          "from_account_type": "Christmas Club",
+          "from_account_number": "3000555",
+          "to_account_number": "800700900",
+          "city_state_zip": "ENID OK 73000-2300",
+          "account_holder_info": {
+            "primary_name": "Will B BAKERSH",
+            "co_names": []
+          },
+          "address_info": {
+            "street": "900 W POLDAR",
+            "city": "ENID",
+            "state": "OK",
+            "zip": "73000-2300"
+          }
+        },
+        {
+          "bank_name": "Stride Bank, N.A",
+          "notice_date": "11/13/25",
+          "notice_type": "NOTICE OF TRANSFER",
+          "transfer_amount": "1,200.90",
+          "from_account_type": "Christmas Club",
+          "from_account_number": "3000719",
+          "to_account_number": "30000907",
+          "city_state_zip": "ENID OK 73000-2300",
+          "account_holder_info": {
+            "primary_name": "RICHA M MATSON",
+            "co_names": [
+              "NICHI S MATSON"
+            ]
+          },
+          "address_info": {
+            "street": "3000 RED LANE CIR",
+            "city": "ENID",
+            "state": "OK",
+            "zip": "73000-2300"
+          }
+        }
+      ],
+      "errors": [],
+      "summary": {
+        "total_records": 4,
+        "successful_records": 4,
+        "failed_records": 0
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acdedac935f798ed31ea70c"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "create_ts": {
+        "$date": "2026-10-13T08:37:00.026Z"
+      },
+      "update_user_id": "794f9034-65d1-47dd-aa89-033ae2472b14",
+      "update_ts": {
+        "$date": "2026-10-13T08:37:25.092Z"
+      },
+      "record_status": "A"
+    },
+    "start": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "date": {
+        "$date": "2026-10-13T00:00:00Z"
+      },
+      "dateTime": {
+        "$date": "2026-10-13T08:37:00.044Z"
+      },
+      "timezone": "UTC"
+    },
+    "end": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "date": {
+        "$date": "2026-10-13T00:00:00Z"
+      },
+      "dateTime": {
+        "$date": "2026-10-13T08:37:25.092Z"
+      },
+      "timezone": "UTC"
+    },
+    "agent": {
+      "client_id": "691ad32be2653616d96af2d5",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Agent",
+      "reference_id": "6acdd6c63d578a20bff2713a"
+    },
+    "states": [
+      {
+        "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Start",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:37:00.077Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:37:00.126Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Start",
+        "type": "Start",
+        "status": "SUCCEEDED",
+        "config": {
+          "position": {
+            "x": 415,
+            "y": 286
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+          },
+          "context": {}
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acdedac935f798ed31ea70c",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "Precog",
+              "type": "Precog",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "5k645j2s5x276m240e2k243o2j2v1k2c"
+        },
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 48,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "End",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:37:25.042Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:37:25.061Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "End",
+        "type": "End",
+        "status": "SUCCEEDED",
+        "config": {
+          "position": {
+            "x": 420,
+            "y": 663
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+          },
+          "context": {
+            "precog_execution": {
+              "identifier": "bot_run_af463aa7-87a2-49b3-83d5-80e421e6223e"
+            },
+            "data": {
+              "result": "Empty response received from the service."
+            },
+            "should_exit": false,
+            "result": "Empty response received from the service."
+          }
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acdedac935f798ed31ea70c",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [],
+          "current_state_identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+          "precog_execution": {
+            "identifier": "bot_run_af463aa7-87a2-49b3-83d5-80e421e6223e"
+          }
+        },
+        "input_data": {
+          "result": "Empty response received from the service."
+        },
+        "output_data": {
+          "result": "Empty response received from the service."
+        },
+        "next": [],
+        "duration_ms": 19,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:37:00.140Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:37:16.389Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Parser",
+        "type": "Precog",
+        "status": "SUCCEEDED",
+        "config": {
+          "bot_id": "6ac6656b0717bfc9b1625932",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.input_file",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "file_url",
+              "value": "$.constants.file_path",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "input_text",
+              "value": "$.input_text",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "split_pattern",
+              "value": "$.split_pattern",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 369,
+            "y": 443
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "fabrix_connector": {
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "model": null,
+          "params": {
+            "input_file": "$.input_file",
+            "file_url": "$.constants.file_path",
+            "input_text": "$.input_text",
+            "split_pattern": "$.split_pattern"
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+          },
+          "context": {
+            "precog_execution": {
+              "identifier": "bot_run_a40fb285-179f-4bd6-a3ef-cd9d0023d7b9"
+            },
+            "data": {
+              "status": "success",
+              "data": [
+                {
+                  "bank_name": "Stride Bank, N.A",
+                  "notice_date": "11/13/25",
+                  "notice_type": "NOTICE OF TRANSFER",
+                  "transfer_amount": "1,200.90",
+                  "from_account_type": "Christmas Club",
+                  "from_account_number": "3000653",
+                  "to_account_number": "30000861",
+                  "city_state_zip": "BRANSON MO 65100-4400",
+                  "account_holder_info": {
+                    "primary_name": "DANI M MATSON",
+                    "co_names": [
+                      "NICHI S MATSON"
+                    ]
+                  },
+                  "address_info": {
+                    "street": "300 SCHONGER DR APT 2048",
+                    "city": "BRANSON",
+                    "state": "MO",
+                    "zip": "65100-4400"
+                  }
+                },
+                {
+                  "bank_name": "Stride Bank, N.A",
+                  "notice_date": "11/13/25",
+                  "notice_type": "NOTICE OF TRANSFER",
+                  "transfer_amount": "1,200.00",
+                  "from_account_type": "Christmas Club",
+                  "from_account_number": "3000881",
+                  "to_account_number": "000770",
+                  "city_state_zip": "ENID OK 73000-2300",
+                  "account_holder_info": {
+                    "primary_name": "Will B BAKERSH",
+                    "co_names": []
+                  },
+                  "address_info": {
+                    "street": "900 W POLDAR",
+                    "city": "ENID",
+                    "state": "OK",
+                    "zip": "73000-2300"
+                  }
+                },
+                {
+                  "bank_name": "Stride Bank, N.A",
+                  "notice_date": "11/13/25",
+                  "notice_type": "NOTICE OF TRANSFER",
+                  "transfer_amount": "1,100.00",
+                  "from_account_type": "Christmas Club",
+                  "from_account_number": "3000555",
+                  "to_account_number": "800700900",
+                  "city_state_zip": "ENID OK 73000-2300",
+                  "account_holder_info": {
+                    "primary_name": "Will B BAKERSH",
+                    "co_names": []
+                  },
+                  "address_info": {
+                    "street": "900 W POLDAR",
+                    "city": "ENID",
+                    "state": "OK",
+                    "zip": "73000-2300"
+                  }
+                },
+                {
+                  "bank_name": "Stride Bank, N.A",
+                  "notice_date": "11/13/25",
+                  "notice_type": "NOTICE OF TRANSFER",
+                  "transfer_amount": "1,200.90",
+                  "from_account_type": "Christmas Club",
+                  "from_account_number": "3000719",
+                  "to_account_number": "30000907",
+                  "city_state_zip": "ENID OK 73000-2300",
+                  "account_holder_info": {
+                    "primary_name": "RICHA M MATSON",
+                    "co_names": [
+                      "NICHI S MATSON"
+                    ]
+                  },
+                  "address_info": {
+                    "street": "3000 RED LANE CIR",
+                    "city": "ENID",
+                    "state": "OK",
+                    "zip": "73000-2300"
+                  }
+                }
+              ],
+              "errors": [],
+              "summary": {
+                "total_records": 4,
+                "successful_records": 4,
+                "failed_records": 0
+              }
+            },
+            "should_exit": false
+          }
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acdedac935f798ed31ea70c",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "1m5p275m1t2x3l503b0q6c6z16205j2p",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "Masker",
+              "type": "Precog",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+          "precog_execution": {
+            "identifier": "bot_run_a40fb285-179f-4bd6-a3ef-cd9d0023d7b9"
+          }
+        },
+        "input_data": {},
+        "output_data": {
+          "status": "success",
+          "data": [
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000653",
+              "to_account_number": "30000861",
+              "city_state_zip": "BRANSON MO 65100-4400",
+              "account_holder_info": {
+                "primary_name": "DANI M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "300 SCHONGER DR APT 2048",
+                "city": "BRANSON",
+                "state": "MO",
+                "zip": "65100-4400"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000881",
+              "to_account_number": "000770",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,100.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000555",
+              "to_account_number": "800700900",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000719",
+              "to_account_number": "30000907",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "RICHA M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "3000 RED LANE CIR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            }
+          ],
+          "errors": [],
+          "summary": {
+            "total_records": 4,
+            "successful_records": 4,
+            "failed_records": 0
+          }
+        },
+        "next": [
+          {
+            "identifier": "1m5p275m1t2x3l503b0q6c6z16205j2p",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Masker",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 16249,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "1m5p275m1t2x3l503b0q6c6z16205j2p",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:37:16.428Z"
+          },
+          "timezone": "UTC"
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "date": {
+            "$date": "2026-10-13T00:00:00Z"
+          },
+          "dateTime": {
+            "$date": "2026-10-13T08:37:25.020Z"
+          },
+          "timezone": "UTC"
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Masker",
+        "type": "Precog",
+        "status": "SUCCEEDED",
+        "config": {
+          "bot_id": "6ac7a3ca10110026df8b33cd",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.input_file",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "input_json",
+              "value": "$.data",
+              "type": "json",
+              "required": false
+            },
+            {
+              "key": "file_url",
+              "value": "$.file_url",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 375,
+            "y": 556
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Notice of Transfer Letter Masking",
+            "reference_id": "6ac7a348c39023e81a5490a9"
+          },
+          "fabrix_connector": {
+            "name": "Notice of Transfer Letter Masking",
+            "reference_id": "6ac7a348c39023e81a5490a9"
+          },
+          "model": null,
+          "params": {
+            "input_file": "$.input_file",
+            "input_json": "$.data",
+            "file_url": "$.file_url"
+          }
+        },
+        "reference": {},
+        "context": {
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+          },
+          "context": {
+            "precog_execution": {
+              "identifier": "bot_run_af463aa7-87a2-49b3-83d5-80e421e6223e"
+            },
+            "data": {
+              "result": "Empty response received from the service."
+            },
+            "should_exit": false
+          }
+        },
+        "internal_context": {
+          "client_id": "691ad32be2653616d96af2d5",
+          "execution_id": "6acdedac935f798ed31ea70c",
+          "agent_id": "6acdd6c63d578a20bff2713a",
+          "agent_name": "Hektor Agent",
+          "execution_type": "execute",
+          "constants": {
+            "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+          },
+          "variables": {},
+          "next": [
+            {
+              "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+              "client_id": "",
+              "acl": [],
+              "hidden": false,
+              "deleted_status": "N",
+              "plugins": [],
+              "miners": [],
+              "status": "",
+              "name": "End",
+              "type": "End",
+              "reference_id": "",
+              "ingest_id": ""
+            }
+          ],
+          "current_state_identifier": "1m5p275m1t2x3l503b0q6c6z16205j2p",
+          "precog_execution": {
+            "identifier": "bot_run_af463aa7-87a2-49b3-83d5-80e421e6223e"
+          }
+        },
+        "input_data": {
+          "status": "success",
+          "data": [
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000653",
+              "to_account_number": "30000861",
+              "city_state_zip": "BRANSON MO 65100-4400",
+              "account_holder_info": {
+                "primary_name": "DANI M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "300 SCHONGER DR APT 2048",
+                "city": "BRANSON",
+                "state": "MO",
+                "zip": "65100-4400"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000881",
+              "to_account_number": "000770",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,100.00",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000555",
+              "to_account_number": "800700900",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "Will B BAKERSH",
+                "co_names": []
+              },
+              "address_info": {
+                "street": "900 W POLDAR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            },
+            {
+              "bank_name": "Stride Bank, N.A",
+              "notice_date": "11/13/25",
+              "notice_type": "NOTICE OF TRANSFER",
+              "transfer_amount": "1,200.90",
+              "from_account_type": "Christmas Club",
+              "from_account_number": "3000719",
+              "to_account_number": "30000907",
+              "city_state_zip": "ENID OK 73000-2300",
+              "account_holder_info": {
+                "primary_name": "RICHA M MATSON",
+                "co_names": [
+                  "NICHI S MATSON"
+                ]
+              },
+              "address_info": {
+                "street": "3000 RED LANE CIR",
+                "city": "ENID",
+                "state": "OK",
+                "zip": "73000-2300"
+              }
+            }
+          ],
+          "errors": [],
+          "summary": {
+            "total_records": 4,
+            "successful_records": 4,
+            "failed_records": 0
+          }
+        },
+        "output_data": {
+          "result": "Empty response received from the service."
+        },
+        "next": [
+          {
+            "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "End",
+            "type": "End"
+          }
+        ],
+        "duration_ms": 8591,
+        "source": "native",
+        "retry_count": 0
+      }
+    ],
+    "status": "SUCCEEDED",
+    "input_data": {
+      "constants": {
+        "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+      }
+    },
+    "initial_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "current_state": {
+      "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "End",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "date": {
+          "$date": "2026-10-13T00:00:00Z"
+        },
+        "dateTime": {
+          "$date": "2026-10-13T08:37:25.042Z"
+        },
+        "timezone": "UTC"
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "date": {
+          "$date": "2026-10-13T00:00:00Z"
+        },
+        "dateTime": {
+          "$date": "2026-10-13T08:37:25.061Z"
+        },
+        "timezone": "UTC"
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "End",
+      "type": "End",
+      "status": "SUCCEEDED",
+      "config": {
+        "position": {
+          "x": 420,
+          "y": 663
+        }
+      },
+      "reference": {},
+      "context": {
+        "constants": {
+          "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+        },
+        "context": {
+          "precog_execution": {
+            "identifier": "bot_run_af463aa7-87a2-49b3-83d5-80e421e6223e"
+          },
+          "data": {
+            "result": "Empty response received from the service."
+          },
+          "should_exit": false,
+          "result": "Empty response received from the service."
+        }
+      },
+      "internal_context": {
+        "client_id": "691ad32be2653616d96af2d5",
+        "execution_id": "6acdedac935f798ed31ea70c",
+        "agent_id": "6acdd6c63d578a20bff2713a",
+        "agent_name": "Hektor Agent",
+        "execution_type": "execute",
+        "constants": {
+          "file_path": "C:\\Predigle\\hektor_inbox\\bank_statements\\New-sample - Copy - Copy.txt"
+        },
+        "variables": {},
+        "next": [],
+        "current_state_identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "precog_execution": {
+          "identifier": "bot_run_af463aa7-87a2-49b3-83d5-80e421e6223e"
+        }
+      },
+      "input_data": {
+        "result": "Empty response received from the service."
+      },
+      "output_data": {
+        "result": "Empty response received from the service."
+      },
+      "next": [],
+      "duration_ms": 19,
+      "source": "native",
+      "retry_count": 0
+    },
+    "active_child_execution_count": 0,
+    "trigger": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "",
+      "type": "StreamingConnection",
+      "details": {
+        "connection_type": "local_file",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "agent:6acdd6c63d578a20bff2713a:local_file_adapter:6ad0000000000000000f1e01",
+        "type": "agent",
+        "reference_id": "6acdd6c63d578a20bff2713a"
+      }
+    },
+    "duration_ms": 25047,
+    "execution_type": "execute",
+    "label": "Execution - 113642",
+    "output_data": {
+      "result": "Empty response received from the service."
+    }
+  }
+]

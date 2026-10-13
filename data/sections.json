@@ -1,0 +1,261 @@
+[
+  {
+    "_id": {
+      "$oid": "6ac659f96a96f8432eca10d8"
+    },
+    "identifier": "c66eb93788c74c66a4d10ea592c12178",
+    "slug": "4b7205433fc34227b64416bb332d7435",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:57.772Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:57.772Z"
+      },
+      "record_status": "A"
+    },
+    "name": "Default Section",
+    "tags": [],
+    "fabrix": {
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section_type": {
+      "type": "default"
+    },
+    "type": "primary",
+    "inheritance_graph_version": 0,
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6ac659f96a96f8432eca10da"
+    },
+    "identifier": "hc3dna-masking",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "hc3dna-masking",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-07T14:40:57.807Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T14:40:57.807Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "Masking",
+    "description": "Scramble field-level masking rules, one per real Fiserv DNA cohort.",
+    "tags": [],
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "HC3 Fiserv DNA Masking",
+      "reference_id": "6ac659f96a96f8432eca10d6"
+    },
+    "section_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "deterministic"
+    },
+    "type": "primary",
+    "inheritance_graph_version": 0
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a348c39023e81a5490ab"
+    },
+    "identifier": "2f53c12de4c740d8ac30d7518d17669d",
+    "slug": "b9c2c044f1194f43a5b8eca15fa7d4ec",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-08T14:06:00.504Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-08T14:06:00.504Z"
+      },
+      "record_status": "A"
+    },
+    "name": "Default Section",
+    "tags": [],
+    "fabrix": {
+      "name": "Notice of Transfer Letter Masking",
+      "reference_id": "6ac7a348c39023e81a5490a9"
+    },
+    "section_type": {
+      "type": "default"
+    },
+    "type": "primary",
+    "inheritance_graph_version": 0,
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a348c39023e81a5490ad"
+    },
+    "identifier": "notice-transfer-masking",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "notice-transfer-masking",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-08T14:06:00.558Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-08T14:06:00.558Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "Masking",
+    "description": "Scramble field-level masking rules, one per PII field extracted from the notice-of-transfer letter.",
+    "tags": [],
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Notice of Transfer Letter Masking",
+      "reference_id": "6ac7a348c39023e81a5490a9"
+    },
+    "section_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "deterministic"
+    },
+    "type": "primary",
+    "inheritance_graph_version": 0
+  },
+  {
+    "_id": {
+      "$oid": "6acca142546eee5cf25270f8"
+    },
+    "identifier": "6fd62e630749452e9d7adcbe9a28b2f4",
+    "slug": "ad9b8b2b185a4c93989e097006bfa4d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T08:58:42.717Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T08:58:42.717Z"
+      },
+      "record_status": "A"
+    },
+    "name": "Default Section",
+    "tags": [],
+    "fabrix": {
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section_type": {
+      "type": "default"
+    },
+    "type": "primary",
+    "inheritance_graph_version": 0,
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6acca142546eee5cf25270fa"
+    },
+    "identifier": "hektorbse-det",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "hektorbse-det",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T08:58:42.827Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T08:58:42.827Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "Deterministic",
+    "description": "Regex field extraction and function.execute transforms over the current statement's raw text.",
+    "tags": [],
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "deterministic"
+    },
+    "type": "primary",
+    "inheritance_graph_version": 0
+  },
+  {
+    "_id": {
+      "$oid": "6acca142546eee5cf25270fb"
+    },
+    "identifier": "hektorbse-nondet",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "hektorbse-nondet",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-12T08:58:42.858Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T08:58:42.858Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "Non-Deterministic",
+    "description": "LLM-prompt field extraction over the current statement's raw text.",
+    "tags": [],
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section_type": {
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "non-deterministic"
+    },
+    "type": "primary",
+    "inheritance_graph_version": 0
+  }
+]

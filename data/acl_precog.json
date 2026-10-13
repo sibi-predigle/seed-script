@@ -1,0 +1,444 @@
+[
+  {
+    "_id": {
+      "$oid": "6a60e094d3b42957dd173880"
+    },
+    "identifier": "bot/6a60e094d3b42957dd173880",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.169Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:19.169Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6a60e094d3b42957dd173880",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Bot"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa95dea43949b401138905c"
+    },
+    "identifier": "bot/6aa95dea43949b401138905c",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.169Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:19.169Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6aa95dea43949b401138905c",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Bot"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac6656b0717bfc9b1625932"
+    },
+    "identifier": "bot/6ac6656b0717bfc9b1625932",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.169Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:19.169Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ac6656b0717bfc9b1625932",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Bot"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a3ca10110026df8b33cd"
+    },
+    "identifier": "bot/6ac7a3ca10110026df8b33cd",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.169Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:19.169Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ac7a3ca10110026df8b33cd",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Bot"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6a60e06d3ed84624e4a7cbe9"
+    },
+    "identifier": "processor/6a60e06d3ed84624e4a7cbe9",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.178Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:19.178Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6a60e06d3ed84624e4a7cbe9",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Processor"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6aa93548e04eef122a9b4407"
+    },
+    "identifier": "processor/6aa93548e04eef122a9b4407",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.178Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:19.178Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6aa93548e04eef122a9b4407",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Processor"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac6656b0717bfc9b1625930"
+    },
+    "identifier": "processor/6ac6656b0717bfc9b1625930",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.178Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:19.178Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ac6656b0717bfc9b1625930",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Processor"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a3ba10110026df8b33cb"
+    },
+    "identifier": "processor/6ac7a3ba10110026df8b33cb",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.178Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:19.178Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ac7a3ba10110026df8b33cb",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Processor"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "674deade8e543636b4052137"
+    },
+    "identifier": "processortype/674deade8e543636b4052137",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.187Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:19.187Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "674deade8e543636b4052137",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "ProcessorType"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "691b375c509165efb68b7e49"
+    },
+    "identifier": "processortype/691b375c509165efb68b7e49",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:19.187Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:19.187Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "691b375c509165efb68b7e49",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "ProcessorType"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6a605c3e683499e2a1cb9d0d"
+    },
+    "identifier": "fnfmodel/6a605c3e683499e2a1cb9d0d",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:26.965Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:26.965Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6a605c3e683499e2a1cb9d0d",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "FNFModel"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6a60ae74683499e2a1cb9d25"
+    },
+    "identifier": "modelversion/6a60ae74683499e2a1cb9d25",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:27.250Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:27.250Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6a60ae74683499e2a1cb9d25",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "ModelVersion"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6a5f4406683499e2a1cb9cde"
+    },
+    "identifier": "foundationmodel/6a5f4406683499e2a1cb9cde",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-12T09:31:27.531Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-12T09:31:27.531Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6a5f4406683499e2a1cb9cde",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "FoundationModel"
+    }
+  }
+]

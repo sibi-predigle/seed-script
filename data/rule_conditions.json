@@ -1,0 +1,2834 @@
+[
+  {
+    "_id": {
+      "$oid": "129898cf3826ee25f8eba963"
+    },
+    "slug": "equals",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "comparison",
+    "deleted_status": "N",
+    "description": "Field value matches the given value exactly",
+    "execution": {
+      "handler": "comparison.equals"
+    },
+    "metadata": {
+      "aliases": [
+        "=",
+        "==",
+        "eq"
+      ],
+      "status": "active"
+    },
+    "name": "Equals",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string",
+            "number",
+            "boolean",
+            "datetime",
+            "null"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "f8dc0fa0c1719d45cfcb9418"
+    },
+    "slug": "not-equals",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "comparison",
+    "deleted_status": "N",
+    "description": "Field value differs from the given value",
+    "execution": {
+      "handler": "comparison.not_equals"
+    },
+    "metadata": {
+      "aliases": [
+        "!=",
+        "neq"
+      ],
+      "status": "active"
+    },
+    "name": "Not Equals",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string",
+            "number",
+            "boolean",
+            "datetime",
+            "null"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "8fabffbb55da994cbd0e93ed"
+    },
+    "slug": "greater-than",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "comparison",
+    "deleted_status": "N",
+    "description": "Field value is strictly greater than the given value",
+    "execution": {
+      "handler": "comparison.greater_than"
+    },
+    "metadata": {
+      "aliases": [
+        ">",
+        "gt"
+      ],
+      "status": "active"
+    },
+    "name": "Greater Than",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number",
+            "datetime",
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "1e54085b6bcd53408221d217"
+    },
+    "slug": "less-than",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "comparison",
+    "deleted_status": "N",
+    "description": "Field value is strictly less than the given value",
+    "execution": {
+      "handler": "comparison.less_than"
+    },
+    "metadata": {
+      "aliases": [
+        "<",
+        "lt"
+      ],
+      "status": "active"
+    },
+    "name": "Less Than",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number",
+            "datetime",
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "18ab2b106851c447b1e9dc6c"
+    },
+    "slug": "greater-than-or-equals",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "comparison",
+    "deleted_status": "N",
+    "description": "Field value is greater than or equal to the given value",
+    "execution": {
+      "handler": "comparison.greater_than_or_equals"
+    },
+    "metadata": {
+      "aliases": [
+        ">=",
+        "gte"
+      ],
+      "status": "active"
+    },
+    "name": "Greater Than Or Equals",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number",
+            "datetime",
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "c5333d1c6fcaa5c6bd3c3203"
+    },
+    "slug": "less-than-or-equals",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "comparison",
+    "deleted_status": "N",
+    "description": "Field value is less than or equal to the given value",
+    "execution": {
+      "handler": "comparison.less_than_or_equals"
+    },
+    "metadata": {
+      "aliases": [
+        "<=",
+        "lte"
+      ],
+      "status": "active"
+    },
+    "name": "Less Than Or Equals",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number",
+            "datetime",
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "a043b26879bd535cc1358455"
+    },
+    "slug": "like",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field contains the given substring (case-insensitive)",
+    "execution": {
+      "handler": "string.like"
+    },
+    "metadata": {
+      "aliases": [
+        "contains-text"
+      ],
+      "status": "active"
+    },
+    "name": "Like",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "9d08bfeb054109881fe446ac"
+    },
+    "slug": "not-like",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field does not contain the given substring (case-insensitive)",
+    "execution": {
+      "handler": "string.not_like"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not Like",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "46d0a12d03978c8f4283265e"
+    },
+    "slug": "starts-with",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field starts with the given substring",
+    "execution": {
+      "handler": "string.starts_with"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Starts With",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "d8c453526a1c27a31585584d"
+    },
+    "slug": "not-starts-with",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field does not start with the given substring",
+    "execution": {
+      "handler": "string.not_starts_with"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not Starts With",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "92f4627a130e0e090b3eff92"
+    },
+    "slug": "ends-with",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field ends with the given substring",
+    "execution": {
+      "handler": "string.ends_with"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Ends With",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "bb16a30f014e108fbd236dd6"
+    },
+    "slug": "not-ends-with",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field does not end with the given substring",
+    "execution": {
+      "handler": "string.not_ends_with"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not Ends With",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "904aea11be1a9af0d60e33f6"
+    },
+    "slug": "email",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field is a syntactically valid email address",
+    "execution": {
+      "handler": "string.email"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Email",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "c5f2cd4b3c92943524b1f38d"
+    },
+    "slug": "url",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field is a syntactically valid URL",
+    "execution": {
+      "handler": "string.url"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Url",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "9de1f422a5260967c0703381"
+    },
+    "slug": "uuid",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field is a syntactically valid UUID",
+    "execution": {
+      "handler": "string.uuid"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Uuid",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "9ad97a62141a81baec4b0f2b"
+    },
+    "slug": "alpha",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field contains only alphabetic characters",
+    "execution": {
+      "handler": "string.alpha"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Alpha",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "eeef75b40d8070b659675bc1"
+    },
+    "slug": "alpha-numeric",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field contains only letters and digits",
+    "execution": {
+      "handler": "string.alpha_numeric"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Alpha Numeric",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "533373f0938cfdaa1376c114"
+    },
+    "slug": "numeric",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field contains only digit characters",
+    "execution": {
+      "handler": "string.numeric"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Numeric",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "d2e1a4003cb2787c81eb2b33"
+    },
+    "slug": "lower-case",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field is entirely lowercase",
+    "execution": {
+      "handler": "string.lower_case"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Lower Case",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "dd47b7ef035e00999eb89a28"
+    },
+    "slug": "upper-case",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "string",
+    "deleted_status": "N",
+    "description": "Field is entirely uppercase",
+    "execution": {
+      "handler": "string.upper_case"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Upper Case",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "8f976dc9733023e3a5e3aba8"
+    },
+    "slug": "integer",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Field is a whole number with no decimal component",
+    "execution": {
+      "handler": "numeric.integer"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Integer",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6a31c84307eaa8b8129c15e6"
+    },
+    "slug": "float",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Field is a number with a decimal component",
+    "execution": {
+      "handler": "numeric.float"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Float",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "455330f68d91f7a6bbbdafb6"
+    },
+    "slug": "positive",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Field is greater than zero",
+    "execution": {
+      "handler": "numeric.positive"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Positive",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "f83fb08de21ed12edf292b17"
+    },
+    "slug": "negative",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Field is less than zero",
+    "execution": {
+      "handler": "numeric.negative"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Negative",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "7bb59b42b4e495ed6d6695c7"
+    },
+    "slug": "zero",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Field equals zero",
+    "execution": {
+      "handler": "numeric.zero"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Zero",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6c746ea7266e5924664ee143"
+    },
+    "slug": "even",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Field is evenly divisible by two",
+    "execution": {
+      "handler": "numeric.even"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Even",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "664846d0dfddf429fcce763c"
+    },
+    "slug": "odd",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Field is not evenly divisible by two",
+    "execution": {
+      "handler": "numeric.odd"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Odd",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "5674ea0a3cbea1396b300ad5"
+    },
+    "slug": "between",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Field value falls within an inclusive range",
+    "execution": {
+      "handler": "numeric.between"
+    },
+    "metadata": {
+      "aliases": [
+        "btwn"
+      ],
+      "status": "active"
+    },
+    "name": "Between",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "allowed_types": [
+            "number",
+            "datetime"
+          ],
+          "required": true,
+          "description": "Minimum value (inclusive)"
+        },
+        "max": {
+          "allowed_types": [
+            "number",
+            "datetime"
+          ],
+          "required": true,
+          "description": "Maximum value (inclusive)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "93c8a4c8ecde80aaaa76b775"
+    },
+    "slug": "number-between",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Field value falls within an inclusive range",
+    "execution": {
+      "handler": "numeric.number_between"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Number Between",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Minimum value (inclusive)"
+        },
+        "max": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Maximum value (inclusive)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "5f2118eb66727e2e68511a52"
+    },
+    "slug": "min",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Threshold the field must meet or exceed",
+    "execution": {
+      "handler": "numeric.min"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Min",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "52e00f3718ae072236da5610"
+    },
+    "slug": "max",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "numeric",
+    "deleted_status": "N",
+    "description": "Threshold the field must not exceed",
+    "execution": {
+      "handler": "numeric.max"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Max",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "3ff937a088f9b5f92ef739c4"
+    },
+    "slug": "in",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "List of values the field must match one of",
+    "execution": {
+      "handler": "array.in"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "In",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": true,
+          "description": "List of values to compare against"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "4d33f573560da865dd39e11f"
+    },
+    "slug": "not-in",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "List of values the field must not match",
+    "execution": {
+      "handler": "array.not_in"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not In",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": true,
+          "description": "List of values to compare against"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "4f94e39b909d6b8836808d25"
+    },
+    "slug": "contains",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "Value the array field must contain",
+    "execution": {
+      "handler": "array.contains"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Contains",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "any"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "5e30ca922829670238cea212"
+    },
+    "slug": "not-contains",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "Value the array field must not contain",
+    "execution": {
+      "handler": "array.not_contains"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not Contains",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "any"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "1b78387dff384e9781fc6aa7"
+    },
+    "slug": "contains-any",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "Array field must contain at least one of these values",
+    "execution": {
+      "handler": "array.contains_any"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Contains Any",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": true,
+          "description": "List of values to compare against"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "c9adce3f0d2f14ad8bcf06d3"
+    },
+    "slug": "contains-all",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "Array field must contain every one of these values",
+    "execution": {
+      "handler": "array.contains_all"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Contains All",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": true,
+          "description": "List of values to compare against"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "ed79063372a97b87672132f0"
+    },
+    "slug": "not-contains-any",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "Array field must contain none of these values",
+    "execution": {
+      "handler": "array.not_contains_any"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not Contains Any",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": true,
+          "description": "List of values to compare against"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "ea81cd09a9d8feff5ca2821d"
+    },
+    "slug": "not-contains-all",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "Array field must not contain every one of these values",
+    "execution": {
+      "handler": "array.not_contains_all"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not Contains All",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "array"
+          ],
+          "required": true,
+          "description": "List of values to compare against"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "2ee3f4a7204660040368f4d9"
+    },
+    "slug": "array-length",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "Exact required length of the array field",
+    "execution": {
+      "handler": "array.array_length"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Array Length",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "07b61a733693fb03766d82c1"
+    },
+    "slug": "array-min-length",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "Minimum required length of the array field",
+    "execution": {
+      "handler": "array.array_min_length"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Array Min Length",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "d8795a510c84c71fb6f19922"
+    },
+    "slug": "array-max-length",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "Maximum allowed length of the array field",
+    "execution": {
+      "handler": "array.array_max_length"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Array Max Length",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "3d0ad4b49063893ca5d2b60c"
+    },
+    "slug": "array-length-between",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "aggregation",
+      "deduplication"
+    ],
+    "category": "array",
+    "deleted_status": "N",
+    "description": "Field value falls within an inclusive range",
+    "execution": {
+      "handler": "array.array_length_between"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Array Length Between",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Minimum array length (inclusive)"
+        },
+        "max": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Maximum array length (inclusive)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "827a4b287573b96b41d5e107"
+    },
+    "slug": "date-after",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Date the field must fall after",
+    "execution": {
+      "handler": "date.date_after"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Date After",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "datetime"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "82870c381ceb10d944aa4156"
+    },
+    "slug": "date-before",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Date the field must fall before",
+    "execution": {
+      "handler": "date.date_before"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Date Before",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "datetime"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "dfd0062311b93f98dd809697"
+    },
+    "slug": "date-equals",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Date the field must match (day precision)",
+    "execution": {
+      "handler": "date.date_equals"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Date Equals",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "datetime"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "d4878de08ea060e8eaedec99"
+    },
+    "slug": "date-not-equals",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Date the field must not match (day precision)",
+    "execution": {
+      "handler": "date.date_not_equals"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Date Not Equals",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "datetime"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "da512ab3f7db400dd7e48e93"
+    },
+    "slug": "date-between",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Field value falls within an inclusive range",
+    "execution": {
+      "handler": "date.date_between"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Date Between",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "allowed_types": [
+            "datetime"
+          ],
+          "required": true,
+          "description": "Range start date (inclusive)"
+        },
+        "max": {
+          "allowed_types": [
+            "datetime"
+          ],
+          "required": true,
+          "description": "Range end date (inclusive)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "a6298e46f14e208e771fbbf3"
+    },
+    "slug": "date-after-now",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Field date is later than the current date",
+    "execution": {
+      "handler": "date.date_after_now"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Date After Now",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "c56f864d7e1b2d682b4a0ab9"
+    },
+    "slug": "date-before-now",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Field date is earlier than the current date",
+    "execution": {
+      "handler": "date.date_before_now"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Date Before Now",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "5ed6e69b83d03a84f24dd88c"
+    },
+    "slug": "date-equals-now",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Field date is today's date",
+    "execution": {
+      "handler": "date.date_equals_now"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Date Equals Now",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "05b76f29476bb23e98dc5f5b"
+    },
+    "slug": "date-not-equals-now",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Field date is not today's date",
+    "execution": {
+      "handler": "date.date_not_equals_now"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Date Not Equals Now",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "84f152d050c14da6a77d2aca"
+    },
+    "slug": "time-after",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Time (HH:mm) the field must fall after",
+    "execution": {
+      "handler": "date.time_after"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Time After",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "3a8ddc0af6b3a9c1a6b37b16"
+    },
+    "slug": "time-before",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Time (HH:mm) the field must fall before",
+    "execution": {
+      "handler": "date.time_before"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Time Before",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "7931ee99a8096ee7546dcdff"
+    },
+    "slug": "time-equals",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Time (HH:mm) the field must match exactly",
+    "execution": {
+      "handler": "date.time_equals"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Time Equals",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "8c3e3f1d201a90a9b1cfbc49"
+    },
+    "slug": "time-not-equals",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Time (HH:mm) the field must not match",
+    "execution": {
+      "handler": "date.time_not_equals"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Time Not Equals",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "d85078a6a0f237d97cec8be6"
+    },
+    "slug": "time-between",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "date_time",
+    "deleted_status": "N",
+    "description": "Field value falls within an inclusive range",
+    "execution": {
+      "handler": "date.time_between"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Time Between",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Range start time (HH:mm, inclusive)"
+        },
+        "max": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Range end time (HH:mm, inclusive)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "05aa844ca475313d4b364da8"
+    },
+    "slug": "string",
+    "applicable_rule_types": [
+      "validation",
+      "filtering"
+    ],
+    "category": "type_validation",
+    "deleted_status": "N",
+    "description": "Field's runtime type is string",
+    "execution": {
+      "handler": "type.string"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "String",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "72206567f4b2fddb9e1a6437"
+    },
+    "slug": "number",
+    "applicable_rule_types": [
+      "validation",
+      "filtering"
+    ],
+    "category": "type_validation",
+    "deleted_status": "N",
+    "description": "Field's runtime type is number",
+    "execution": {
+      "handler": "type.number"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Number",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "7c9a1474fcbb8e846b74ae67"
+    },
+    "slug": "boolean",
+    "applicable_rule_types": [
+      "validation",
+      "filtering"
+    ],
+    "category": "type_validation",
+    "deleted_status": "N",
+    "description": "Field's runtime type is boolean",
+    "execution": {
+      "handler": "type.boolean"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Boolean",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "80c3c51a4e13f514f00eb533"
+    },
+    "slug": "object",
+    "applicable_rule_types": [
+      "validation",
+      "filtering"
+    ],
+    "category": "type_validation",
+    "deleted_status": "N",
+    "description": "Field is a non-null object",
+    "execution": {
+      "handler": "type.object"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Object",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "f5067baa6a4d9d33e5df4f3a"
+    },
+    "slug": "array",
+    "applicable_rule_types": [
+      "validation",
+      "filtering"
+    ],
+    "category": "type_validation",
+    "deleted_status": "N",
+    "description": "Field is an array",
+    "execution": {
+      "handler": "type.array"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Array",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "4e01aa1a45de0395355fd55d"
+    },
+    "slug": "date",
+    "applicable_rule_types": [
+      "validation",
+      "filtering"
+    ],
+    "category": "type_validation",
+    "deleted_status": "N",
+    "description": "Field is a valid date value",
+    "execution": {
+      "handler": "type.date"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Date",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "c508e9d889ddba0bc5641625"
+    },
+    "slug": "function",
+    "applicable_rule_types": [
+      "validation",
+      "filtering"
+    ],
+    "category": "type_validation",
+    "deleted_status": "N",
+    "description": "Field's runtime type is function",
+    "execution": {
+      "handler": "type.function"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Function",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "3934d9f791bcf506295264f1"
+    },
+    "slug": "null",
+    "applicable_rule_types": [
+      "validation",
+      "filtering"
+    ],
+    "category": "type_validation",
+    "deleted_status": "N",
+    "description": "Field is exactly null",
+    "execution": {
+      "handler": "type.null"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Null",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "aeee0c74622d46e64a834d13"
+    },
+    "slug": "undefined",
+    "applicable_rule_types": [
+      "validation",
+      "filtering"
+    ],
+    "category": "type_validation",
+    "deleted_status": "N",
+    "description": "Field is undefined",
+    "execution": {
+      "handler": "type.undefined"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Undefined",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "3ec74302fd510c46c9845833"
+    },
+    "slug": "exists",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "existence",
+    "deleted_status": "N",
+    "description": "Field is present on the entity",
+    "execution": {
+      "handler": "existence.exists"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Exists",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "5cc20c1c5c1a08db8d4f53e9"
+    },
+    "slug": "not-exists",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "existence",
+    "deleted_status": "N",
+    "description": "Field is absent on the entity",
+    "execution": {
+      "handler": "existence.not_exists"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not Exists",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "b07f2c84802f08dbd8224d1c"
+    },
+    "slug": "null-or-undefined",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "existence",
+    "deleted_status": "N",
+    "description": "Field is null or undefined",
+    "execution": {
+      "handler": "existence.null_or_undefined"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Null Or Undefined",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "6f0b1b5ccf836eda14a0f63b"
+    },
+    "slug": "not-null-or-undefined",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "existence",
+    "deleted_status": "N",
+    "description": "Field is neither null nor undefined",
+    "execution": {
+      "handler": "existence.not_null_or_undefined"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not Null Or Undefined",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "7628030361cd053b0ee7eff8"
+    },
+    "slug": "empty",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "existence",
+    "deleted_status": "N",
+    "description": "Field is an empty string, array, object, null, or undefined",
+    "execution": {
+      "handler": "existence.empty"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Empty",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "9e78638032090de758625678"
+    },
+    "slug": "not-empty",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "existence",
+    "deleted_status": "N",
+    "description": "Field holds meaningful content",
+    "execution": {
+      "handler": "existence.not_empty"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not Empty",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "7241caa33c4090e92e68b5d3"
+    },
+    "slug": "null-or-white-space",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "existence",
+    "deleted_status": "N",
+    "description": "Field is null or only whitespace",
+    "execution": {
+      "handler": "existence.null_or_white_space"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Null Or White Space",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "075b716aad9faf22b8a9c5ad"
+    },
+    "slug": "not-null-or-white-space",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "existence",
+    "deleted_status": "N",
+    "description": "Field has non-whitespace content",
+    "execution": {
+      "handler": "existence.not_null_or_white_space"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Not Null Or White Space",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "853758462c0e62060c121c2f"
+    },
+    "slug": "string-length",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "masking"
+    ],
+    "category": "length_range",
+    "deleted_status": "N",
+    "description": "Exact required character length",
+    "execution": {
+      "handler": "length.string_length"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "String Length",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "ce8c7525b69a26b14dc1defa"
+    },
+    "slug": "min-length",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "masking"
+    ],
+    "category": "length_range",
+    "deleted_status": "N",
+    "description": "Minimum required character length",
+    "execution": {
+      "handler": "length.min_length"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Min Length",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "98d3bbc5b5ea478fd0cf7abb"
+    },
+    "slug": "max-length",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "masking"
+    ],
+    "category": "length_range",
+    "deleted_status": "N",
+    "description": "Maximum allowed character length",
+    "execution": {
+      "handler": "length.max_length"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Max Length",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Comparison value"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "c4a3c4d55a4b82fca6ab4ce8"
+    },
+    "slug": "length-between",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "masking"
+    ],
+    "category": "length_range",
+    "deleted_status": "N",
+    "description": "Field value falls within an inclusive range",
+    "execution": {
+      "handler": "length.length_between"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Length Between",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Minimum length (inclusive)"
+        },
+        "max": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Maximum length (inclusive)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "82409023d45c9df5e41d22dc"
+    },
+    "slug": "truthy",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "boolean",
+    "deleted_status": "N",
+    "description": "Field evaluates to a truthy value",
+    "execution": {
+      "handler": "boolean.truthy"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Truthy",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "82629fed87bb7ead0574230d"
+    },
+    "slug": "falsy",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "boolean",
+    "deleted_status": "N",
+    "description": "Field evaluates to a falsy value",
+    "execution": {
+      "handler": "boolean.falsy"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Falsy",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "dea4945e6f3968424f68b55a"
+    },
+    "slug": "boolean-string",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "boolean",
+    "deleted_status": "N",
+    "description": "Field is the literal string \"true\" or \"false\"",
+    "execution": {
+      "handler": "boolean.boolean_string"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Boolean String",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "aa43d0f264b2efbd6c224cb0"
+    },
+    "slug": "boolean-number",
+    "applicable_rule_types": [
+      "*"
+    ],
+    "category": "boolean",
+    "deleted_status": "N",
+    "description": "Field is the literal number 0 or 1",
+    "execution": {
+      "handler": "boolean.boolean_number"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Boolean Number",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "0fa3686406ff24599fba3b26"
+    },
+    "slug": "matches",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "transformation",
+      "normalization",
+      "masking"
+    ],
+    "category": "pattern_matching",
+    "deleted_status": "N",
+    "description": "Field matches (or does not match) the given regular expression",
+    "execution": {
+      "handler": "pattern.matches"
+    },
+    "metadata": {
+      "aliases": [
+        "regex"
+      ],
+      "status": "active"
+    },
+    "name": "Matches",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "pattern": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Regular expression pattern (no delimiters)"
+        },
+        "flags": {
+          "allowed_types": [
+            "string",
+            "null"
+          ],
+          "required": false,
+          "description": "Optional regex flags, e.g. \"i\""
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "77c570f8d5e8117bf184a354"
+    },
+    "slug": "not-matches",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "transformation",
+      "normalization",
+      "masking"
+    ],
+    "category": "pattern_matching",
+    "deleted_status": "N",
+    "description": "Field matches (or does not match) the given regular expression",
+    "execution": {
+      "handler": "pattern.not_matches"
+    },
+    "metadata": {
+      "aliases": [
+        "not-regex"
+      ],
+      "status": "active"
+    },
+    "name": "Not Matches",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "pattern": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Regular expression pattern (no delimiters)"
+        },
+        "flags": {
+          "allowed_types": [
+            "string",
+            "null"
+          ],
+          "required": false,
+          "description": "Optional regex flags, e.g. \"i\""
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "846044d929b1ad11e18212a9"
+    },
+    "slug": "persian-alpha",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "normalization"
+    ],
+    "category": "persian_text",
+    "deleted_status": "N",
+    "description": "Field contains only Persian alphabetic characters",
+    "execution": {
+      "handler": "persian.persian_alpha"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Persian Alpha",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "fe8f3fdbbe09cda138bd5e08"
+    },
+    "slug": "persian-alpha-numeric",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "normalization"
+    ],
+    "category": "persian_text",
+    "deleted_status": "N",
+    "description": "Field contains only Persian letters and digits",
+    "execution": {
+      "handler": "persian.persian_alpha_numeric"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Persian Alpha Numeric",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "f34d0224bdee53c927e0f793"
+    },
+    "slug": "persian-number",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "normalization"
+    ],
+    "category": "persian_text",
+    "deleted_status": "N",
+    "description": "Field contains only Persian numeral characters",
+    "execution": {
+      "handler": "persian.persian_number"
+    },
+    "metadata": {
+      "aliases": [],
+      "status": "active"
+    },
+    "name": "Persian Number",
+    "params_schema": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "5e51f421a70fcd731b593140"
+    },
+    "slug": "fuzzy-match",
+    "applicable_rule_types": [
+      "validation",
+      "filtering",
+      "transformation",
+      "normalization",
+      "masking"
+    ],
+    "category": "pattern_matching",
+    "deleted_status": "N",
+    "description": "Field's string similarity to a target value meets or exceeds a threshold",
+    "execution": {
+      "handler": "pattern.fuzzy_match"
+    },
+    "metadata": {
+      "aliases": [
+        "fuzzy",
+        "similarity"
+      ],
+      "status": "active"
+    },
+    "name": "Fuzzy Match",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "target": {
+          "allowed_types": [
+            "string"
+          ],
+          "required": true,
+          "description": "Text to compare the field value against"
+        },
+        "threshold": {
+          "allowed_types": [
+            "number"
+          ],
+          "required": true,
+          "description": "Minimum similarity score required, 0.0-1.0"
+        }
+      },
+      "additionalProperties": false
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  }
+]

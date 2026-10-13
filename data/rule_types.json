@@ -1,0 +1,94 @@
+[
+  {
+    "_id": {
+      "$oid": "a1b2c3d4e5f601020304ff01"
+    },
+    "slug": "validation",
+    "deleted_status": "N",
+    "description": "Check a condition and mark the record as valid or invalid",
+    "input_schema": {
+      "target_field": {
+        "allowed": false,
+        "required": false
+      },
+      "actions": {
+        "allowed": true,
+        "required": false
+      },
+      "conditions": {
+        "allowed": true,
+        "required": true
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "validate",
+        "check"
+      ]
+    },
+    "name": "Validation Rule",
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "a1b2c3d4e5f601020304ff02"
+    },
+    "slug": "transformation",
+    "deleted_status": "N",
+    "description": "Apply one or more operations to reshape or clean a target field's value",
+    "input_schema": {
+      "target_field": {
+        "allowed": true,
+        "required": true
+      },
+      "actions": {
+        "allowed": true,
+        "required": true
+      },
+      "conditions": {
+        "allowed": false,
+        "required": false
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "transform",
+        "reshape",
+        "clean"
+      ]
+    },
+    "name": "Transformation Rule",
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "a1b2c3d4e5f601020304ff16"
+    },
+    "slug": "extraction",
+    "deleted_status": "N",
+    "description": "Parse a target field's value out of raw external content (HTML/DOM) using a selector chain with fallbacks",
+    "input_schema": {
+      "target_field": {
+        "allowed": true,
+        "required": true
+      },
+      "actions": {
+        "allowed": true,
+        "required": true
+      },
+      "conditions": {
+        "allowed": false,
+        "required": false
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "parse",
+        "extract",
+        "scrape"
+      ]
+    },
+    "name": "Extraction Rule",
+    "client_id": "691ad32be2653616d96af2d5"
+  }
+]

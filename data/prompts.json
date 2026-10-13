@@ -1,0 +1,408 @@
+[
+  {
+    "_id": {
+      "$oid": "6ac567b68fe9bfaa29fea68f"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-bank-statement-document-transaction-details",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-06T21:27:18.120Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-06T21:27:18.120Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor Bank Statement Document - transaction_details",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac567b68fe9bfaa29fea693"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-bank-statement-document-cheque-payee-address",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-06T21:27:18.371Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-06T21:27:18.371Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor Bank Statement Document - cheque_payee_address",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac567b68fe9bfaa29fea697"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-bank-statement-document-summary-of-charges",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-06T21:27:18.558Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-06T21:27:18.558Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor Bank Statement Document - summary_of_charges",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac567b68fe9bfaa29fea69b"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-bank-statement-document-bank-details",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-06T21:27:18.705Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-06T21:27:18.705Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor Bank Statement Document - bank_details",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da70c1ffbf41d8258c27"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-las330-borrower-info",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:48.931Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T05:36:48.931Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor LAS330 - borrower_info",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da71c1ffbf41d8258c2f"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-las330-collateral-info",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:49.561Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T05:36:49.561Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor LAS330 - collateral_info",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da79c1ffbf41d8258ca4"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-ls300-pspdoc-borrower-info",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:57.123Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T05:36:57.123Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor ls300-pspdoc - borrower_info",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da79c1ffbf41d8258cac"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-ls300-pspdoc-collateral-info",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:57.547Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T05:36:57.547Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor ls300-pspdoc - collateral_info",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da79c1ffbf41d8258cb4"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-ls300-pspdoc-name-injection",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:57.964Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T05:36:57.964Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor ls300-pspdoc - name_injection",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da7ac1ffbf41d8258cbc"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-ls300-pspdoc-processor-id-column",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:58.361Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T05:36:58.361Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor ls300-pspdoc - processor_id_column",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac5da7bc1ffbf41d8258cd4"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-ls300-pspdoc-discovered-fields",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-07T05:36:59.883Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-07T05:36:59.883Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor ls300-pspdoc - discovered_fields",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca142546eee5cf25270fc"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-bank-statement-extraction-system-prompt",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T08:58:42.902Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T08:58:42.902Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor Bank Statement Extraction - system prompt",
+    "tags": [],
+    "metadata": {
+      "category": "system_prompt"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527113"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-bank-statement-extraction-account-holder-info",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor Bank Statement Extraction - account_holder_info",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527117"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-bank-statement-extraction-address-info",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-12T19:18:12.508Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor Bank Statement Extraction - address_info",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
+  }
+]

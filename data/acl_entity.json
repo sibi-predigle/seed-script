@@ -1,0 +1,376 @@
+[
+  {
+    "_id": {
+      "$oid": "6a60e036b5e1889f1a06f8a2"
+    },
+    "identifier": "connection/6a60e036b5e1889f1a06f8a2",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791797487535
+      },
+      "update_ts": {
+        "$date": 1791797487535
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6a60e036b5e1889f1a06f8a2",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Connection"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69ccadf10ab6f287f499f4fb"
+    },
+    "identifier": "connection/69ccadf10ab6f287f499f4fb",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791797487536
+      },
+      "update_ts": {
+        "$date": 1791797487536
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "69ccadf10ab6f287f499f4fb",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Connection"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6a96c91f18f1ce947b857ec4"
+    },
+    "identifier": "connection/6a96c91f18f1ce947b857ec4",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791797487536
+      },
+      "update_ts": {
+        "$date": 1791797487536
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6a96c91f18f1ce947b857ec4",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Connection"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca8e7aba30971d037e711"
+    },
+    "identifier": "connection/6acca8e7aba30971d037e711",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791797487536
+      },
+      "update_ts": {
+        "$date": 1791797487536
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6acca8e7aba30971d037e711",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Connection"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca8e7aba30971d037e712"
+    },
+    "identifier": "connection/6acca8e7aba30971d037e712",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791797487536
+      },
+      "update_ts": {
+        "$date": 1791797487536
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6acca8e7aba30971d037e712",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Connection"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca8e7aba30971d037e713"
+    },
+    "identifier": "connection/6acca8e7aba30971d037e713",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791797487536
+      },
+      "update_ts": {
+        "$date": 1791797487536
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6acca8e7aba30971d037e713",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Connection"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca8e7aba30971d037e714"
+    },
+    "identifier": "connection/6acca8e7aba30971d037e714",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791797487536
+      },
+      "update_ts": {
+        "$date": 1791797487536
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6acca8e7aba30971d037e714",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Connection"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acc9594d270343c5d96569d"
+    },
+    "identifier": "connection/6acc9594d270343c5d96569d",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791797487536
+      },
+      "update_ts": {
+        "$date": 1791797487536
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6acc9594d270343c5d96569d",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Connection"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000000"
+    },
+    "identifier": "entity/*",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791797487592
+      },
+      "update_ts": {
+        "$date": 1791797487592
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "*",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "entity"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acca8e7aba30971d037e716"
+    },
+    "identifier": "connection/6acca8e7aba30971d037e716",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791797487536
+      },
+      "update_ts": {
+        "$date": 1791797487536
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6acca8e7aba30971d037e716",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Connection"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ad0000000000000000f1e01"
+    },
+    "identifier": "connection/6ad0000000000000000f1e01",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": 1791763200000
+      },
+      "update_ts": {
+        "$date": 1791763200000
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ad0000000000000000f1e01",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Connection"
+    }
+  }
+]

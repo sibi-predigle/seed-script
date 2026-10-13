@@ -1,0 +1,48 @@
+# --- Django ---
+SECRET_KEY=django-insecure-qhyp(2fl*-#z-x37(z8di66j!*l%3-f!7sp87q-h7*ce+i5h%k
+DEBUG=True
+CORS_ALLOWED_ORIGINS=*
+CORS_ALLOWED_ORIGIN_REGEXES=*
+
+# --- MongoDB ---
+DB_NAME=pdb-agent-dev
+MONGODB_CONNECTION=mongodb://predigle-mongodb:27017
+
+# --- Storage ---
+GS_BUCKET_NAME=placeholder
+
+# --- Keycloak ---
+KEYCLOAK_AUTH_SERVER_URL=https://accounts-dev.predigle.com
+KEYCLOAK_REALM=predigle-dev
+KEYCLOAK_CLIENT_ID=hektor-service-account
+KEYCLOAK_CLIENT_SECRET=vXPQrenvO8cvN5jbMR4ApdrcDzzkhMtd
+KEYCLOAK_AUDIENCE=agent-aud
+KEYCLOAK_ALGORITHM=RS256
+KEYCLOAK_EXPIRE_TIME_KEYWORD=exp
+KEYCLOAK_VERIFY_TOKEN_WITH_PROVIDER=False
+
+# --- Services ---
+USER_ENTITY_URL=https://api-entity-user-101289191754.us-central1.run.app
+PRECOG_URL=http://pi-designer-dev.hc3.io/api/precog
+FABRIX_URL=http://pi-designer-dev.hc3.io/api/pi
+CONNECTION_URL=http://pi-designer-dev.hc3.io/api/connections
+SCHEDULER_URL=http://app-network:8011
+APPROVAL_ENTITY_URL=http://app-network:8012
+PI_FRONTEND_URL=http://localhost:4200
+
+# --- Mail ---
+MAIL_SENDER_SMTP_SERVER=smtp-mail.outlook.com
+MAIL_SENDER_SMTP_PORT=587
+MAIL_SENDER_SMTP_USER=noreply@predigle.com
+MAIL_SENDER_SMTP_PASSWORD=zwyjnzxlpgsccqhz
+MAIL_SENDER_USE_TLS=True
+
+# --- Logging / observability ---
+LOGGER_NAME="fabrix-logger"
+LOGGING_TYPE=OtelLogging
+ENV=dev
+OTEL_SERVICE_NAME="api-entity-fabrix:local"
+OTEL_PROTOCOL=grpc
+OTLP_ENDPOINT="https://otel-placeholder.predigle.com"
+OTEL_PYTHON_DJANGO_EXCLUDED_URLS=docs,health,/docs,/health
+ 

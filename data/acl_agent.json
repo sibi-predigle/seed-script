@@ -1,0 +1,36 @@
+[
+  {
+    "_id": {
+      "$oid": "6acdd6c63d578a20bff2713a"
+    },
+    "identifier": "agent/6acdd6c63d578a20bff2713a",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-13T08:46:04.283Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-13T08:46:04.283Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6acdd6c63d578a20bff2713a",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Agent"
+    }
+  }
+]

@@ -1,0 +1,2969 @@
+[{
+  "_id": {
+    "$oid": "6916c8a8c092c2eadb973f3c"
+  },
+  "name": "Email Task",
+  "description": "Send an email to a recipient",
+  "type": "Micro Task",
+  "config": {
+    "visual": {
+      "icon": "email",
+      "color": "#004085",
+      "bg_color": "#E6F0F8"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "to_email",
+        "label": "Sender Email",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "john.doe@example.com"
+      },
+      {
+        "key": "subject",
+        "label": "Email Subject",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter email subject"
+      },
+      {
+        "key": "body",
+        "label": "Email Body",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter email content"
+      }
+    ]
+  },
+  "category": "Micro Tasks",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "reference": {
+    "name": "Email Task",
+    "reference_id": "690d0bb7df56a2457e711c50"
+  },
+  "title": "Email Task"
+},
+{
+  "_id": {
+    "$oid": "6916c9c6c092c2eadb973f3d"
+  },
+  "name": "Http Task",
+  "description": "Send a HTTP request",
+  "type": "Micro Task",
+  "config": {
+    "visual": {
+      "icon": "http",
+      "color": "#856404",
+      "bg_color": "#FDFCF2"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "url",
+        "label": "URL",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "john.doe@example.com"
+      },
+      {
+        "key": "headers",
+        "label": "Request Headers",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter request headers"
+      },
+      {
+        "key": "body",
+        "label": "Request Body",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter request content"
+      }
+    ]
+  },
+  "category": "Micro Tasks",
+  "reference": {
+    "name": "Http Task",
+    "identifier": "690d0919a08ebf69b65119d6"
+  },
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Http Task"
+},
+{
+  "_id": {
+    "$oid": "691cb53dc1b6ac808efbe85f"
+  },
+  "name": "Loop",
+  "description": "Entry point for a loop.",
+  "type": "Loop",
+  "config": {
+    "visual": {
+      "icon": "loop",
+      "color": "#4F4F9A",
+      "bg_color": "#FFF3E0"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 2
+    },
+    "fields": [
+      {
+        "key": "iterations",
+        "label": "Number of Iterations",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": false,
+          "minimum": 1,
+          "maximum": 5
+        },
+        "placeholder": "Enter no. of iterations"
+      },
+      {
+        "key": "data",
+        "label": "Data",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Enter data to be processed"
+      },
+      {
+        "key": "loop_state",
+        "label": "Loop State",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "name",
+        "optionValue": "identifier",
+        "placeholder": "Select the loop step",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": []
+        }
+      },
+      {
+        "key": "batch_size",
+        "label": "batch_size",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Enter batch_size"
+      }
+    ]
+  },
+  "category": "control flow",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Loop"
+},
+{
+  "_id": {
+    "$oid": "6916a5a5c092c2eadb973f3a"
+  },
+  "name": "Precog",
+  "description": "Execute a single Precog",
+  "type": "Precog",
+  "config": {
+    "visual": {
+      "icon": "task",
+      "color": "#065F46",
+      "bg_color": "#F0FDF4"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "bot_id",
+        "label": "Agent Name",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select the agent",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "metadata.name",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processor/:placeholder",
+              "method": "GET",
+              "pathParam": "configuration.processor.reference_id"
+            }
+          }
+        ]
+      },
+      {
+        "key": "mode",
+        "label": "Execution Mode",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Mode",
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "async",
+              "id": "async"
+            },
+            {
+              "primaryContent": "live",
+              "id": "live"
+            }
+          ]
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      }
+    ]
+  },
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Precog"
+},
+{
+  "_id": {
+    "$oid": "691e1f67b6ab25437bc09b1b"
+  },
+  "name": "Azure",
+  "description": "Microsoft cloud storage",
+  "type": "Storage",
+  "config": {
+    "visual": {
+      "image": "azure",
+      "color": "#ffffff",
+      "bg_color": "#ffffff"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "connection_id",
+        "label": "Container Name",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Container",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/connections/connection/?type=azure",
+          "method": "GET"
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      }
+    ]
+  },
+  "category": "Storage",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Azure"
+},
+{
+  "_id": {
+    "$oid": "69163cb451ebc153edd52686"
+  },
+  "name": "Success",
+  "description": "End execution successfully",
+  "type": "Succeed",
+  "config": {
+    "visual": {
+      "icon": "task_alt",
+      "color": "#14B337",
+      "bg_color": "#E6F8E8",
+      "shape": "oval"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 0
+    },
+    "fields": []
+  },
+  "category": "terminal nodes",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Success"
+},
+{
+  "_id": {
+    "$oid": "69dcbc9da6d8c899b61a4b2d"
+  },
+  "name": "Streaming connection",
+  "description": "Stream the flow",
+  "type": "Trigger",
+  "config": {
+    "visual": {
+      "icon": "dns",
+      "image": "kafka",
+      "color": "#004085",
+      "bg_color": "#E6F0F8",
+      "shape": "circle"
+    },
+    "io": {
+      "inputs": 0,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "connection_id",
+        "label": "connections Source ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Source",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/connections/connection/?category=source&type=kafka",
+          "method": "GET"
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      }
+    ]
+  },
+  "category": "Triggers",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Kafka Stream"
+},
+{
+  "_id": {
+    "$oid": "6a1583da4ccdcc5838234861"
+  },
+  "name": "Send Email",
+  "description": "Esper approval",
+  "type": "Human Review",
+  "config": {
+    "visual": {
+      "image": "esper-approve",
+      "color": "#ffffff",
+      "bg_color": "#ffffff"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "to_email",
+        "label": "Sender Email",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "john.doe@example.com"
+      },
+      {
+        "key": "data",
+        "label": "Data",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter data"
+      }
+    ]
+  },
+  "category": "Human Review",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Esper Approval"
+},
+{
+  "_id": {
+    "$oid": "6a1fd7fbfe6b76d44cc4ba05"
+  },
+  "name": "Filter",
+  "description": "Filter a list of items based on a condition",
+  "type": "Filter",
+  "config": {
+    "visual": {
+      "icon": "filter_list",
+      "color": "#8B5CF6",
+      "bg_color": "#F5F3FF"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "function_id",
+        "label": "Function ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select the function",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/pi/functions",
+          "method": "GET"
+        },
+        "optionLabel": "title",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "input_param",
+            "label": "Input Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the Input Params",
+            "source": {
+              "type": "static",
+              "options": []
+            }
+          }
+        ]
+      },
+      {
+        "key": "data",
+        "label": "Data",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true,
+          "minimum": 0
+        },
+        "placeholder": "Enter the field name"
+      }
+    ]
+  },
+  "category": "control flow",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Filter"
+},
+{
+  "_id": {
+    "$oid": "6a3a31dfa8bce5efd1330c24"
+  },
+  "name": "Content Classifier",
+  "title": "Content Classifier",
+  "description": "Classify documents and text into predefined categories",
+  "type": "Precog",
+  "referenceId": "6a3557329af3ba2f3466e6da",
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "config": {
+    "visual": {
+      "icon": "category",
+      "color": "#DC2626",
+      "bg_color": "#FEF2F2"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "Document",
+        "type": "file",
+        "key": "document",
+        "placeholder": "Upload the Document here",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "Document Level Processing",
+        "type": "boolean",
+        "key": "document_level_processing",
+        "placeholder": "",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      },
+      {
+        "key": "bot_id",
+        "label": "Agent Name",
+        "type": "",
+        "defaultValue": "6a3557329af3ba2f3466e6da",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Select the agent",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "slug",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processor/:placeholder",
+              "method": "GET",
+              "pathParam": "configuration.processor.reference_id"
+            }
+          }
+        ]
+      }
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "6916c3dac092c2eadb973f3b"
+  },
+  "name": "Map",
+  "description": "Iterate over a list of items and perform actions",
+  "type": "Map",
+  "config": {
+    "visual": {
+      "icon": "map",
+      "color": "#10B981",
+      "bg_color": "#ECFDF5"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "function_id",
+        "label": "Function ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select the function",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/pi/functions",
+          "method": "GET"
+        },
+        "optionLabel": "title",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "input_param",
+            "label": "Input Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the Input Params",
+            "source": {
+              "type": "static",
+              "options": []
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "category": "control flow",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Map"
+},
+{
+  "_id": {
+    "$oid": "6916d439c092c2eadb973f40"
+  },
+  "name": "Postgres Query Task",
+  "description": "Execute Query Postgresql Database",
+  "type": "Micro Task",
+  "config": {
+    "visual": {
+      "icon": "storage",
+      "image": "postgresql",
+      "color": "#004085",
+      "bg_color": "#F1F0F8"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "host",
+        "label": "Host",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter host"
+      },
+      {
+        "key": "port",
+        "label": "Port",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter port"
+      },
+      {
+        "key": "username",
+        "label": "Username",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Enter username"
+      },
+      {
+        "key": "password",
+        "label": "Password",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Enter password"
+      },
+      {
+        "key": "database_name",
+        "label": "Database Name",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter database name"
+      },
+      {
+        "key": "query",
+        "label": "Query",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter query"
+      }
+    ]
+  },
+  "category": "Micro Tasks",
+  "reference": {
+    "name": "Postgres Query Task",
+    "identifier": "690b259335b700ab288d8cdd"
+  },
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Postgres Query Task"
+},
+{
+  "_id": {
+    "$oid": "691e1e35b6ab23867bc09b1b"
+  },
+  "name": "Destination",
+  "description": "Select where to send the processed data.",
+  "type": "Output",
+  "config": {
+    "visual": {
+      "icon": "output",
+      "color": "#00000099",
+      "bg_color": "#ffffff"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "connection_id",
+        "label": "connections Destination ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Destination",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/connections/connection/?category=destination",
+          "method": "GET"
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      }
+    ]
+  },
+  "category": "Connections",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Destination"
+},
+{
+  "_id": {
+    "$oid": "691e1e35b6ab25437bc09b1b"
+  },
+  "name": "Google Bucket",
+  "description": "Google cloud storage",
+  "type": "Storage",
+  "config": {
+    "visual": {
+      "image": "google_bucket",
+      "color": "#ffffff",
+      "bg_color": "#ffffff"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "connection_id",
+        "label": "Google Bucket Name",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Bucket",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/connections/connection/?type=google_bucket",
+          "method": "GET"
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      }
+    ]
+  },
+  "category": "Storage",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Google Bucket"
+},
+{
+  "_id": {
+    "$oid": "6916cff3c092c2eadb973f3e"
+  },
+  "name": "Kafka Task",
+  "description": "Publishes data to a Kafka topic",
+  "type": "Micro Task",
+  "config": {
+    "visual": {
+      "icon": "dns",
+      "color": "#14958E",
+      "bg_color": "#F1F0F8"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "topic",
+        "label": "Kafka Topic",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter kafka topic"
+      },
+      {
+        "key": "bootstrap_servers",
+        "label": "Bootstrap Servers",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter the server IP"
+      },
+      {
+        "key": "data",
+        "label": "Data",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter the data to be published"
+      }
+    ]
+  },
+  "category": "Micro Tasks",
+  "reference": {
+    "name": "Kafka Producer Task",
+    "identifier": "690d10084a66d8a9644b060d"
+  },
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Kafka Task"
+},
+{
+  "_id": {
+    "$oid": "6916e0a5c092c2eadb973f42"
+  },
+  "name": "Choice",
+  "description": "Conditional flow",
+  "type": "Choice",
+  "config": {
+    "visual": {
+      "icon": "schema",
+      "color": "#FB900B",
+      "bg_color": "#FDF7E7",
+      "shape": "diamond"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 3
+    },
+    "fields": [
+      {
+        "key": "variable",
+        "label": "Variable",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter variable name"
+      },
+      {
+        "key": "condition",
+        "label": "Condition",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "placeholder": "Select the condition",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "Equals",
+              "id": "equals"
+            },
+            {
+              "primaryContent": "Not Equals",
+              "id": "not_equals"
+            },
+            {
+              "primaryContent": "Greater Than",
+              "id": "greater_than"
+            },
+            {
+              "primaryContent": "Less Than",
+              "id": "less_than"
+            },
+            {
+              "primaryContent": "Greater Than or Equal To",
+              "id": "greater_than_equals"
+            },
+            {
+              "primaryContent": "Less Than or Equal To",
+              "id": "less_than_equals"
+            },
+            {
+              "primaryContent": "Contains",
+              "id": "contains"
+            },
+            {
+              "primaryContent": "Does Not Contain",
+              "id": "not_contains"
+            }
+          ]
+        }
+      },
+      {
+        "key": "value",
+        "label": "Value",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter value"
+      },
+      {
+        "key": "next",
+        "label": "Next",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "state_name",
+        "optionValue": "identifier",
+        "placeholder": "Select the next step",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": []
+        }
+      }
+    ]
+  },
+  "category": "control flow",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Choice"
+},
+{
+  "_id": {
+    "$oid": "691cb6cfc1b6ac808efbe860"
+  },
+  "name": "Source",
+  "description": "Choose where your data will come from.",
+  "type": "Input",
+  "config": {
+    "visual": {
+      "icon": "input",
+      "color": "#26C6DA",
+      "bg_color": "#26C6DA"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "connection_id",
+        "label": "connections Source ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Source",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/connections/connection/?category=source",
+          "method": "GET"
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      }
+    ]
+  },
+  "category": "Connections",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Source"
+},
+{
+  "_id": {
+    "$oid": "69eefda21f2ef9c6d7f90deb"
+  },
+  "name": "Fax Extractor Agent",
+  "description": "Extract information",
+  "type": "Precog",
+  "config": {
+    "visual": {
+      "icon": "find_in_page",
+      "color": "#065F46",
+      "bg_color": "#F0FDF4"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "bot_id",
+        "label": "Agent Name",
+        "type": "",
+        "defaultValue": "69afbbcff837ba5e9ec70281",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Select the agent",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "slug",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processor/:placeholder",
+              "method": "GET",
+              "pathParam": "configuration.processor.reference_id"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Fax Extractor Precog"
+},
+{
+  "_id": {
+    "$oid": "69eefdd81f2ef9c6d7f90ded"
+  },
+  "name": "Elasticity Prediction Agent",
+  "description": "Predict information",
+  "type": "Precog",
+  "config": {
+    "visual": {
+      "icon": "insights",
+      "color": "#065F46",
+      "bg_color": "#F0FDF4"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "bot_id",
+        "label": "Agent Name",
+        "type": "",
+        "defaultValue": "69afbc4d638140d7a916e883",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Select the agent",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "slug",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processor/:placeholder",
+              "method": "GET",
+              "pathParam": "configuration.processor.reference_id"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Elasticity Prediction Precog"
+},
+{
+  "_id": {
+    "$oid": "6a1f04738914044d624efe34"
+  },
+  "name": "Data Transformation Precog",
+  "description": "Transformation",
+  "type": "Precog",
+  "config": {
+    "visual": {
+      "icon": "summarize",
+      "color": "#065F46",
+      "bg_color": "#F0FDF4"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "context",
+        "label": "Context",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter context"
+      },
+      {
+        "key": "model_specification",
+        "label": "Model Specification",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "placeholder": "Select the model",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "GPT-4",
+              "id": "gpt-4"
+            },
+            {
+              "primaryContent": "GPT-3.5",
+              "id": "gpt-3.5"
+            }
+          ]
+        }
+      },
+      {
+        "key": "reasoning_effort",
+        "label": "Reasoning Effort",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "placeholder": "Select the model",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "Low",
+              "id": "low"
+            },
+            {
+              "primaryContent": "Medium",
+              "id": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "key": "output_format",
+        "label": "Output Format",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "placeholder": "Select the model",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "Text",
+              "id": "text"
+            },
+            {
+              "primaryContent": "Bullet Points",
+              "id": "bullet_points"
+            },
+            {
+              "primaryContent": "Summary Paragraph",
+              "id": "summary"
+            }
+          ]
+        }
+      },
+      {
+        "key": "bot_id",
+        "label": "Bot ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select the bot",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "slug",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processortype/:placeholder",
+              "method": "GET",
+              "pathParam": "configs.1.processor.processor_type_ref"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Data Transformation Precog"
+},
+{
+  "_id": {
+    "$oid": "6a214369732491e795d821ea"
+  },
+  "name": "Insurance Extractor Agent",
+  "description": "Extract insurance information",
+  "type": "Precog",
+  "config": {
+    "visual": {
+      "icon": "find_in_page",
+      "color": "#065F46",
+      "bg_color": "#F0FDF4"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "bot_id",
+        "label": "Agent Name",
+        "type": "",
+        "defaultValue": "69f3493f3c9359e131f32474",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Select the agent",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "slug",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processor/:placeholder",
+              "method": "GET",
+              "pathParam": "configuration.processor.reference_id"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Insurance Extractor Precog"
+},
+{
+  "_id": {
+    "$oid": "6a328393c8a473a6236c4a1e"
+  },
+  "name": "Preview & Approve",
+  "description": "Pauses execution for in-app review. Displays output options for human selection.",
+  "type": "Preview Approve",
+  "config": {
+    "visual": {
+      "icon": "rate_review",
+      "color": "#D97706",
+      "bg_color": "#FEF3C7",
+      "shape": "oval"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "deterministic_path",
+        "label": "Deterministic Output Path",
+        "type": "textbox",
+        "defaultValue": "$.deterministic_output",
+        "placeholder": "$.deterministic_output",
+        "validators": {
+          "required": true
+        },
+        "metadata": {
+          "helpText": "JSON path to the deterministic output in the incoming data"
+        }
+      },
+      {
+        "key": "non_deterministic_path",
+        "label": "AI Suggestions Path",
+        "type": "textbox",
+        "defaultValue": "$.non_deterministic_output",
+        "placeholder": "$.non_deterministic_output",
+        "validators": {
+          "required": true
+        },
+        "metadata": {
+          "helpText": "JSON path to the non-deterministic (AI) output in the incoming data"
+        }
+      }
+    ]
+  },
+  "category": "Human Review",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Preview & Approve"
+},
+{
+  "_id": {
+    "$oid": "69163cb451ebc153edd52689"
+  },
+  "name": "Wait",
+  "description": "Wait for a specified time",
+  "type": "Wait",
+  "config": {
+    "visual": {
+      "icon": "pause_circle",
+      "color": "#DB2777",
+      "bg_color": "#FCF3F8"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "wait_time",
+        "label": "Wait Time (seconds)",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true,
+          "minimum": 0
+        },
+        "placeholder": "Enter wait time in seconds"
+      }
+    ]
+  },
+  "category": "control flow",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Wait"
+},
+{
+  "_id": {
+    "$oid": "6917170ac092c2eadb973f4a"
+  },
+  "name": "Mongo Query Task",
+  "description": "Queries the database and provides output",
+  "type": "Micro Task",
+  "config": {
+    "visual": {
+      "icon": "storage",
+      "color": "#065F46",
+      "bg_color": "#F1F0F8"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "uri",
+        "label": "URI",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter uri"
+      },
+      {
+        "key": "database_name",
+        "label": "Database Name",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter database name"
+      },
+      {
+        "key": "collection_name",
+        "label": "Collection Name",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter collection name"
+      },
+      {
+        "key": "query",
+        "label": "Query",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter query to be added"
+      }
+    ]
+  },
+  "category": "Micro Tasks",
+  "reference": {
+    "name": "Mongo Query Task",
+    "identifier": "690a9488c41bce856dcb943d"
+  },
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Mongo Query Task"
+},
+{
+  "_id": {
+    "$oid": "699ff760d6b2e32a667b2ef4"
+  },
+  "name": "Web Hook",
+  "description": "Runs the flow via HTTP",
+  "type": "Trigger",
+  "config": {
+    "visual": {
+      "icon": "webhook",
+      "color": "#004085",
+      "bg_color": "#E6F0F8",
+      "shape": "circle"
+    },
+    "io": {
+      "inputs": 0,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "webhook_response_mode",
+        "label": "Response Mode",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Response mode",
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "name": "Immediately",
+              "_id": "immediately"
+            }
+          ]
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      },
+      {
+        "key": "webhook_response_data",
+        "label": "Response Data",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Response data",
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "name": "All Data",
+              "_id": "all_data"
+            },
+            {
+              "name": "No Data",
+              "_id": "no_data"
+            }
+          ]
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      },
+      {
+        "key": "webhook_http_method",
+        "label": "HTTP Method",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select http method",
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "name": "GET",
+              "_id": "get"
+            },
+            {
+              "name": "POST",
+              "_id": "post"
+            },
+            {
+              "name": "PATCH",
+              "_id": "patch"
+            },
+            {
+              "name": "PUT",
+              "_id": "put"
+            },
+            {
+              "name": "DELETE",
+              "_id": "delete"
+            }
+          ]
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      },
+      {
+        "key": "webhook_url",
+        "label": "Webhook URL",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "https://abc.com/webhook/53638"
+      }
+    ]
+  },
+  "category": "Triggers",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "reference": {
+    "name": "Web Hook",
+    "reference_id": ""
+  },
+  "title": "Web Hook"
+},
+{
+  "_id": {
+    "$oid": "69163cb451ebc153edd52684"
+  },
+  "name": "Start",
+  "description": "",
+  "type": "Start",
+  "config": {
+    "visual": {
+      "icon": "flag",
+      "color": "#1E88E5",
+      "bg_color": "#EBF3FB",
+      "shape": "oval-circle"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": []
+  },
+  "category": "terminal nodes",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Start"
+},
+{
+  "_id": {
+    "$oid": "6916df71c092c2eadb973f41"
+  },
+  "name": "Mongo Write Task",
+  "description": "Adds a new record in MongoDB.",
+  "type": "Micro Task",
+  "config": {
+    "visual": {
+      "icon": "storage",
+      "image": "mongodb",
+      "color": "#065F46",
+      "bg_color": "#F1F0F8"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "uri",
+        "label": "URI",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter uri"
+      },
+      {
+        "key": "database_name",
+        "label": "Database Name",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter database name"
+      },
+      {
+        "key": "collection_name",
+        "label": "Collection Name",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter collection name"
+      },
+      {
+        "key": "data",
+        "label": "Data",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter data to be added"
+      }
+    ]
+  },
+  "category": "Micro Tasks",
+  "reference": {
+    "name": "Mongo Insert Task",
+    "identifier": "690ab189a6f3f728c2c63c7e"
+  },
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Mongo Write Task"
+},
+{
+  "_id": {
+    "$oid": "6916e1e3c092c2eadb973f43"
+  },
+  "name": "Reasoning Agent",
+  "description": "Reasons text or conversations",
+  "type": "Precog",
+  "config": {
+    "visual": {
+      "icon": "summarize",
+      "color": "#065F46",
+      "bg_color": "#F0FDF4"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "context",
+        "label": "Context",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter context"
+      },
+      {
+        "key": "model_specification",
+        "label": "Model Specification",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "placeholder": "Select the model",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "GPT-4",
+              "id": "gpt-4"
+            },
+            {
+              "primaryContent": "GPT-3.5",
+              "id": "gpt-3.5"
+            }
+          ]
+        }
+      },
+      {
+        "key": "reasoning_effort",
+        "label": "Reasoning Effort",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "placeholder": "Select the model",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "Low",
+              "id": "low"
+            },
+            {
+              "primaryContent": "Medium",
+              "id": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "key": "output_format",
+        "label": "Output Format",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "placeholder": "Select the model",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "Text",
+              "id": "text"
+            },
+            {
+              "primaryContent": "Bullet Points",
+              "id": "bullet_points"
+            },
+            {
+              "primaryContent": "Summary Paragraph",
+              "id": "summary"
+            }
+          ]
+        }
+      },
+      {
+        "key": "bot_id",
+        "label": "Bot ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select the bot",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "slug",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processortype/:placeholder",
+              "method": "GET",
+              "pathParam": "configs.1.processor.processor_type_ref"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Reasoning Precog"
+},
+{
+  "_id": {
+    "$oid": "69a05874d6b2e32a667b2efd"
+  },
+  "name": "Scheduler",
+  "description": "Schedule the workflow",
+  "type": "Trigger",
+  "config": {
+    "visual": {
+      "icon": "schedule",
+      "color": "#004085",
+      "bg_color": "#E6F0F8",
+      "shape": "circle"
+    },
+    "io": {
+      "inputs": 0,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "scheduler_name",
+        "label": "Scheduler Name",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "enter Scheduler name"
+      },
+      {
+        "key": "schedule_type",
+        "label": "Schedule Type",
+        "type": "dropdown",
+        "defaultValue": "CRON",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select schedule type",
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "name": "CRON",
+              "_id": "CRON"
+            },
+            {
+              "name": "DATE & TIME",
+              "_id": "date_time"
+            }
+          ]
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      },
+      {
+        "key": "cron_exp",
+        "label": "CRON Expression",
+        "type": "",
+        "defaultValue": "",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Add Cron Expression"
+      }
+    ]
+  },
+  "category": "Triggers",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "reference": {
+    "name": "Web Hook",
+    "reference_id": ""
+  },
+  "title": "Scheduler"
+},
+{
+  "_id": {
+    "$oid": "69a03d5ad6b2e32a667b2ef7"
+  },
+  "name": "Microsoft Teams",
+  "description": "Sends message for approval",
+  "type": "Human Review",
+  "config": {
+    "visual": {
+      "image": "teams",
+      "color": "#ffffff",
+      "bg_color": "#ffffff"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "channel_webhook_url",
+        "label": "Channel Webhook Url",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter channel's webhook url"
+      }
+    ]
+  },
+  "category": "Human Review",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "audit_data": {
+    "create_user_id": "0",
+    "create_ts": {
+      "$date": "2026-03-02T11:29:59.931Z"
+    },
+    "update_user_id": "0",
+    "update_ts": {
+      "$date": "2026-03-02T11:29:59.931Z"
+    },
+    "record_status": "A"
+  },
+  "slug": null,
+  "title": "Microsoft Teams"
+},
+{
+  "_id": {
+    "$oid": "691b70720144895be21ded3e"
+  },
+  "name": "Function",
+  "description": "Executes custom logic or a function",
+  "type": "Function",
+  "config": {
+    "visual": {
+      "icon": "code",
+      "color": "#673AB7",
+      "bg_color": "#F1F0F8"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "function_id",
+        "label": "Function ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select the function",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/pi/functions",
+          "method": "GET"
+        },
+        "optionLabel": "title",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "input_param",
+            "label": "Input Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the Input Params",
+            "source": {
+              "type": "static",
+              "options": []
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Utility",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Function"
+},
+{
+  "_id": {
+    "$oid": "69eefdbb1f2ef9c6d7f90dec"
+  },
+  "name": "ROI optimizer Agent",
+  "description": "Optimizes Revenue",
+  "type": "Precog",
+  "config": {
+    "visual": {
+      "icon": "attach_money",
+      "color": "#065F46",
+      "bg_color": "#F0FDF4"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "bot_id",
+        "label": "Agent Name",
+        "type": "",
+        "defaultValue": "69afbc4d638140d7a916e883",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Select the agent",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "slug",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processor/:placeholder",
+              "method": "GET",
+              "pathParam": "configuration.processor.reference_id"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "ROI optimizer Precog"
+},
+{
+  "_id": {
+    "$oid": "6a1f04a58914044d624efe35"
+  },
+  "name": "Data Validation Precog",
+  "description": "Validation",
+  "type": "Precog",
+  "config": {
+    "visual": {
+      "icon": "summarize",
+      "color": "#065F46",
+      "bg_color": "#F0FDF4"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "context",
+        "label": "Context",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter context"
+      },
+      {
+        "key": "model_specification",
+        "label": "Model Specification",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "placeholder": "Select the model",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "GPT-4",
+              "id": "gpt-4"
+            },
+            {
+              "primaryContent": "GPT-3.5",
+              "id": "gpt-3.5"
+            }
+          ]
+        }
+      },
+      {
+        "key": "reasoning_effort",
+        "label": "Reasoning Effort",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "placeholder": "Select the model",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "Low",
+              "id": "low"
+            },
+            {
+              "primaryContent": "Medium",
+              "id": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "key": "output_format",
+        "label": "Output Format",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "placeholder": "Select the model",
+        "hasDependentFields": false,
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "Text",
+              "id": "text"
+            },
+            {
+              "primaryContent": "Bullet Points",
+              "id": "bullet_points"
+            },
+            {
+              "primaryContent": "Summary Paragraph",
+              "id": "summary"
+            }
+          ]
+        }
+      },
+      {
+        "key": "bot_id",
+        "label": "Bot ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select the bot",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "slug",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processortype/:placeholder",
+              "method": "GET",
+              "pathParam": "configs.1.processor.processor_type_ref"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Data Validation Precog"
+},
+{
+  "_id": {
+    "$oid": "6a2928d5732491e795d82206"
+  },
+  "name": "File Loader",
+  "description": "Loads file from signed url",
+  "type": "File Loader",
+  "config": {
+    "visual": {
+      "icon": "input",
+      "color": "#DB2777",
+      "bg_color": "#FCF3F8"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "signed_file_url",
+        "label": "Signed File Url",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true,
+          "minimum": 0
+        },
+        "placeholder": "Enter the file's signed url"
+      }
+    ]
+  },
+  "category": "Utility",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "File Loader"
+},
+{
+  "_id": {
+    "$oid": "69163cb451ebc153edd52685"
+  },
+  "name": "End",
+  "description": "",
+  "type": "End",
+  "config": {
+    "visual": {
+      "icon": "flag",
+      "color": "#666666",
+      "bg_color": "#E9ECEF",
+      "shape": "oval-circle"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 0
+    },
+    "fields": []
+  },
+  "category": "terminal nodes",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "End"
+},
+{
+  "_id": {
+    "$oid": "691e6f87b6ab25437bc09b1b"
+  },
+  "name": "Sharepoint",
+  "description": "Document storage",
+  "type": "Storage",
+  "config": {
+    "visual": {
+      "image": "sharepoint",
+      "color": "#ffffff",
+      "bg_color": "#ffffff"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "connection_id",
+        "label": "Sharepoint ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Sharepoint",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/connections/connection/?type=sharepoint",
+          "method": "GET"
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      }
+    ]
+  },
+  "category": "Storage",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Sharepoint"
+},
+{
+  "_id": {
+    "$oid": "69163cb451ebc153edd52688"
+  },
+  "name": "Parallel",
+  "description": "Execute branches in parallel",
+  "type": "parallel",
+  "config": {
+    "visual": {
+      "icon": "timeline",
+      "color": "#7C3AED",
+      "bg_color": "#F3EAFE"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 2
+    },
+    "fields": [
+      {
+        "key": "branches",
+        "label": "Number of Branches",
+        "type": "textbox",
+        "defaultValue": 2,
+        "validators": {
+          "minimum": 1
+        }
+      }
+    ]
+  },
+  "category": "control flow",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Parallel"
+},
+{
+  "_id": {
+    "$oid": "69a03be2d6b2e32a667b2ef6"
+  },
+  "name": "Send Email",
+  "description": "Sends email for approval",
+  "type": "Human Review",
+  "config": {
+    "visual": {
+      "image": "gmail",
+      "color": "#ffffff",
+      "bg_color": "#ffffff"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "to_email",
+        "label": "Sender Email",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "john.doe@example.com"
+      },
+      {
+        "key": "data",
+        "label": "Data",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter data"
+      }
+    ]
+  },
+  "category": "Human Review",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Send Email"
+},
+{
+  "_id": {
+    "$oid": "69163cb451ebc153edd52687"
+  },
+  "name": "Fail",
+  "description": "End execution with failure",
+  "type": "Fail",
+  "config": {
+    "visual": {
+      "icon": "error",
+      "color": "#D32F2F",
+      "bg_color": "#FDEAE9",
+      "shape": "oval"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 0
+    },
+    "fields": [
+      {
+        "key": "error_message",
+        "label": "Error Message",
+        "type": "textbox"
+      }
+    ]
+  },
+  "category": "terminal nodes",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Fail"
+},
+{
+  "_id": {
+    "$oid": "69eb1f56d614f1f123375f02"
+  },
+  "name": "Streaming connection",
+  "description": "Stream the flow",
+  "type": "Trigger",
+  "config": {
+    "visual": {
+      "icon": "stream",
+      "color": "#004085",
+      "bg_color": "#E6F0F8",
+      "shape": "circle"
+    },
+    "io": {
+      "inputs": 0,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "connection_id",
+        "label": "connections Source ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Source",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/connections/connection/?category=source&type=gcs_stream",
+          "method": "GET"
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      }
+    ]
+  },
+  "category": "Triggers",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "GCS Stream"
+},
+{
+  "_id": {
+    "$oid": "6a1f04d58914044d624efe36"
+  },
+  "name": "File Discovery Precog",
+  "description": "Extract meta information from files.",
+  "type": "Precog",
+  "config": {
+    "visual": {
+      "icon": "summarize",
+      "color": "#065F46",
+      "bg_color": "#F0FDF4"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "bot_id",
+        "label": "Agent Name",
+        "type": "",
+        "defaultValue": "6a200921a22473821756167a",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Select the agent",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "slug",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processor/:placeholder",
+              "method": "GET",
+              "pathParam": "configuration.processor.reference_id"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "File Discovery Precog"
+},
+{
+  "_id": {
+    "$oid": "6a3a31baa8bce5efd1330c23"
+  },
+  "name": "Information Extractor",
+  "title": "Information Extractor",
+  "description": "Extract structured information from documents and text",
+  "type": "Precog",
+  "referenceId": "6a355748c8a33ad82243aa84",
+  "category": "Precogs",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "config": {
+    "visual": {
+      "icon": "fact_check",
+      "color": "#7C3AED",
+      "bg_color": "#F5F3FF"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "Document",
+        "type": "file",
+        "key": "document",
+        "placeholder": "Upload the Document here",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "tags": [],
+        "name": "Document Level Processing",
+        "type": "boolean",
+        "key": "document_level_processing",
+        "placeholder": "",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": [],
+          "tags": []
+        },
+        "default_value": ""
+      },
+      {
+        "key": "bot_id",
+        "label": "Agent Name",
+        "type": "",
+        "defaultValue": "6a355748c8a33ad82243aa84",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Select the agent",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "method": "GET"
+        },
+        "optionLabel": "slug",
+        "optionValue": "_id",
+        "hasDependentFields": true,
+        "dependentFields": [
+          {
+            "key": "processor_param",
+            "label": "Processor Param",
+            "type": "dropdown",
+            "defaultValue": "",
+            "validators": {
+              "required": false
+            },
+            "placeholder": "Select the bot",
+            "source": {
+              "type": "api",
+              "url": "http://pi-designer-dev.hc3.io/api/precog/processor/:placeholder",
+              "method": "GET",
+              "pathParam": "configuration.processor.reference_id"
+            }
+          }
+        ]
+      }
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "6a57815e1ca071735af92b4d"
+  },
+  "name": "NPI Registry Lookup Task",
+  "title": "NPI Registry Lookup Task",
+  "description": "Queries npiregistry with filters",
+  "type": "Micro Task",
+  "config": {
+    "visual": {
+      "icon": "storage",
+      "color": "#9A9A4F",
+      "bg_color": "#2563EB"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "query_params",
+        "label": "Query",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Enter json with number/first_name,last_name...."
+      }
+    ]
+  },
+  "category": "Micro Tasks",
+  "reference": {
+    "name": "Nppes Lookup Task",
+    "identifier": "6a5780831ca071735af92b4b"
+  },
+  "client_id": "64c48dc0eb5ba14e7588cbe6"
+},
+{
+  "_id": {
+    "$oid": "6aad10ed2f18831c45ed25de"
+  },
+  "name": "Publish to Kafka",
+  "description": "Publishes data to a Kafka topic",
+  "type": "Publish to Kafka",
+  "config": {
+    "visual": {
+      "icon": "dns",
+      "color": "#14958E",
+      "bg_color": "#F1F0F8"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "connection_id",
+        "label": "connections Destination ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Source",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/connections/connection/?category=destination&type=kafka",
+          "method": "GET"
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      },
+      {
+        "key": "payload",
+        "label": "Payload",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Message to publish to kafka"
+      }
+    ]
+  },
+  "category": "Integrations",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Publish to Kafka"
+},
+{
+  "_id": {
+    "$oid": "6aad19e72f18831c45ed25df"
+  },
+  "name": "Call Webhook",
+  "description": "Call a webhook",
+  "type": "Call Webhook",
+  "config": {
+    "visual": {
+      "icon": "dns",
+      "color": "#14958E",
+      "bg_color": "#F1F0F8"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "connection_id",
+        "label": "connections Destination ID",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select Source",
+        "source": {
+          "type": "api",
+          "url": "http://pi-designer-dev.hc3.io/api/connections/connection/?category=destination&type=rest_hook",
+          "method": "GET"
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      },
+      {
+        "key": "payload",
+        "label": "Payload",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Data to send to webhook"
+      }
+    ]
+  },
+  "category": "Integrations",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Call Webhook"
+},
+{
+  "_id": {
+    "$oid": "6ab2758962c8f763742741f5"
+  },
+  "name": "Merge",
+  "description": "Combines the outputs of every batch from a loop into a single merged result.",
+  "type": "Merge",
+  "config": {
+    "visual": {
+      "icon": "merge_type",
+      "color": "#0EA5E9",
+      "bg_color": "#EFF8FF"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "data",
+        "label": "data",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "data to merge"
+      },
+      {
+        "key": "output_field",
+        "label": "Output field(optional)",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "select a field to extract output from each path."
+      }
+    ]
+  },
+  "category": "control flow",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Batch Aggregator"
+},
+{
+  "_id": {
+    "$oid": "6ab4be34a35751acd5db27b5"
+  },
+  "name": "Execute Agent",
+  "description": "Passes input into another Agent and runs it",
+  "type": "ExecuteAgent",
+  "config": {
+    "visual": {
+      "icon": "rocket_launch",
+      "color": "#0D9488",
+      "bg_color": "#F0FDFA"
+    },
+    "io": {
+      "inputs": 1,
+      "outputs": 1
+    },
+    "fields": [
+      {
+        "key": "agent_id",
+        "label": "Select Agent",
+        "type": "dropdown",
+        "defaultValue": "",
+        "validators": {
+          "required": true
+        },
+        "placeholder": "Select the agent to execute",
+        "source": {
+          "type": "api",
+          "url": "https://api-agent-dev.predigle.com/agent/?summary=true",
+          "method": "GET"
+        },
+        "optionLabel": "name",
+        "optionValue": "_id",
+        "hasDependentFields": false,
+        "dependentFields": []
+      },
+      {
+        "key": "data",
+        "label": "Data",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": false,
+          "minimum": 0
+        },
+        "placeholder": "Data to send to the selected agent"
+      },
+      {
+        "key": "constants",
+        "label": "constants",
+        "type": "textbox",
+        "defaultValue": "",
+        "validators": {
+          "required": false,
+          "minimum": 0
+        },
+        "placeholder": "constants to send to the selected agent"
+      }
+    ]
+  },
+  "category": "control flow",
+  "client_id": "64c48dc0eb5ba14e7588cbe6",
+  "title": "Execute Agent",
+  "audit_data": {
+    "create_user_id": "0",
+    "create_ts": {
+      "$date": "2026-09-25T04:28:00.345Z"
+    },
+    "update_user_id": "0",
+    "update_ts": {
+      "$date": "2026-09-25T04:28:00.346Z"
+    },
+    "record_status": "A"
+  }
+}]

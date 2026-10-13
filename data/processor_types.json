@@ -1,0 +1,130 @@
+[
+  {
+    "_id": {
+      "$oid": "674deade8e543636b4052137"
+    },
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "miners": [],
+    "name": "pi/data/process/masking",
+    "tags": [],
+    "module_name": "engine.processors.anonymizer.masking",
+    "class_name": "MaskingProcessor",
+    "status": "active",
+    "input_params": [
+      {
+        "key": "input_file",
+        "name": "Input File",
+        "description": "File to be masked",
+        "type": "file",
+        "required": false
+      }
+    ],
+    "audit_data": {
+      "create_user_id": "632b9e14-c2a0-473c-a96f-c582031ac114",
+      "create_ts": {
+        "$date": "2025-09-30T06:15:04.029Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-05-06T20:47:53.401Z"
+      },
+      "record_status": "A"
+    },
+    "supported_modes": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "live"
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "async"
+      }
+    ],
+    "fabrix": {},
+    "plugins": [],
+    "required_variants": [],
+    "model": {},
+    "type": {
+      "name": "maskprocessor",
+      "type": "mask"
+    },
+    "client_id": "691ad32be2653616d96af2d5"
+  },
+  {
+    "_id": {
+      "$oid": "691b375c509165efb68b7e49"
+    },
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "632b9e14-c2a0-473c-a96f-c582031ac114",
+      "create_ts": {
+        "$date": "2025-11-17T14:55:24.885Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-04-22T06:24:32.921Z"
+      },
+      "record_status": "A"
+    },
+    "name": "pi/data/process/transformation",
+    "tags": [],
+    "module_name": "engine.processors.transformer.transformer",
+    "class_name": "TransformationProcessor",
+    "status": "active",
+    "input_params": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "Input File",
+        "description": "File to be transformed",
+        "type": "file",
+        "key": "input_file",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N"
+        }
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "Split Pattern",
+        "description": "Regex or text pattern to split records. Can be used as a delimiter (splits content) or statement start pattern (identifies record boundaries)",
+        "type": "string",
+        "key": "split_pattern",
+        "placeholder": "e.g., END OF RECORD or ^STATEMENT START",
+        "required": false,
+        "validations": {
+          "hidden": false,
+          "deleted_status": "N"
+        }
+      }
+    ],
+    "fabrix": {},
+    "miners": [],
+    "plugins": [],
+    "supported_modes": [
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "live"
+      },
+      {
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "async"
+      }
+    ],
+    "required_variants": [],
+    "model": {},
+    "client_id": "691ad32be2653616d96af2d5"
+  }
+]
