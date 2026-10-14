@@ -1376,7 +1376,7 @@
 },
 {
   "_id": {
-    "$oid": "6a328393c8a473a6236c4a1e"
+    "$oid": "6acf2c352d5da68de16837b9"
   },
   "name": "Preview & Approve",
   "description": "Pauses execution for in-app review. Displays output options for human selection.",
@@ -1418,6 +1418,66 @@
         "metadata": {
           "helpText": "JSON path to the non-deterministic (AI) output in the incoming data"
         }
+      },
+      {
+        "key": "auto_approve_from_memory",
+        "label": "Auto-approve remembered decisions",
+        "type": "dropdown",
+        "defaultValue": "false",
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Select",
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "Off",
+              "id": "false"
+            },
+            {
+              "primaryContent": "On",
+              "id": "true"
+            }
+          ]
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "hasDependentFields": false,
+        "dependentFields": [],
+        "metadata": {
+          "helpText": "Skip review when every AI suggestion already has a remembered decision"
+        }
+      },
+      {
+        "key": "review_mode",
+        "label": "Review mode",
+        "type": "dropdown",
+        "defaultValue": {
+          "primaryContent": "Schema validation",
+          "id": "schema_validation"
+        },
+        "validators": {
+          "required": false
+        },
+        "placeholder": "Select mode",
+        "source": {
+          "type": "static",
+          "options": [
+            {
+              "primaryContent": "Schema validation",
+              "id": "schema_validation"
+            },
+            {
+              "primaryContent": "Rule suggestions",
+              "id": "rule_suggestions"
+            }
+          ]
+        },
+        "optionLabel": "primaryContent",
+        "optionValue": "id",
+        "hasDependentFields": false,
+        "dependentFields": []
       }
     ]
   },
