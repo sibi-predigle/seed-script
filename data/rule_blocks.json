@@ -1132,5 +1132,95 @@
       "name": "data.to_account_number Rule",
       "reference_id": "6ac7a349c39023e81a5490bc"
     }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf252711a"
+    },
+    "identifier": "cohort-extra-account-numbers-hektorbse-extra-account-numbers",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-extra-account-numbers-hektorbse-extra-account-numbers",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "extra_account_numbers",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Non-Deterministic",
+      "reference_id": "6acca142546eee5cf25270fb"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "extra_account_numbers Rule",
+      "reference_id": "6ace1100546eee5cf2527119"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a349c39023e81a5490bf"
+    },
+    "identifier": "cohort-data-extra-account-numbers",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "cohort-data-extra-account-numbers",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "data.extra_account_numbers",
+    "tags": [],
+    "status": "active",
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Notice of Transfer Letter Masking",
+      "reference_id": "6ac7a348c39023e81a5490a9"
+    },
+    "section": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Masking",
+      "reference_id": "6ac7a348c39023e81a5490ad"
+    },
+    "rule": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "data.extra_account_numbers Rule",
+      "reference_id": "6ac7a349c39023e81a5490be"
+    }
   }
 ]

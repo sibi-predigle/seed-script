@@ -14,7 +14,7 @@
       },
       "update_user_id": "0",
       "update_ts": {
-        "$date": "2026-10-13T13:15:52.451Z"
+        "$date": "2026-10-14T16:08:16.526Z"
       },
       "record_status": "A"
     },
@@ -97,8 +97,8 @@
         "status": "Pending",
         "config": {
           "position": {
-            "x": 420,
-            "y": 663
+            "x": 432,
+            "y": 993
           }
         },
         "reference": {},
@@ -168,8 +168,8 @@
             "id": "live"
           },
           "position": {
-            "x": 369,
-            "y": 443
+            "x": 358,
+            "y": 466
           },
           "connector": [
             {
@@ -178,16 +178,15 @@
               "icon": "agent-assets/icons/taxfab.svg"
             }
           ],
+          "fabrix_connector": {
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
           "fabrix": {
             "selection_strategy": "direct",
             "name": "Hektor Bank Statement Extraction",
             "reference_id": "6acca142546eee5cf25270f6"
           },
-          "fabrix_connector": {
-            "name": "Hektor Bank Statement Extraction",
-            "reference_id": "6acca142546eee5cf25270f6"
-          },
-          "model": null,
           "params": {
             "input_file": "$.input_file",
             "file_url": "$.constants.file_path",
@@ -200,12 +199,12 @@
         "output_data": {},
         "next": [
           {
-            "identifier": "1m5p275m1t2x3l503b0q6c6z16205j2p",
+            "identifier": "281a6b1z28660a4n3l6n2s33726g0o5c",
             "hidden": false,
             "deleted_status": "N",
             "acl": [],
-            "name": "Masker",
-            "type": "Precog"
+            "name": "Preview & Approve",
+            "type": "Preview Approve"
           }
         ],
         "duration_ms": 0,
@@ -248,7 +247,7 @@
             },
             {
               "key": "input_json",
-              "value": "$.data",
+              "value": "$.node.parser.output_data.data",
               "type": "json",
               "required": false
             },
@@ -265,8 +264,8 @@
             "id": "live"
           },
           "position": {
-            "x": 375,
-            "y": 556
+            "x": 376,
+            "y": 769
           },
           "connector": [
             {
@@ -275,19 +274,18 @@
               "icon": "agent-assets/icons/taxfab.svg"
             }
           ],
+          "fabrix_connector": {
+            "name": "Notice of Transfer Letter Masking",
+            "reference_id": "6ac7a348c39023e81a5490a9"
+          },
           "fabrix": {
             "selection_strategy": "direct",
             "name": "Notice of Transfer Letter Masking",
             "reference_id": "6ac7a348c39023e81a5490a9"
           },
-          "fabrix_connector": {
-            "name": "Notice of Transfer Letter Masking",
-            "reference_id": "6ac7a348c39023e81a5490a9"
-          },
-          "model": null,
           "params": {
             "input_file": "$.input_file",
-            "input_json": "$.data",
+            "input_json": "$.node.parser.output_data.data",
             "file_url": "$.file_url"
           }
         },
@@ -302,6 +300,64 @@
             "acl": [],
             "name": "End",
             "type": "End"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "281a6b1z28660a4n3l6n2s33726g0o5c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Preview & Approve",
+        "description": "Pauses execution for in-app review. Displays output options for human selection.",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Preview & Approve",
+        "type": "Preview Approve",
+        "status": "Pending",
+        "config": {
+          "deterministic_path": "$.ai_suggestions.review.determistics",
+          "non_deterministic_path": "$.ai_suggestions.review.suggestions",
+          "auto_approve_from_memory": {
+            "primaryContent": "On",
+            "id": "true"
+          },
+          "review_mode": {
+            "primaryContent": "Rule suggestions",
+            "id": "rule_suggestions"
+          },
+          "position": {
+            "x": 86,
+            "y": 620
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "1m5p275m1t2x3l503b0q6c6z16205j2p",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
           }
         ],
         "duration_ms": 0,
@@ -343,20 +399,20 @@
       "source": "native",
       "retry_count": 0
     },
-    "content_hash": "5df379c26f3b0f9da645599e85f06e994d77444a908853ed3a1e89a8acd66bc6",
+    "content_hash": "b0225f224e35366f05890acf6eff9a2981b37878dd11a1b972f1968867be5ebc",
     "draft_source_version": {
       "hidden": false,
       "deleted_status": "N",
       "acl": [],
-      "name": "Version - d7krem",
-      "reference_id": "6ace2f08fd086ffcec7e37c3"
+      "name": "Version - 60xc3d",
+      "reference_id": "6acfa8f05a2e81eb292f529a"
     },
     "live_deployment": {
       "hidden": false,
       "deleted_status": "N",
       "acl": [],
-      "name": "revision 1",
-      "reference_id": "6ace2f08fd086ffcec7e37c4"
+      "name": "revision 2",
+      "reference_id": "6acfa8f05a2e81eb292f529b"
     }
   }
 ]

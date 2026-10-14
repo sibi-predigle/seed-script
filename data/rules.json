@@ -1066,5 +1066,101 @@
         "when": "always"
       }
     ]
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527119"
+    },
+    "identifier": "rule-extra-account-numbers-hektorbse-extra-account-numbers",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "rule-extra-account-numbers-hektorbse-extra-account-numbers",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "extra_account_numbers Rule",
+    "tags": [],
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction",
+      "reference_id": "6acca142546eee5cf25270f6"
+    },
+    "rule_type": "extraction",
+    "target_field": "extra_account_numbers",
+    "actions": [
+      {
+        "slug": "prompt",
+        "params": {
+          "fragment": {
+            "name": "Hektor Bank Statement Extraction - extra_account_numbers",
+            "slug": "frag-hektor-bank-statement-extraction-extra-account-numbers",
+            "reference_id": "6ace1100546eee5cf252711b",
+            "version": {
+              "name": "version_0.1",
+              "reference_id": "6ace1100546eee5cf252711c"
+            }
+          }
+        },
+        "when": "always",
+        "reference_id": "6a8d53432810779312fb1b34"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a349c39023e81a5490be"
+    },
+    "identifier": "rule-data-extra-account-numbers",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "rule-data-extra-account-numbers",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "name": "data.extra_account_numbers Rule",
+    "tags": [],
+    "fabrix": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Notice of Transfer Letter Masking",
+      "reference_id": "6ac7a348c39023e81a5490a9"
+    },
+    "rule_type": "transformation",
+    "target_field": "data.extra_account_numbers",
+    "actions": [
+      {
+        "slug": "substitute_value",
+        "params": {
+          "value": "{fill:X}{last4}"
+        },
+        "reference_id": "574c9c5726cc4c7eab85f1e6",
+        "when": "always"
+      }
+    ]
   }
 ]

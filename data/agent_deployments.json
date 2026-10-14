@@ -14,7 +14,7 @@
       },
       "update_user_id": "4e72c605-6541-472c-9b80-123f003c46a4",
       "update_ts": {
-        "$date": "2026-10-13T13:15:52.411Z"
+        "$date": "2026-10-14T16:08:16.514Z"
       },
       "record_status": "A"
     },
@@ -34,6 +34,50 @@
       }
     },
     "revision": 1,
+    "state": "Superseded",
+    "live_triggers": [],
+    "superseded_by": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "reference_id": "6acfa8f05a2e81eb292f529b"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6acfa8f05a2e81eb292f529b"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "4e72c605-6541-472c-9b80-123f003c46a4",
+      "create_ts": {
+        "$date": "2026-10-14T16:08:16.504Z"
+      },
+      "update_user_id": "4e72c605-6541-472c-9b80-123f003c46a4",
+      "update_ts": {
+        "$date": "2026-10-14T16:08:16.505Z"
+      },
+      "record_status": "A"
+    },
+    "tags": [],
+    "agent": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Agent",
+      "reference_id": "6acdd6c63d578a20bff2713a",
+      "version": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Version - 60xc3d",
+        "reference_id": "6acfa8f05a2e81eb292f529a"
+      }
+    },
+    "revision": 2,
     "state": "Active",
     "live_triggers": []
   }

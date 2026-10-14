@@ -8328,5 +8328,209 @@
       "deleted_status": "N",
       "type": "RuleBlock"
     }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf2527119"
+    },
+    "identifier": "rule/6ace1100546eee5cf2527119",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ace1100546eee5cf2527119",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Rule"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf252711a"
+    },
+    "identifier": "ruleblock/6ace1100546eee5cf252711a",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ace1100546eee5cf252711a",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "RuleBlock"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf252711b"
+    },
+    "identifier": "prompt/6ace1100546eee5cf252711b",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ace1100546eee5cf252711b",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Prompt"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf252711c"
+    },
+    "identifier": "promptversion/6ace1100546eee5cf252711c",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ace1100546eee5cf252711c",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "PromptVersion"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a349c39023e81a5490be"
+    },
+    "identifier": "rule/6ac7a349c39023e81a5490be",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ac7a349c39023e81a5490be",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "Rule"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ac7a349c39023e81a5490bf"
+    },
+    "identifier": "ruleblock/6ac7a349c39023e81a5490bf",
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": null,
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      }
+    },
+    "plugins": [],
+    "miners": [],
+    "tags": [],
+    "principal": "*",
+    "actions": [
+      "read",
+      "write"
+    ],
+    "resource": {
+      "identifier": "6ac7a349c39023e81a5490bf",
+      "hidden": false,
+      "deleted_status": "N",
+      "type": "RuleBlock"
+    }
   }
 ]

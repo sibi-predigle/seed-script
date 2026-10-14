@@ -102,7 +102,7 @@
         "config": {
           "position": {
             "x": 420,
-            "y": 663
+            "y": 780
           }
         },
         "reference": {},
@@ -173,7 +173,7 @@
           },
           "position": {
             "x": 369,
-            "y": 443
+            "y": 440
           },
           "connector": [
             {
@@ -204,11 +204,128 @@
         "output_data": {},
         "next": [
           {
+            "identifier": "yb9uwlmkxm9yrjsrhf3skwpkgrc4ld7o",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Preview & Approve",
+            "type": "Preview Approve"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "yb9uwlmkxm9yrjsrhf3skwpkgrc4ld7o",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Preview & Approve",
+        "description": "Review the AI rule suggestions of the parser",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Review",
+        "type": "Preview Approve",
+        "status": "Pending",
+        "config": {
+          "review_mode": {
+            "primaryContent": "Rule suggestions",
+            "id": "rule_suggestions"
+          },
+          "deterministic_path": "$.deterministic_output",
+          "non_deterministic_path": "$.ai_suggestions.review.suggestions",
+          "status_path": "$.ai_suggestions.status",
+          "suggestions_path": "$.ai_suggestions.suggestions",
+          "target_path": "$.ai_suggestions.target",
+          "memory_scope_path": "$.ai_suggestions.target.fabrix_id",
+          "apply_on_approval": {
+            "primaryContent": "No",
+            "id": "false"
+          },
+          "auto_approve_from_memory": {
+            "primaryContent": "No",
+            "id": "false"
+          },
+          "position": {
+            "x": 369,
+            "y": 520
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "603nhp7ro589hn3n83d0ixz00h5nyv6m",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Apply to Fabrix",
+            "type": "Apply to Fabrix"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "603nhp7ro589hn3n83d0ixz00h5nyv6m",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Apply to Fabrix",
+        "description": "Apply the approved rules to the fabrix",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Apply",
+        "type": "Apply to Fabrix",
+        "status": "Pending",
+        "config": {
+          "approved_path": "$.data",
+          "suggestions_path": "$.node.parser.output_data.ai_suggestions.suggestions",
+          "target_path": "$.node.parser.output_data.ai_suggestions.target",
+          "position": {
+            "x": 369,
+            "y": 600
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
             "identifier": "1m5p275m1t2x3l503b0q6c6z16205j2p",
             "hidden": false,
             "deleted_status": "N",
             "acl": [],
-            "name": "Masker",
+            "name": "Precog",
             "type": "Precog"
           }
         ],
@@ -252,7 +369,7 @@
             },
             {
               "key": "input_json",
-              "value": "$.data",
+              "value": "$.node.parser.output_data.data",
               "type": "json",
               "required": false
             },
@@ -270,7 +387,7 @@
           },
           "position": {
             "x": 375,
-            "y": 556
+            "y": 680
           },
           "connector": [
             {
@@ -291,7 +408,7 @@
           "model": null,
           "params": {
             "input_file": "$.input_file",
-            "input_json": "$.data",
+            "input_json": "$.node.parser.output_data.data",
             "file_url": "$.file_url"
           }
         },
@@ -347,6 +464,419 @@
       "source": "native",
       "retry_count": 0
     },
-    "content_hash": "5df379c26f3b0f9da645599e85f06e994d77444a908853ed3a1e89a8acd66bc6"
+    "content_hash": "4c241876ba73a142b492576296b02938b301828ee322207c7856a011b432d5fc"
+  },
+  {
+    "_id": {
+      "$oid": "6acfa8f05a2e81eb292f529a"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "4e72c605-6541-472c-9b80-123f003c46a4",
+      "create_ts": {
+        "$date": "2026-10-14T16:08:16.435Z"
+      },
+      "update_user_id": "4e72c605-6541-472c-9b80-123f003c46a4",
+      "update_ts": {
+        "$date": "2026-10-14T16:08:16.438Z"
+      },
+      "record_status": "A"
+    },
+    "name": "Version - 60xc3d",
+    "tags": [],
+    "agent_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Hektor Agent",
+      "reference_id": "6acdd6c63d578a20bff2713a"
+    },
+    "states": [
+      {
+        "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Start",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Start",
+        "type": "Start",
+        "status": "Pending",
+        "config": {
+          "position": {
+            "x": 415,
+            "y": 286
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "End",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "End",
+        "type": "End",
+        "status": "Pending",
+        "config": {
+          "position": {
+            "x": 432,
+            "y": 993
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "0c08260h0c636y0212634s4k0d3a2o2n",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Parser",
+        "type": "Precog",
+        "status": "Pending",
+        "config": {
+          "bot_id": "6ac6656b0717bfc9b1625932",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.input_file",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "file_url",
+              "value": "$.constants.file_path",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "input_text",
+              "value": "$.input_text",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "split_pattern",
+              "value": "$.split_pattern",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 358,
+            "y": 466
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix_connector": {
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Hektor Bank Statement Extraction",
+            "reference_id": "6acca142546eee5cf25270f6"
+          },
+          "params": {
+            "input_file": "$.input_file",
+            "file_url": "$.constants.file_path",
+            "input_text": "$.input_text",
+            "split_pattern": "$.split_pattern"
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "281a6b1z28660a4n3l6n2s33726g0o5c",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Preview & Approve",
+            "type": "Preview Approve"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "1m5p275m1t2x3l503b0q6c6z16205j2p",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Precog",
+        "description": "Execute a single Precog",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Masker",
+        "type": "Precog",
+        "status": "Pending",
+        "config": {
+          "bot_id": "6ac7a3ca10110026df8b33cd",
+          "bot_id_params": [
+            {
+              "key": "input_file",
+              "value": "$.input_file",
+              "type": "file",
+              "required": false
+            },
+            {
+              "key": "input_json",
+              "value": "$.node.parser.output_data.data",
+              "type": "json",
+              "required": false
+            },
+            {
+              "key": "file_url",
+              "value": "$.file_url",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "bot_id_processor_param": null,
+          "mode": {
+            "primaryContent": "live",
+            "id": "live"
+          },
+          "position": {
+            "x": 376,
+            "y": 769
+          },
+          "connector": [
+            {
+              "id": "fabrix",
+              "name": "Fabrix",
+              "icon": "agent-assets/icons/taxfab.svg"
+            }
+          ],
+          "fabrix_connector": {
+            "name": "Notice of Transfer Letter Masking",
+            "reference_id": "6ac7a348c39023e81a5490a9"
+          },
+          "fabrix": {
+            "selection_strategy": "direct",
+            "name": "Notice of Transfer Letter Masking",
+            "reference_id": "6ac7a348c39023e81a5490a9"
+          },
+          "params": {
+            "input_file": "$.input_file",
+            "input_json": "$.node.parser.output_data.data",
+            "file_url": "$.file_url"
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "202m5k2m3g0n1f2k1u1f614e14310y22",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "End",
+            "type": "End"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      },
+      {
+        "identifier": "281a6b1z28660a4n3l6n2s33726g0o5c",
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": [],
+        "name": "Preview & Approve",
+        "description": "Pauses execution for in-app review. Displays output options for human selection.",
+        "start": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "end": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "location": {
+          "hidden": false,
+          "deleted_status": "N",
+          "acl": []
+        },
+        "state_name": "Preview & Approve",
+        "type": "Preview Approve",
+        "status": "Pending",
+        "config": {
+          "deterministic_path": "$.ai_suggestions.review.determistics",
+          "non_deterministic_path": "$.ai_suggestions.review.suggestions",
+          "auto_approve_from_memory": {
+            "primaryContent": "On",
+            "id": "true"
+          },
+          "review_mode": {
+            "primaryContent": "Rule suggestions",
+            "id": "rule_suggestions"
+          },
+          "position": {
+            "x": 86,
+            "y": 620
+          }
+        },
+        "reference": {},
+        "input_data": {},
+        "output_data": {},
+        "next": [
+          {
+            "identifier": "1m5p275m1t2x3l503b0q6c6z16205j2p",
+            "hidden": false,
+            "deleted_status": "N",
+            "acl": [],
+            "name": "Precog",
+            "type": "Precog"
+          }
+        ],
+        "duration_ms": 0,
+        "source": "native",
+        "retry_count": 0
+      }
+    ],
+    "triggers": [],
+    "initial_state": {
+      "identifier": "5k645j2s5x276m240e2k243o2j2v1k2c",
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Start",
+      "start": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "end": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "location": {
+        "hidden": false,
+        "deleted_status": "N",
+        "acl": []
+      },
+      "state_name": "Start",
+      "type": "Start",
+      "status": "Pending",
+      "config": {},
+      "reference": {},
+      "input_data": {},
+      "output_data": {},
+      "next": [],
+      "duration_ms": 0,
+      "source": "native",
+      "retry_count": 0
+    },
+    "content_hash": "b0225f224e35366f05890acf6eff9a2981b37878dd11a1b972f1968867be5ebc",
+    "parent_version": {
+      "hidden": false,
+      "deleted_status": "N",
+      "acl": [],
+      "name": "Version - d7krem",
+      "reference_id": "6ace2f08fd086ffcec7e37c3"
+    }
   }
 ]

@@ -32544,7 +32544,7 @@
       },
       "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
       "update_ts": {
-        "$date": "2026-10-12T19:36:33.479Z"
+        "$date": "2026-10-14T13:36:32.839Z"
       },
       "record_status": "A"
     },
@@ -32632,6 +32632,35 @@
             "selected": "N"
           }
         ]
+      },
+      {
+        "slug": "6b838b91974af82785d574833ae036db",
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "data.extra_account_numbers",
+        "feature_type": {
+          "hidden": false,
+          "deleted_status": "N",
+          "name": "data.extra_account_numbers",
+          "type": "string",
+          "canned_features": "N"
+        },
+        "data_source_ref": "fc5c81192eb9411288bba81fc9154838",
+        "enum_bins": [
+          {
+            "slug": "7d0a1022eb5cb72607a041bf659d98e7",
+            "hidden": false,
+            "deleted_status": "N",
+            "name": "Default bin",
+            "low": 0.0,
+            "enum_bin_type": {
+              "hidden": false,
+              "deleted_status": "N",
+              "type": "default"
+            },
+            "selected": "N"
+          }
+        ]
       }
     ]
   },
@@ -32651,7 +32680,7 @@
       },
       "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
       "update_ts": {
-        "$date": "2026-10-12T19:18:12.508Z"
+        "$date": "2026-10-14T13:36:32.839Z"
       },
       "record_status": "A"
     },
@@ -32988,6 +33017,35 @@
         "enum_bins": [
           {
             "slug": "4c3ff295b2fd5f5ee1e49139f79b069f",
+            "hidden": false,
+            "deleted_status": "N",
+            "name": "Default bin",
+            "low": 0.0,
+            "enum_bin_type": {
+              "hidden": false,
+              "deleted_status": "N",
+              "type": "default"
+            },
+            "selected": "N"
+          }
+        ]
+      },
+      {
+        "slug": "ca4dca359ff4cc5d2f568edb22de2931",
+        "hidden": false,
+        "deleted_status": "N",
+        "name": "extra_account_numbers",
+        "feature_type": {
+          "hidden": false,
+          "deleted_status": "N",
+          "name": "extra_account_numbers",
+          "type": "string",
+          "canned_features": "N"
+        },
+        "data_source_ref": "8fa6bcf398c341799a966b26dcf662c0",
+        "enum_bins": [
+          {
+            "slug": "ae51cf053ba8c5b58d8c61a2144c7ef9",
             "hidden": false,
             "deleted_status": "N",
             "name": "Default bin",

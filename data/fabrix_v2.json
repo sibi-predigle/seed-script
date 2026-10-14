@@ -107,14 +107,14 @@
       },
       "update_user_id": "697e46c5-9947-4ab6-86c2-d61071304d43",
       "update_ts": {
-        "$date": "2026-10-12T19:18:12.508Z"
+        "$date": "2026-10-14T13:36:32.839Z"
       },
       "record_status": "A"
     },
     "plugins": [],
     "miners": [],
     "name": "Hektor Bank Statement Extraction",
-    "description": "Hektor client: Notice of Transfer letters. One deterministic section (regex transform_attribute: bank, date, amount, from/to accounts, city/state/zip) and one non-deterministic section (LLM prompt: account holder names, address). Replaces the loan-billing-statement fields.",
+    "description": "Hektor client: Notice of Transfer letters. One deterministic section (regex transform_attribute: bank, date, amount, from/to accounts, city/state/zip) and one non-deterministic section (LLM prompt: account holder names, address, extra account numbers). Replaces the loan-billing-statement fields.",
     "tags": [],
     "fabrix_type": {
       "hidden": false,

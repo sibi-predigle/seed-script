@@ -404,5 +404,34 @@
     "metadata": {
       "category": "fragment"
     }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf252711b"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": "frag-hektor-bank-statement-extraction-extra-account-numbers",
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "record_status": "A"
+    },
+    "plugins": [],
+    "miners": [],
+    "status": "active",
+    "name": "Hektor Bank Statement Extraction - extra_account_numbers",
+    "tags": [],
+    "metadata": {
+      "category": "fragment"
+    }
   }
 ]

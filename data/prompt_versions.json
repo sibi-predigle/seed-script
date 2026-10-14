@@ -567,11 +567,79 @@
       "reference_id": "6acca142546eee5cf25270fc"
     },
     "template": {
-      "system": "You extract fields from ONE Notice of Transfer letter.\nReturn ONLY a single JSON object whose keys are exactly the field names below. If a field is not present in the letter, return null for it. Never guess or invent values.\n\nFields to extract:\n{field_definitions}\n\n{schema}"
+      "system": "You are a document-analysis assistant for financial correspondence. Work only from the text you are given. Copy values exactly as written; never normalise, guess or invent. If something is not present, return null.\nFor an extraction request, return ONLY a single JSON object whose keys are exactly the field names below; for any other request, follow the output format that request asks for.\n\nExisting fields:\n{field_definitions}"
     },
     "model_configuration": {
-      "structured_outputs": false,
-      "structured_outputs_schema": null
+      "structured_outputs": true,
+      "structured_outputs_schema": {
+        "title": "rule_suggestion_discovery",
+        "type": "object",
+        "required": [
+          "fields"
+        ],
+        "properties": {
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "description",
+                "extraction",
+                "kind",
+                "occurrences"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "extraction": {
+                  "type": "string",
+                  "enum": [
+                    "deterministic",
+                    "llm"
+                  ]
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "scalar",
+                    "text_block",
+                    "list",
+                    "object",
+                    "static_text"
+                  ]
+                },
+                "occurrences": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "record_index",
+                      "value",
+                      "before"
+                    ],
+                    "properties": {
+                      "record_index": {
+                        "type": "integer"
+                      },
+                      "value": {
+                        "type": "string"
+                      },
+                      "before": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "metadata": {
       "fabrix": [
@@ -661,6 +729,51 @@
       "hidden": false,
       "deleted_status": "N",
       "system": "Analyze the given Notice of Transfer letter text and extract the mailing address from the lines after \"Please adjust your records\" (the street line, then the city, state and zip line). Do not include any names. If a field does not exist, return \"null\". Do not skip any field: {\"street\": \"string\", \"city\": \"string\", \"state\": \"string\", \"zip\": \"string\"}"
+    },
+    "model_configuration": {},
+    "metadata": {
+      "fabrix": [
+        {
+          "name": "Hektor Bank Statement Extraction",
+          "reference_id": "6acca142546eee5cf25270f6"
+        }
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6ace1100546eee5cf252711c"
+    },
+    "client_id": "691ad32be2653616d96af2d5",
+    "slug": null,
+    "hidden": false,
+    "deleted_status": "N",
+    "acl": [],
+    "audit_data": {
+      "create_user_id": "0",
+      "create_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "update_user_id": "0",
+      "update_ts": {
+        "$date": "2026-10-14T13:36:32.839Z"
+      },
+      "record_status": "A"
+    },
+    "status": "active",
+    "name": "version_0.1",
+    "tags": [],
+    "version": "0.1",
+    "prompt_reference": {
+      "hidden": false,
+      "deleted_status": "N",
+      "name": "Hektor Bank Statement Extraction - extra_account_numbers",
+      "reference_id": "6ace1100546eee5cf252711b"
+    },
+    "template": {
+      "hidden": false,
+      "deleted_status": "N",
+      "system": "Analyze the given Notice of Transfer letter text and find every account number in it other than the two transfer accounts (the account the money was moved from and the account it was moved to, written as \"account # <number> to account # <number>\"). An account number here is a number of exactly 7 digits that is used as an account number, like 3000653 (it can follow \"account\", \"acct\" or \"#\", or be listed among linked or related accounts). Do not include zip codes, amounts, phone numbers, loan or reference numbers. Return each number once, as a string, in the order it appears. If there are none, return an empty list. Do not skip any field: [\"string\"]"
     },
     "model_configuration": {},
     "metadata": {
