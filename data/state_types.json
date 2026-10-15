@@ -216,7 +216,7 @@
         "placeholder": "Select the agent",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "metadata.name",
@@ -568,7 +568,7 @@
         "placeholder": "Select the agent",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "slug",
@@ -1071,7 +1071,7 @@
         "placeholder": "Select the agent",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "slug",
@@ -1131,7 +1131,7 @@
         "placeholder": "Select the agent",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "slug",
@@ -1283,7 +1283,7 @@
         "placeholder": "Select the bot",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "slug",
@@ -1343,7 +1343,7 @@
         "placeholder": "Select the agent",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "slug",
@@ -1930,7 +1930,7 @@
         "placeholder": "Select the bot",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "slug",
@@ -2170,7 +2170,7 @@
         "placeholder": "Select the agent",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "slug",
@@ -2322,7 +2322,7 @@
         "placeholder": "Select the bot",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "slug",
@@ -2635,7 +2635,7 @@
         "placeholder": "Select the agent",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "slug",
@@ -2735,7 +2735,7 @@
         "placeholder": "Select the agent",
         "source": {
           "type": "api",
-          "url": "http://pi-designer-dev.hc3.io/api/precog/bot",
+          "url": "http://pi-designer-dev.hc3.io/api/precog/bot/",
           "method": "GET"
         },
         "optionLabel": "slug",
