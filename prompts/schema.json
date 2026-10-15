@@ -1,0 +1,32 @@
+{
+  "title": "rule_suggestion_discovery",
+  "type": "object",
+  "required": ["fields"],
+  "properties": {
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "extraction", "kind", "occurrences"],
+        "properties": {
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "extraction": {"type": "string", "enum": ["deterministic", "llm"]},
+          "kind": {"type": "string", "enum": ["scalar", "text_block", "list", "object"]},
+          "occurrences": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["record_index", "value", "before"],
+              "properties": {
+                "record_index": {"type": "integer"},
+                "value": {"type": "string"},
+                "before": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
